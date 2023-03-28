@@ -13,7 +13,7 @@ namespace Sol_Capa_Entidades
         public int codigo_ma { get; set; }
         public int codigo_um { get; set; }
         public int codigo_ca { get; set; }
-        public int stock_min { get; set; }
+        public decimal stock_min { get; set; }
         public decimal stock_max { get; set; }
     }
 }

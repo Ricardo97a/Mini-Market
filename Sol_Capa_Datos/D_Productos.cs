@@ -59,7 +59,7 @@ namespace Sol_Capa_Datos
                 comando.Parameters.Add("@nStock_min", SqlDbType.VarChar).Value = oPr.stock_min;
                 comando.Parameters.Add("@nStock_max", SqlDbType.VarChar).Value = oPr.stock_max; 
                 sqlcon.Open();
-                respuesta = comando.ExecuteNonQuery() == 1 ? "ok" : "No se pudo regitrar los datos";
+                respuesta = comando.ExecuteNonQuery() >= 1 ? "ok" : "No se pudo regitrar los datos";
             }
             catch (Exception ex)
             {
@@ -97,5 +97,125 @@ namespace Sol_Capa_Datos
             }
             return respuesta;
         }
-    }
+        /*Listar Marcas*/
+        public DataTable Listado_ma_pr(string ctexto)
+        {
+            SqlDataReader Resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlcon = new SqlConnection();
+
+            try
+            {
+                sqlcon = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("USP_Listado_ma_pr", sqlcon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@ctexto", SqlDbType.VarChar).Value = ctexto;
+                sqlcon.Open();
+                Resultado = comando.ExecuteReader();
+                tabla.Load(Resultado);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
+            }
+
+        }
+        /*Listar Unidad de Medidas */
+        public DataTable Listado_um_pr(string ctexto)
+        {
+            SqlDataReader Resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlcon = new SqlConnection();
+
+            try
+            {
+                sqlcon = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("USP_Listado_um_pr", sqlcon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@ctexto", SqlDbType.VarChar).Value = ctexto;
+                sqlcon.Open();
+                Resultado = comando.ExecuteReader();
+                tabla.Load(Resultado);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
+            }
+
+        }
+        /*Listar Categorias*/
+        public DataTable Listado_ca_pr(string ctexto)
+        {
+            SqlDataReader Resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlcon = new SqlConnection();
+
+            try
+            {
+                sqlcon = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("USP_Listado_ca_pr", sqlcon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@ctexto", SqlDbType.VarChar).Value = ctexto;
+                sqlcon.Open();
+                Resultado = comando.ExecuteReader();
+                tabla.Load(Resultado);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
+            }
+
+        }
+
+        public DataTable Ver_Stock_Actual(int nCodigo_pr)
+        {
+            SqlDataReader Resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlcon = new SqlConnection();
+
+            try
+            {
+                sqlcon = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("USP_Ver_Stock_Actual", sqlcon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@nCodigo_pr", SqlDbType.Int).Value = nCodigo_pr;
+                sqlcon.Open();
+                Resultado = comando.ExecuteReader();
+                tabla.Load(Resultado);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
+            }
+
+        }
+    } /*fin de clase*/
 }

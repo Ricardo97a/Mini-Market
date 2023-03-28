@@ -1,5 +1,5 @@
 ﻿
-namespace Sol_Capa_Presentacion.Categoria
+namespace Sol_Capa_Presentacion.Productos
 {
     partial class Frm_Unidades_Medidas
     {

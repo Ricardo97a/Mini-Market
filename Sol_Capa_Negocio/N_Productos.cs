@@ -28,5 +28,26 @@ namespace Sol_Capa_Negocio
             D_Productos Datos = new D_Productos();
             return Datos.Eliminar_pr(codigo_pr);
         }
+
+        public static DataTable Listado_ma_pr(string ctexto)
+        {
+            D_Productos Datos = new D_Productos();
+            return Datos.Listado_ma_pr(ctexto);
+        }
+        public static DataTable Listado_um_pr(string ctexto)
+        {
+            D_Productos Datos = new D_Productos();
+            return Datos.Listado_um_pr(ctexto);
+        }
+        public static DataTable Listado_ca_pr(string ctexto)
+        {
+            D_Productos Datos = new D_Productos();
+            return Datos.Listado_ca_pr(ctexto);
+        }
+        public static DataTable Ver_Stock_Actual(int nCodigo_pr)
+        {
+            D_Productos Datos = new D_Productos();
+            return Datos.Ver_Stock_Actual(nCodigo_pr);
+        }
     }
 }

@@ -68,11 +68,12 @@ C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\bin\Debug\ru\Microsoft.Repo
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.csproj.AssemblyReference.cache
-C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Categoria.Frm_Almacenes.resources
-C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Categoria.Frm_Categoria.resources
-C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Categoria.Frm_Marcas.resources
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Almacenes.resources
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Categoria.resources
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Marcas.resources
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Productos.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Properties.Resources.resources
-C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Categoria.Frm_Unidades_Medidas.resources
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Unidades_Medidas.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.csproj.GenerateResource.cache
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\RdlCompile.cache
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\RdlCompile.compiled
@@ -80,4 +81,3 @@ C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presenta
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.csproj.CopyComplete
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.exe
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.pdb
-C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Categoria.Frm_Productos.resources
