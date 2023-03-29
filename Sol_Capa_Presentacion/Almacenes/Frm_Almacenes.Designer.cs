@@ -1,5 +1,5 @@
 ﻿
-namespace Sol_Capa_Presentacion.Productos
+namespace Sol_Capa_Presentacion.Almacenes
 {
     partial class Frm_Almacenes
     {
@@ -220,7 +220,7 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtDescripcion_al.Size = new System.Drawing.Size(365, 19);
             this.txtDescripcion_al.TabIndex = 9;
             this.txtDescripcion_al.Text = "Almacen(*)";
-           
+
             this.txtDescripcion_al.Enter += new System.EventHandler(this.txtDescripcion_al_Enter);
             this.txtDescripcion_al.Leave += new System.EventHandler(this.txtDescripcion_al_Leave);
             // 

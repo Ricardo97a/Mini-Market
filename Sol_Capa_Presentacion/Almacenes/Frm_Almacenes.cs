@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Sol_Capa_Entidades;
 using Sol_Capa_Negocio;
 
-namespace Sol_Capa_Presentacion.Productos
+namespace Sol_Capa_Presentacion.Almacenes
 {
     public partial class Frm_Almacenes : Form
     {

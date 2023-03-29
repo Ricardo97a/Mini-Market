@@ -100,6 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Sol_Sistema_POO.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Rubros\Frm_Rubros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rubros\Frm_Rubros.Designer.cs">
+      <DependentUpon>Frm_Rubros.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Unidad_Medidas\Frm_Unidades_Medidas.cs">
       <SubType>Form</SubType>
@@ -130,6 +136,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reporte\Report_Categoria.rdlc" />
+    <EmbeddedResource Include="Rubros\Frm_Rubros.resx">
+      <DependentUpon>Frm_Rubros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Unidad_Medidas\Frm_Unidades_Medidas.resx">
       <DependentUpon>Frm_Unidades_Medidas.cs</DependentUpon>
     </EmbeddedResource>

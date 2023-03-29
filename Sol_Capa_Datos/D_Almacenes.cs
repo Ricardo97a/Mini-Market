@@ -54,8 +54,8 @@ namespace Sol_Capa_Datos
                 comando.Parameters.Add("@nCodigo_al", SqlDbType.Int).Value = oAL.codigo_al;
                 comando.Parameters.Add("@cdescripcion", SqlDbType.VarChar).Value = oAL.descripcion_al;
                 sqlcon.Open();
-                respuesta = comando.ExecuteNonQuery() == 1 ? "ok" : "No se pudo regitrar los datos";
-            }
+                respuesta = comando.ExecuteNonQuery() >= 1 ? "ok" : "No se pudo regitrar los datos";
+            } 
             catch (Exception ex)
             {
 
