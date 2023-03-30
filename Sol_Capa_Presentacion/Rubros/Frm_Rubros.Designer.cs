@@ -44,7 +44,7 @@ namespace Sol_Capa_Presentacion.Rubros
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtDescripcion_ma = new System.Windows.Forms.TextBox();
+            this.txtDescripcion_ru = new System.Windows.Forms.TextBox();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnactualizar = new System.Windows.Forms.Button();
@@ -101,7 +101,7 @@ namespace Sol_Capa_Presentacion.Rubros
             this.txtMarcas.Name = "txtMarcas";
             this.txtMarcas.Size = new System.Drawing.Size(365, 19);
             this.txtMarcas.TabIndex = 5;
-            this.txtMarcas.Text = "Buscar Marcas:";
+            this.txtMarcas.Text = "Buscar Rubros:";
             this.txtMarcas.Enter += new System.EventHandler(this.textBox1_Enter);
             this.txtMarcas.Leave += new System.EventHandler(this.txtMarcas_Leave);
             // 
@@ -154,7 +154,7 @@ namespace Sol_Capa_Presentacion.Rubros
             this.tabPage2.Controls.Add(this.btnGuardar);
             this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.txtDescripcion_ma);
+            this.tabPage2.Controls.Add(this.txtDescripcion_ru);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -210,20 +210,19 @@ namespace Sol_Capa_Presentacion.Rubros
             this.panel1.Size = new System.Drawing.Size(363, 1);
             this.panel1.TabIndex = 10;
             // 
-            // txtDescripcion_ma
+            // txtDescripcion_ru
             // 
-            this.txtDescripcion_ma.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion_ma.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion_ma.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_ma.Location = new System.Drawing.Point(222, 42);
-            this.txtDescripcion_ma.Name = "txtDescripcion_ma";
-            this.txtDescripcion_ma.ReadOnly = true;
-            this.txtDescripcion_ma.Size = new System.Drawing.Size(365, 19);
-            this.txtDescripcion_ma.TabIndex = 9;
-            this.txtDescripcion_ma.Text = "Marcas(*)";
-
-            this.txtDescripcion_ma.Enter += new System.EventHandler(this.txtDescripcion_ma_Enter);
-            this.txtDescripcion_ma.Leave += new System.EventHandler(this.txtDescripcion_ma_Leave);
+            this.txtDescripcion_ru.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion_ru.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion_ru.ForeColor = System.Drawing.Color.Black;
+            this.txtDescripcion_ru.Location = new System.Drawing.Point(222, 42);
+            this.txtDescripcion_ru.Name = "txtDescripcion_ru";
+            this.txtDescripcion_ru.ReadOnly = true;
+            this.txtDescripcion_ru.Size = new System.Drawing.Size(365, 19);
+            this.txtDescripcion_ru.TabIndex = 9;
+            this.txtDescripcion_ru.Text = "Marcas(*)";
+            this.txtDescripcion_ru.Enter += new System.EventHandler(this.txtDescripcion_ma_Enter);
+            this.txtDescripcion_ru.Leave += new System.EventHandler(this.txtDescripcion_ma_Leave);
             // 
             // btnnuevo
             // 
@@ -362,7 +361,7 @@ namespace Sol_Capa_Presentacion.Rubros
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtDescripcion_ma;
+        private System.Windows.Forms.TextBox txtDescripcion_ru;
         private System.Windows.Forms.Button btnretornar;
         private System.Windows.Forms.ImageList imageList1;
     }

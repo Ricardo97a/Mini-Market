@@ -75,6 +75,12 @@
     <Compile Include="Almacenes\Frm_Almacenes.Designer.cs">
       <DependentUpon>Frm_Almacenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Canton\Frm_Cantones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Canton\Frm_Cantones.Designer.cs">
+      <DependentUpon>Frm_Cantones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Categoria\Frm_Categoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provincias\Frm_Provincias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Provincias\Frm_Provincias.Designer.cs">
+      <DependentUpon>Frm_Provincias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reporte\DataSet_Sol_Sistema_POO.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +128,9 @@
     <EmbeddedResource Include="Almacenes\Frm_Almacenes.resx">
       <DependentUpon>Frm_Almacenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Canton\Frm_Cantones.resx">
+      <DependentUpon>Frm_Cantones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Categoria\Frm_Categoria.resx">
       <DependentUpon>Frm_Categoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +150,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Provincias\Frm_Provincias.resx">
+      <DependentUpon>Frm_Provincias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reporte\Report_Categoria.rdlc" />
     <EmbeddedResource Include="Rubros\Frm_Rubros.resx">
       <DependentUpon>Frm_Rubros.cs</DependentUpon>

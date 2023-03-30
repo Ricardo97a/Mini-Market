@@ -16,7 +16,7 @@ namespace Sol_Capa_Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sol_Capa_Presentacion.Almacenes.Frm_Almacenes());
+            Application.Run(new Sol_Capa_Presentacion.Cantones.Frm_Cantones());
         }
     }
 }
