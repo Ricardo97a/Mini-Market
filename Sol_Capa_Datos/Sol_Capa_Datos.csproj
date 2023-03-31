@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="D_Almacenes.cs" />
+    <Compile Include="D_Distritos.cs" />
     <Compile Include="D_Categoria.cs" />
     <Compile Include="D_Cantones.cs" />
     <Compile Include="D_Provincias.cs" />

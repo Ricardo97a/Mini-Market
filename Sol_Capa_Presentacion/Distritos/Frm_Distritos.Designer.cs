@@ -1,7 +1,7 @@
 ﻿
-namespace Sol_Capa_Presentacion.Canto
+namespace Sol_Capa_Presentacion.Distritos
 {
-    partial class Frm_Cantones
+    partial class Frm_Distritos
     {
         /// <summary>
         /// Required designer variable.
@@ -32,32 +32,34 @@ namespace Sol_Capa_Presentacion.Canto
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cantones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Distritos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tb_Principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Linea = new System.Windows.Forms.Panel();
-            this.txtCantones = new System.Windows.Forms.TextBox();
+            this.txtDistritos = new System.Windows.Forms.TextBox();
             this.Dgv_Principal = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pnlListadoProvincias = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDescripcion_co = new System.Windows.Forms.TextBox();
+            this.pnlListadoPO_CO = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtBuscar2P = new System.Windows.Forms.TextBox();
+            this.txtBuscar2PO_CO = new System.Windows.Forms.TextBox();
             this.btnRetornar2PO = new System.Windows.Forms.Button();
             this.btnLupa2PO = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblListadoMarcas = new System.Windows.Forms.Label();
             this.Dgv_Provincias = new System.Windows.Forms.DataGridView();
-            this.btnLupaPO = new System.Windows.Forms.Button();
+            this.btnLupa_po_co = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txtDescripcion_po = new System.Windows.Forms.TextBox();
             this.btnretornar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtDescripcion_co = new System.Windows.Forms.TextBox();
+            this.txtDescripcion_di = new System.Windows.Forms.TextBox();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.btnactualizar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
@@ -67,7 +69,7 @@ namespace Sol_Capa_Presentacion.Canto
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Principal)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.pnlListadoProvincias.SuspendLayout();
+            this.pnlListadoPO_CO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Provincias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@ namespace Sol_Capa_Presentacion.Canto
             this.Tb_Principal.Location = new System.Drawing.Point(12, 12);
             this.Tb_Principal.Name = "Tb_Principal";
             this.Tb_Principal.SelectedIndex = 0;
-            this.Tb_Principal.Size = new System.Drawing.Size(1115, 395);
+            this.Tb_Principal.Size = new System.Drawing.Size(1305, 395);
             this.Tb_Principal.TabIndex = 0;
             this.Tb_Principal.Selected += new System.Windows.Forms.TabControlEventHandler(this.Tb_Principal_Selected);
             this.Tb_Principal.Click += new System.EventHandler(this.Tb_Principal_Click);
@@ -87,13 +89,13 @@ namespace Sol_Capa_Presentacion.Canto
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.Linea);
-            this.tabPage1.Controls.Add(this.txtCantones);
+            this.tabPage1.Controls.Add(this.txtDistritos);
             this.tabPage1.Controls.Add(this.Dgv_Principal);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1107, 362);
+            this.tabPage1.Size = new System.Drawing.Size(1297, 362);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -106,18 +108,18 @@ namespace Sol_Capa_Presentacion.Canto
             this.Linea.Size = new System.Drawing.Size(363, 1);
             this.Linea.TabIndex = 8;
             // 
-            // txtCantones
+            // txtDistritos
             // 
-            this.txtCantones.BackColor = System.Drawing.Color.White;
-            this.txtCantones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCantones.ForeColor = System.Drawing.Color.Black;
-            this.txtCantones.Location = new System.Drawing.Point(222, 42);
-            this.txtCantones.Name = "txtCantones";
-            this.txtCantones.Size = new System.Drawing.Size(365, 19);
-            this.txtCantones.TabIndex = 5;
-            this.txtCantones.Text = "Buscar Cantones:";
-            this.txtCantones.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.txtCantones.Leave += new System.EventHandler(this.txtMarcas_Leave);
+            this.txtDistritos.BackColor = System.Drawing.Color.White;
+            this.txtDistritos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDistritos.ForeColor = System.Drawing.Color.Black;
+            this.txtDistritos.Location = new System.Drawing.Point(222, 42);
+            this.txtDistritos.Name = "txtDistritos";
+            this.txtDistritos.Size = new System.Drawing.Size(365, 19);
+            this.txtDistritos.TabIndex = 5;
+            this.txtDistritos.Text = "Buscar Distritos:";
+            this.txtDistritos.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtDistritos.Leave += new System.EventHandler(this.txtMarcas_Leave);
             // 
             // Dgv_Principal
             // 
@@ -144,7 +146,7 @@ namespace Sol_Capa_Presentacion.Canto
             this.Dgv_Principal.RowHeadersWidth = 62;
             this.Dgv_Principal.RowTemplate.Height = 28;
             this.Dgv_Principal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_Principal.Size = new System.Drawing.Size(858, 234);
+            this.Dgv_Principal.Size = new System.Drawing.Size(1063, 234);
             this.Dgv_Principal.TabIndex = 3;
             this.Dgv_Principal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Principal_CellDoubleClick);
             // 
@@ -164,37 +166,71 @@ namespace Sol_Capa_Presentacion.Canto
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.pnlListadoProvincias);
-            this.tabPage2.Controls.Add(this.btnLupaPO);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.txtDescripcion_co);
+            this.tabPage2.Controls.Add(this.pnlListadoPO_CO);
+            this.tabPage2.Controls.Add(this.btnLupa_po_co);
             this.tabPage2.Controls.Add(this.panel9);
             this.tabPage2.Controls.Add(this.txtDescripcion_po);
             this.tabPage2.Controls.Add(this.btnretornar);
             this.tabPage2.Controls.Add(this.btnGuardar);
             this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.txtDescripcion_co);
+            this.tabPage2.Controls.Add(this.txtDescripcion_di);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1107, 362);
+            this.tabPage2.Size = new System.Drawing.Size(1297, 362);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // pnlListadoProvincias
+            // imageList1
             // 
-            this.pnlListadoProvincias.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlListadoProvincias.Controls.Add(this.panel7);
-            this.pnlListadoProvincias.Controls.Add(this.txtBuscar2P);
-            this.pnlListadoProvincias.Controls.Add(this.btnRetornar2PO);
-            this.pnlListadoProvincias.Controls.Add(this.btnLupa2PO);
-            this.pnlListadoProvincias.Controls.Add(this.lblListadoMarcas);
-            this.pnlListadoProvincias.Controls.Add(this.Dgv_Provincias);
-            this.pnlListadoProvincias.Location = new System.Drawing.Point(565, 48);
-            this.pnlListadoProvincias.Name = "pnlListadoProvincias";
-            this.pnlListadoProvincias.Size = new System.Drawing.Size(404, 269);
-            this.pnlListadoProvincias.TabIndex = 36;
-            this.pnlListadoProvincias.Visible = false;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "newfile_85903.png");
+            this.imageList1.Images.SetKeyName(1, "edit_modify_icon_149489.png");
+            this.imageList1.Images.SetKeyName(2, "removetheproperty_theapplication_eliminar_2965.png");
+            this.imageList1.Images.SetKeyName(3, "file_spreadsheet_icon_143779.png");
+            this.imageList1.Images.SetKeyName(4, "mbrilogout_99583 (1).png");
+            this.imageList1.Images.SetKeyName(5, "puntos3.png");
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(129, 168);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(350, 2);
+            this.panel2.TabIndex = 38;
+            // 
+            // txtDescripcion_co
+            // 
+            this.txtDescripcion_co.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion_co.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion_co.ForeColor = System.Drawing.Color.Black;
+            this.txtDescripcion_co.Location = new System.Drawing.Point(129, 147);
+            this.txtDescripcion_co.MaxLength = 30;
+            this.txtDescripcion_co.Name = "txtDescripcion_co";
+            this.txtDescripcion_co.ReadOnly = true;
+            this.txtDescripcion_co.Size = new System.Drawing.Size(364, 19);
+            this.txtDescripcion_co.TabIndex = 37;
+            this.txtDescripcion_co.Text = "Canton (*)";
+            // 
+            // pnlListadoPO_CO
+            // 
+            this.pnlListadoPO_CO.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlListadoPO_CO.Controls.Add(this.panel7);
+            this.pnlListadoPO_CO.Controls.Add(this.txtBuscar2PO_CO);
+            this.pnlListadoPO_CO.Controls.Add(this.btnRetornar2PO);
+            this.pnlListadoPO_CO.Controls.Add(this.btnLupa2PO);
+            this.pnlListadoPO_CO.Controls.Add(this.lblListadoMarcas);
+            this.pnlListadoPO_CO.Controls.Add(this.Dgv_Provincias);
+            this.pnlListadoPO_CO.Location = new System.Drawing.Point(562, 59);
+            this.pnlListadoPO_CO.Name = "pnlListadoPO_CO";
+            this.pnlListadoPO_CO.Size = new System.Drawing.Size(634, 269);
+            this.pnlListadoPO_CO.TabIndex = 36;
+            this.pnlListadoPO_CO.Visible = false;
             // 
             // panel7
             // 
@@ -204,16 +240,16 @@ namespace Sol_Capa_Presentacion.Canto
             this.panel7.Size = new System.Drawing.Size(225, 2);
             this.panel7.TabIndex = 39;
             // 
-            // txtBuscar2P
+            // txtBuscar2PO_CO
             // 
-            this.txtBuscar2P.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtBuscar2P.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscar2P.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar2P.Location = new System.Drawing.Point(24, 78);
-            this.txtBuscar2P.Name = "txtBuscar2P";
-            this.txtBuscar2P.Size = new System.Drawing.Size(202, 19);
-            this.txtBuscar2P.TabIndex = 38;
-            this.txtBuscar2P.Text = "Buscar Provincias:";
+            this.txtBuscar2PO_CO.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtBuscar2PO_CO.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar2PO_CO.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscar2PO_CO.Location = new System.Drawing.Point(24, 78);
+            this.txtBuscar2PO_CO.Name = "txtBuscar2PO_CO";
+            this.txtBuscar2PO_CO.Size = new System.Drawing.Size(202, 19);
+            this.txtBuscar2PO_CO.TabIndex = 38;
+            this.txtBuscar2PO_CO.Text = "Buscar Provincias o Canton:";
             // 
             // btnRetornar2PO
             // 
@@ -249,26 +285,15 @@ namespace Sol_Capa_Presentacion.Canto
             this.btnLupa2PO.UseVisualStyleBackColor = true;
             this.btnLupa2PO.Click += new System.EventHandler(this.btnLupa2PO_Click);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "newfile_85903.png");
-            this.imageList1.Images.SetKeyName(1, "edit_modify_icon_149489.png");
-            this.imageList1.Images.SetKeyName(2, "removetheproperty_theapplication_eliminar_2965.png");
-            this.imageList1.Images.SetKeyName(3, "file_spreadsheet_icon_143779.png");
-            this.imageList1.Images.SetKeyName(4, "mbrilogout_99583 (1).png");
-            this.imageList1.Images.SetKeyName(5, "puntos3.png");
-            // 
             // lblListadoMarcas
             // 
             this.lblListadoMarcas.AutoSize = true;
             this.lblListadoMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListadoMarcas.Location = new System.Drawing.Point(140, 18);
             this.lblListadoMarcas.Name = "lblListadoMarcas";
-            this.lblListadoMarcas.Size = new System.Drawing.Size(179, 20);
+            this.lblListadoMarcas.Size = new System.Drawing.Size(184, 20);
             this.lblListadoMarcas.TabIndex = 11;
-            this.lblListadoMarcas.Text = "Listado de Provincias";
+            this.lblListadoMarcas.Text = "Listado de Provincias ";
             // 
             // Dgv_Provincias
             // 
@@ -295,26 +320,26 @@ namespace Sol_Capa_Presentacion.Canto
             this.Dgv_Provincias.RowHeadersWidth = 62;
             this.Dgv_Provincias.RowTemplate.Height = 28;
             this.Dgv_Provincias.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_Provincias.Size = new System.Drawing.Size(364, 128);
+            this.Dgv_Provincias.Size = new System.Drawing.Size(554, 128);
             this.Dgv_Provincias.TabIndex = 10;
             this.Dgv_Provincias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Provincias_CellDoubleClick);
             this.Dgv_Provincias.DoubleClick += new System.EventHandler(this.Dgv_Provincias_DoubleClick);
             // 
-            // btnLupaPO
+            // btnLupa_po_co
             // 
-            this.btnLupaPO.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLupaPO.FlatAppearance.BorderSize = 0;
-            this.btnLupaPO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLupaPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLupaPO.ImageKey = "puntos3.png";
-            this.btnLupaPO.ImageList = this.imageList1;
-            this.btnLupaPO.Location = new System.Drawing.Point(497, 89);
-            this.btnLupaPO.Name = "btnLupaPO";
-            this.btnLupaPO.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
-            this.btnLupaPO.Size = new System.Drawing.Size(38, 32);
-            this.btnLupaPO.TabIndex = 35;
-            this.btnLupaPO.UseVisualStyleBackColor = true;
-            this.btnLupaPO.Click += new System.EventHandler(this.btnLupaPO_Click);
+            this.btnLupa_po_co.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLupa_po_co.FlatAppearance.BorderSize = 0;
+            this.btnLupa_po_co.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLupa_po_co.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLupa_po_co.ImageKey = "puntos3.png";
+            this.btnLupa_po_co.ImageList = this.imageList1;
+            this.btnLupa_po_co.Location = new System.Drawing.Point(497, 89);
+            this.btnLupa_po_co.Name = "btnLupa_po_co";
+            this.btnLupa_po_co.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupa_po_co.Size = new System.Drawing.Size(38, 32);
+            this.btnLupa_po_co.TabIndex = 35;
+            this.btnLupa_po_co.UseVisualStyleBackColor = true;
+            this.btnLupa_po_co.Click += new System.EventHandler(this.btnLupaPO_Click);
             // 
             // panel9
             // 
@@ -342,7 +367,7 @@ namespace Sol_Capa_Presentacion.Canto
             this.btnretornar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnretornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnretornar.ForeColor = System.Drawing.Color.Black;
-            this.btnretornar.Location = new System.Drawing.Point(356, 209);
+            this.btnretornar.Location = new System.Drawing.Point(356, 265);
             this.btnretornar.Name = "btnretornar";
             this.btnretornar.Size = new System.Drawing.Size(87, 39);
             this.btnretornar.TabIndex = 13;
@@ -355,7 +380,7 @@ namespace Sol_Capa_Presentacion.Canto
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(249, 209);
+            this.btnGuardar.Location = new System.Drawing.Point(249, 265);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 39);
             this.btnGuardar.TabIndex = 12;
@@ -368,7 +393,7 @@ namespace Sol_Capa_Presentacion.Canto
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(136, 209);
+            this.btnCancelar.Location = new System.Drawing.Point(136, 265);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 39);
             this.btnCancelar.TabIndex = 11;
@@ -379,24 +404,24 @@ namespace Sol_Capa_Presentacion.Canto
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(126, 157);
+            this.panel1.Location = new System.Drawing.Point(126, 220);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(363, 1);
+            this.panel1.Size = new System.Drawing.Size(352, 2);
             this.panel1.TabIndex = 10;
             // 
-            // txtDescripcion_co
+            // txtDescripcion_di
             // 
-            this.txtDescripcion_co.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion_co.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion_co.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_co.Location = new System.Drawing.Point(126, 136);
-            this.txtDescripcion_co.Name = "txtDescripcion_co";
-            this.txtDescripcion_co.ReadOnly = true;
-            this.txtDescripcion_co.Size = new System.Drawing.Size(365, 19);
-            this.txtDescripcion_co.TabIndex = 9;
-            this.txtDescripcion_co.Text = "Cantones (*)";
-            this.txtDescripcion_co.Enter += new System.EventHandler(this.txtDescripcion_ma_Enter);
-            this.txtDescripcion_co.Leave += new System.EventHandler(this.txtDescripcion_ma_Leave);
+            this.txtDescripcion_di.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion_di.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion_di.ForeColor = System.Drawing.Color.Black;
+            this.txtDescripcion_di.Location = new System.Drawing.Point(126, 197);
+            this.txtDescripcion_di.Name = "txtDescripcion_di";
+            this.txtDescripcion_di.ReadOnly = true;
+            this.txtDescripcion_di.Size = new System.Drawing.Size(365, 19);
+            this.txtDescripcion_di.TabIndex = 9;
+            this.txtDescripcion_di.Text = "Distritos (*)";
+            this.txtDescripcion_di.Enter += new System.EventHandler(this.txtDescripcion_ma_Enter);
+            this.txtDescripcion_di.Leave += new System.EventHandler(this.txtDescripcion_ma_Leave);
             // 
             // btnnuevo
             // 
@@ -482,30 +507,30 @@ namespace Sol_Capa_Presentacion.Canto
             this.btnsalir.UseVisualStyleBackColor = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // Frm_Cantones
+            // Frm_Distritos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(55)))), ((int)(((byte)(67)))));
-            this.ClientSize = new System.Drawing.Size(1147, 679);
+            this.ClientSize = new System.Drawing.Size(1336, 547);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnreporte);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.Tb_Principal);
-            this.Name = "Frm_Cantones";
+            this.Name = "Frm_Distritos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";
-            this.Load += new System.EventHandler(this.Frm_Cantones_Load_1);
+            this.Load += new System.EventHandler(this.Frm_Distritos_Load);
             this.Tb_Principal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Principal)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.pnlListadoProvincias.ResumeLayout(false);
-            this.pnlListadoProvincias.PerformLayout();
+            this.pnlListadoPO_CO.ResumeLayout(false);
+            this.pnlListadoPO_CO.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Provincias)).EndInit();
             this.ResumeLayout(false);
 
@@ -518,7 +543,7 @@ namespace Sol_Capa_Presentacion.Canto
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView Dgv_Principal;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtCantones;
+        private System.Windows.Forms.TextBox txtDistritos;
         private System.Windows.Forms.Panel Linea;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnactualizar;
@@ -528,18 +553,20 @@ namespace Sol_Capa_Presentacion.Canto
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtDescripcion_co;
+        private System.Windows.Forms.TextBox txtDescripcion_di;
         private System.Windows.Forms.Button btnretornar;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button btnLupaPO;
+        private System.Windows.Forms.Button btnLupa_po_co;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtDescripcion_po;
-        private System.Windows.Forms.Panel pnlListadoProvincias;
+        private System.Windows.Forms.Panel pnlListadoPO_CO;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txtBuscar2P;
+        private System.Windows.Forms.TextBox txtBuscar2PO_CO;
         private System.Windows.Forms.Button btnRetornar2PO;
         private System.Windows.Forms.Button btnLupa2PO;
         private System.Windows.Forms.Label lblListadoMarcas;
         private System.Windows.Forms.DataGridView Dgv_Provincias;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtDescripcion_co;
     }
 }

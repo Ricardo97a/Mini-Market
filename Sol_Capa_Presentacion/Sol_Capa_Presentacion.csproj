@@ -87,6 +87,12 @@
     <Compile Include="Categoria\Frm_Categoria.Designer.cs">
       <DependentUpon>Frm_Categoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Distritos\Frm_Distritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distritos\Frm_Distritos.Designer.cs">
+      <DependentUpon>Frm_Distritos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marcas\Frm_Marcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Categoria\Frm_Categoria.resx">
       <DependentUpon>Frm_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distritos\Frm_Distritos.resx">
+      <DependentUpon>Frm_Distritos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcas\Frm_Marcas.resx">
       <DependentUpon>Frm_Marcas.cs</DependentUpon>

@@ -10,39 +10,42 @@ using System.Windows.Forms;
 using Sol_Capa_Entidades;
 using Sol_Capa_Negocio;
 
-namespace Sol_Capa_Presentacion.Canto
+namespace Sol_Capa_Presentacion.Distritos
 {
-    public partial class Frm_Cantones : Form
+    public partial class Frm_Distritos : Form
     {
-        public Frm_Cantones()
+        public Frm_Distritos()
         {
             InitializeComponent();
         }
         #region "Variables"
         int estadoGuarda = 0; //sin nunguna accion 
         int codigo_co = 0;
+        int codigo_di = 0;
         int codigo_po = 0;
         int botones = 0;
 
         #endregion
         #region "Mis Metodos"
-        private void Formato_co()
+        private void Formato_di()
         {
             Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_CO";
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO_DI";
             Dgv_Principal.Columns[1].Width = 200;
-            Dgv_Principal.Columns[1].HeaderText = "Canton";
+            Dgv_Principal.Columns[1].HeaderText = "DISTRITOS";
             Dgv_Principal.Columns[2].Width = 200;
-            Dgv_Principal.Columns[2].HeaderText = "Provincias";
-            Dgv_Principal.Columns[3].Visible = false;
+            Dgv_Principal.Columns[2].HeaderText = "CANTON";
+            Dgv_Principal.Columns[3].Width = 200;
+            Dgv_Principal.Columns[3].HeaderText = "PROVINCIA";
+            Dgv_Principal.Columns[4].Visible = false;
         }
 
-        public void Listado_co(string ctexto)
+        public void Listado_di(string ctexto)
         {
             try
             {
-                Dgv_Principal.DataSource = N_Cantones.Listado_co(ctexto);
-                this.Formato_co();
+                Dgv_Principal.DataSource = N_Distritos.Listado_di(ctexto);
+                this.Formato_di();
             }
             catch (Exception ex)
             {
@@ -71,11 +74,11 @@ namespace Sol_Capa_Presentacion.Canto
         {
             this.btnGuardar.Enabled = estado;
             this.btnCancelar.Enabled = estado;           
-            this.txtDescripcion_co.Enabled = estado;
+            this.txtDescripcion_di.Enabled = estado;
         }
         private void Seleccionar_Item()
         {
-            if (String.IsNullOrEmpty(Convert.ToString(Dgv_Principal.CurrentRow.Cells["codigo_co"].Value)))
+            if (String.IsNullOrEmpty(Convert.ToString(Dgv_Principal.CurrentRow.Cells["codigo_di"].Value)))
             {
                 MessageBox.Show("No se tiene informacion para visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -84,27 +87,35 @@ namespace Sol_Capa_Presentacion.Canto
             {
                 this.codigo_po = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_po"].Value);
                 txtDescripcion_po.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_po"].Value);
-
-                this.codigo_co = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_co"].Value);
                 txtDescripcion_co.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_co"].Value);
+
+                this.codigo_di = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_di"].Value);
+                txtDescripcion_di.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_di"].Value);
+
+               
+
+               
 
             }
 
         }
 
-        private void Formato_po()
-        {           
+        private void Formato_po_co()
+        {
             Dgv_Provincias.Columns[0].Width = 200;
-            Dgv_Provincias.Columns[0].HeaderText = "PROVINCIAS";
+            Dgv_Provincias.Columns[0].HeaderText = "CANTON";
             Dgv_Provincias.Columns[1].Visible = false;
+            Dgv_Provincias.Columns[2].Width = 200;
+            Dgv_Provincias.Columns[2].HeaderText = "PROVINCIAS";
+            Dgv_Provincias.Columns[3].Visible = false;
         }
 
-        public void Listado_PO_CO(string ctexto)
+        public void Listado_po_co(string ctexto)
         {
             try
             {
-                Dgv_Provincias.DataSource = N_Cantones.Listado_PO_CO(ctexto);
-                this.Formato_po();
+                Dgv_Provincias.DataSource = N_Distritos.Listado_PO_CO(ctexto);
+                this.Formato_po_co();
             }
             catch (Exception ex)
             {
@@ -113,7 +124,7 @@ namespace Sol_Capa_Presentacion.Canto
             }
 
         }
-        private void Seleccionar_Item_po()
+        private void Seleccionar_Item_po_co()
         {
             if (String.IsNullOrEmpty(Convert.ToString(Dgv_Provincias.CurrentRow.Cells["codigo_po"].Value)))
             {
@@ -122,8 +133,11 @@ namespace Sol_Capa_Presentacion.Canto
             }
             else
             {
+                this.codigo_co = Convert.ToInt32(Dgv_Provincias.CurrentRow.Cells["codigo_co"].Value);
+                txtDescripcion_co.Text = Convert.ToString(Dgv_Provincias.CurrentRow.Cells["descripcion_co"].Value);
+
                 this.codigo_po = Convert.ToInt32(Dgv_Provincias.CurrentRow.Cells["codigo_po"].Value);
-                txtDescripcion_po.Text = Convert.ToString(Dgv_Provincias.CurrentRow.Cells["descripcion_po"].Value);            
+                txtDescripcion_po.Text = Convert.ToString(Dgv_Provincias.CurrentRow.Cells["descripcion_po"].Value);
 
             }
 
@@ -137,10 +151,10 @@ namespace Sol_Capa_Presentacion.Canto
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if(txtCantones.Text== "Buscar Marcas:")
+            if(txtDistritos.Text== "Buscar Marcas:")
             {
-                txtCantones.Text = "";
-                txtCantones.ForeColor = Color.Black;
+                txtDistritos.Text = "";
+                txtDistritos.ForeColor = Color.Black;
 
             }
         }
@@ -148,40 +162,41 @@ namespace Sol_Capa_Presentacion.Canto
         private void txtMarcas_Leave(object sender, EventArgs e)
         {
 
-            if (txtCantones.Text == "")
+            if (txtDistritos.Text == "")
             {
-                txtCantones.Text = "Buscar Marcas:";
-                txtCantones.ForeColor = Color.Black;
+                txtDistritos.Text = "Buscar Marcas:";
+                txtDistritos.ForeColor = Color.Black;
 
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtDescripcion_co.Text == string.Empty || txtDescripcion_po.Text == string.Empty)
+            if (txtDescripcion_di.Text == string.Empty || txtDescripcion_po.Text == string.Empty)
             {
                 MessageBox.Show("Falta ingresar datos requeridos(*)","Aviso de Sistemas",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
             }
             else
             {
-                E_Cantones oCO = new E_Cantones();
+                E_Distritos oDI = new E_Distritos();
                 string respuesta = "";
-                oCO.codigo_co = this.codigo_co;
-                oCO.descripcion_co = txtDescripcion_co.Text.Trim();
-                oCO.codigo_po = this.codigo_po;
-                respuesta = N_Cantones.Guardar_co(estadoGuarda, oCO);
+                oDI.codigo_di = this.codigo_di;
+                oDI.descripcion_di = txtDescripcion_di.Text.Trim();
+                oDI.codigo_co = this.codigo_co;
+              
+                respuesta = N_Distritos.Guardar_di(estadoGuarda, oDI);
                 if (respuesta=="ok")
                 {
-                    this.Listado_co("%");
+                    this.Listado_di("%");
                     MessageBox.Show("Los datos han sido guardado correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     estadoGuarda = 0;
                     this.Estado_Botones_Principales(true);
                     this.Estado_Botones_Procesos(false);
-                    this.txtDescripcion_co.Text = "";
-                    this.txtDescripcion_co.ReadOnly = true;
+                    this.txtDescripcion_di.Text = "";
+                    this.txtDescripcion_di.ReadOnly = true;
                     this.Tb_Principal.SelectedIndex = 0; 
-                    this.codigo_co = 0;
+                    this.codigo_di = 0;
                     this.botones = 0;
                 }
                 else
@@ -212,7 +227,7 @@ namespace Sol_Capa_Presentacion.Canto
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
             this.Seleccionar_Item();
-            this.txtDescripcion_co.ReadOnly = false;
+            this.txtDescripcion_di.ReadOnly = false;
             Tb_Principal.SelectedIndex = 1;
             //txtDescripcion_ma.Focus();
 
@@ -223,27 +238,27 @@ namespace Sol_Capa_Presentacion.Canto
             estadoGuarda = 0; // sin ninguna accion
             this.botones = 0;
             this.codigo_po = 0;
-            txtDescripcion_co.Text = "";
-            this.txtDescripcion_co.ReadOnly = true;
+            txtDescripcion_di.Text = "";
+            this.txtDescripcion_di.ReadOnly = true;
             this.Estado_Botones_Principales(true);
             this.Estado_Botones_Procesos(false);
             this.Botones(false);
             this.Tb_Principal.SelectedIndex = 0;
 
-            if (txtDescripcion_co.Text == "" || txtDescripcion_co.Text != null )
+            if (txtDescripcion_di.Text == "" || txtDescripcion_di.Text != null )
             {
-                txtDescripcion_co.Text = "Marcas(*)";
-                txtDescripcion_co.ForeColor = Color.Black;
+                txtDescripcion_di.Text = "Marcas(*)";
+                txtDescripcion_di.ForeColor = Color.Black;
           
             }
         }
 
         private void txtDescripcion_ma_Enter(object sender, EventArgs e)
         {
-            if (txtDescripcion_co.Text == "Marcas(*)")
+            if (txtDescripcion_di.Text == "Marcas(*)")
             {
-                txtDescripcion_co.Text = "";
-                txtDescripcion_co.ForeColor = Color.Black;
+                txtDescripcion_di.Text = "";
+                txtDescripcion_di.ForeColor = Color.Black;
 
             }
         }
@@ -251,10 +266,10 @@ namespace Sol_Capa_Presentacion.Canto
         private void txtDescripcion_ma_Leave(object sender, EventArgs e)
         {
 
-            if (txtDescripcion_co.Text == "")
+            if (txtDescripcion_di.Text == "")
             {
-                txtDescripcion_co.Text = "Marcas(*)";
-                txtDescripcion_co.ForeColor = Color.Black;
+                txtDescripcion_di.Text = "Marcas(*)";
+                txtDescripcion_di.ForeColor = Color.Black;
 
             }
         }
@@ -278,15 +293,15 @@ namespace Sol_Capa_Presentacion.Canto
         private void Tb_Principal_Click(object sender, EventArgs e)
         {
             //revisar
-            if (txtCantones.Text == "")
+            if (txtDistritos.Text == "")
             {
-                txtCantones.Text = "Buscar Marcas:";
-                txtCantones.ForeColor = Color.Black;
+                txtDistritos.Text = "Buscar Marcas:";
+                txtDistritos.ForeColor = Color.Black;
 
-            }else if (txtDescripcion_co.Text !=null)
+            }else if (txtDescripcion_di.Text !=null)
             {
-                txtCantones.Text = "Buscar Marcas:";
-                txtCantones.ForeColor = Color.Black;
+                txtDistritos.Text = "Buscar Marcas:";
+                txtDistritos.ForeColor = Color.Black;
             }
         }
 
@@ -309,7 +324,7 @@ namespace Sol_Capa_Presentacion.Canto
                     respuesta = N_Cantones.Eliminar_co(this.codigo_co);
                     if (respuesta.Equals("ok"))
                     {
-                        this.Listado_co("%");
+                        this.Listado_di("%");
                         MessageBox.Show("Registro eliminado", "Aviso del Sistema",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                         this.codigo_co = 0;                        
                     }
@@ -321,15 +336,15 @@ namespace Sol_Capa_Presentacion.Canto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Listado_co(txtDescripcion_co.Text.Trim());
+            this.Listado_di(txtDescripcion_di.Text.Trim());
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
-            if (txtDescripcion_co.Text == "")
+            if (txtDescripcion_di.Text == "")
             {
-                txtDescripcion_co.Text = "Marcas(*)";
-                txtDescripcion_co.ForeColor = Color.Black;
+                txtDescripcion_di.Text = "Marcas(*)";
+                txtDescripcion_di.ForeColor = Color.Black;
 
             }
         }
@@ -341,10 +356,10 @@ namespace Sol_Capa_Presentacion.Canto
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-            if (txtDescripcion_co.Text == "")
+            if (txtDescripcion_di.Text == "")
             {
-                txtDescripcion_co.Text = "Marcas(*)";
-                txtDescripcion_co.ForeColor = Color.Black;
+                txtDescripcion_di.Text = "Marcas(*)";
+                txtDescripcion_di.ForeColor = Color.Black;
 
             }
         }
@@ -384,47 +399,54 @@ namespace Sol_Capa_Presentacion.Canto
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
             //txtDescripcion_ma.Text = "";
-            this.txtDescripcion_co.ReadOnly = false;            
+            this.txtDescripcion_po.Focus();
+            this.txtDescripcion_po.ReadOnly = false;
+            txtDescripcion_po.Focus();
+            this.txtDescripcion_co.ReadOnly = false;
+            this.txtDescripcion_di.ReadOnly = false;
+           
             Tb_Principal.SelectedIndex = 1; 
         }
 
         private void btnLupaPO_Click(object sender, EventArgs e)
         {
-            this.pnlListadoProvincias.Visible = true;
-            this.pnlListadoProvincias.Location = btnLupaPO.Location;
+            this.pnlListadoPO_CO.Visible = true;
+            this.pnlListadoPO_CO.Location = btnLupa_po_co.Location;
         }
 
         private void btnRetornar2PO_Click(object sender, EventArgs e)
         {
-            this.pnlListadoProvincias.Visible = false;
+            this.pnlListadoPO_CO.Visible = false;
         }
 
         private void Dgv_Provincias_DoubleClick(object sender, EventArgs e)
         {
-            this.Seleccionar_Item_po();
-            pnlListadoProvincias.Visible = false;
-            this.txtDescripcion_co.Focus();
+            this.Seleccionar_Item_po_co();
+            pnlListadoPO_CO.Visible = false;
+            this.txtDescripcion_di.Focus();
         }
 
         private void btnLupa2PO_Click(object sender, EventArgs e)
         {
-            this.Listado_PO_CO(txtBuscar2P.Text);
+            this.Listado_po_co(txtBuscar2PO_CO.Text);
         }
 
-        private void Frm_Cantones_Load_1(object sender, EventArgs e)
-        {
-            this.Listado_PO_CO("%");
-            this.Listado_co("%");
-        }
+       
 
         private void btnRetornar2PO_Click_1(object sender, EventArgs e)
         {
-            this.pnlListadoProvincias.Visible = false;
+            this.pnlListadoPO_CO.Visible = false;
         }
 
         private void Dgv_Provincias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }         
+
+        private void Frm_Distritos_Load(object sender, EventArgs e)
+        {
+            this.Listado_po_co("%");
+            this.Listado_di("%");
         }
     }
 }
