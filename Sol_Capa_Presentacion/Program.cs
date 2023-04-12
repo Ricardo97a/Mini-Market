@@ -16,7 +16,7 @@ namespace Sol_Capa_Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sol_Capa_Presentacion.Distritos.Frm_Distritos());
+            Application.Run(new Sol_Capa_Presentacion.Entradas_Productos.Frm_Entrada_Productos());
         }
     }
 }

@@ -72,9 +72,11 @@ C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presenta
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Canto.Frm_Cantones.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Categoria.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Distritos.Frm_Distritos.resources
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Entradas_Productos.Frm_Entrada_Productos.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Marcas.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Productos.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Properties.Resources.resources
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Proveedores.Frm_Proveedores.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Provincias.Frm_Provincias.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Rubros.Frm_Rubros.resources
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Presentacion\obj\Debug\Sol_Capa_Presentacion.Productos.Frm_Unidades_Medidas.resources

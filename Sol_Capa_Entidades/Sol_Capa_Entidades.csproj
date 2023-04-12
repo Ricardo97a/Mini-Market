@@ -45,6 +45,8 @@
     <Compile Include="E_Distritos.cs" />
     <Compile Include="E_Categoria.cs" />
     <Compile Include="E_Cantones.cs" />
+    <Compile Include="E_Entrada_Productos.cs" />
+    <Compile Include="E_Proveedores.cs" />
     <Compile Include="E_Provincias.cs" />
     <Compile Include="E_Rubros.cs" />
     <Compile Include="E_Marcas.cs" />
