@@ -47,6 +47,7 @@ namespace Sol_Capa_Presentacion.Productos
             Dgv_Principal.Columns[7].Visible = false;
             Dgv_Principal.Columns[8].Visible = false;
             Dgv_Principal.Columns[9].Visible = false;
+            Dgv_Principal.Columns[10].Visible = false;
         }
 
         public void Listado_pr(string ctexto)
@@ -109,6 +110,7 @@ namespace Sol_Capa_Presentacion.Productos
                 txtDescripcion_ca.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_ca"].Value);
                 txtStock_min.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["stock_min"].Value);
                 txtStock_max.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["stock_max"].Value);
+                txt_precio_pr.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["pu_venta"].Value);
 
             }
 
@@ -249,10 +251,12 @@ namespace Sol_Capa_Presentacion.Productos
             this.Estado_Botones_Procesos(true);         
             this.txtStock_min.Text = "0";
             this.txtStock_max.Text = "0";
+            this.txt_precio_pr.Text = "0";
             this.txtDescripcion_pr.ReadOnly = false;
             this.txtStock_min.ReadOnly = false;
             this.txtStock_max.ReadOnly = false;
             this.txtDescripcion_ma.ReadOnly = false;
+            this.txt_precio_pr.ReadOnly = false;
             Tb_Principal.SelectedIndex = 1;
           
         }
@@ -445,7 +449,8 @@ namespace Sol_Capa_Presentacion.Productos
             if (txtDescripcion_pr.Text == string.Empty ||
                 txtDescripcion_ma.Text == string.Empty ||
                 txtDescripcion_um.Text == string.Empty ||
-                txtDescripcion_ca.Text == string.Empty)
+                txtDescripcion_ca.Text == string.Empty ||
+                txt_precio_pr.Text ==string.Empty)
             {
                 MessageBox.Show("Falta ingresar datos requeridos(*)", "Aviso de Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -461,6 +466,7 @@ namespace Sol_Capa_Presentacion.Productos
                 oPR.codigo_ca = this.codigo_ca;
                 oPR.stock_min = Convert.ToDecimal(txtStock_min.Text);
                 oPR.stock_max = Convert.ToDecimal(txtStock_max.Text);
+                oPR.pu_venta = Convert.ToDecimal(txt_precio_pr.Text);
                 respuesta = N_Productos.Guardar_pr(estadoGuarda, oPR);
                 if (respuesta == "ok")
                 {
@@ -472,9 +478,11 @@ namespace Sol_Capa_Presentacion.Productos
                     this.txtDescripcion_pr.Text = "";
                     this.txtStock_min.Text = "0";
                     this.txtStock_max.Text = "0";
+                    this.txt_precio_pr.Text = "0";
                     this.txtDescripcion_ma.ReadOnly = true;
                     this.txtStock_min.ReadOnly = false;
                     this.txtStock_max.ReadOnly = false;
+                    this.txt_precio_pr.ReadOnly = false;
                     this.txtDescripcion_pr.ReadOnly = true;
                     this.Tb_Principal.SelectedIndex = 0;
                     this.codigo_pr = 0;

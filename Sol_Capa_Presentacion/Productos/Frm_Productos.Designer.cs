@@ -49,6 +49,8 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txt_precio_pr = new System.Windows.Forms.TextBox();
             this.gbxStockActual = new System.Windows.Forms.GroupBox();
             this.Dvg_StockActual = new System.Windows.Forms.DataGridView();
             this.pnlListadoCategoria = new System.Windows.Forms.Panel();
@@ -115,11 +117,10 @@ namespace Sol_Capa_Presentacion.Productos
             // 
             this.Tb_Principal.Controls.Add(this.tabPage1);
             this.Tb_Principal.Controls.Add(this.tabPage2);
-            this.Tb_Principal.Location = new System.Drawing.Point(9, 8);
-            this.Tb_Principal.Margin = new System.Windows.Forms.Padding(2);
+            this.Tb_Principal.Location = new System.Drawing.Point(14, 12);
             this.Tb_Principal.Name = "Tb_Principal";
             this.Tb_Principal.SelectedIndex = 0;
-            this.Tb_Principal.Size = new System.Drawing.Size(1107, 335);
+            this.Tb_Principal.Size = new System.Drawing.Size(1660, 515);
             this.Tb_Principal.TabIndex = 0;
             this.Tb_Principal.RightToLeftLayoutChanged += new System.EventHandler(this.Tb_Principal_RightToLeftLayoutChanged);
             this.Tb_Principal.Selected += new System.Windows.Forms.TabControlEventHandler(this.Tb_Principal_Selected);
@@ -131,11 +132,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.tabPage1.Controls.Add(this.txtBuscarProductos);
             this.tabPage1.Controls.Add(this.Dgv_Principal);
             this.tabPage1.Controls.Add(this.btnBuscar);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1099, 309);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1652, 482);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -143,10 +143,9 @@ namespace Sol_Capa_Presentacion.Productos
             // Linea
             // 
             this.Linea.BackColor = System.Drawing.Color.Black;
-            this.Linea.Location = new System.Drawing.Point(103, 44);
-            this.Linea.Margin = new System.Windows.Forms.Padding(2);
+            this.Linea.Location = new System.Drawing.Point(154, 68);
             this.Linea.Name = "Linea";
-            this.Linea.Size = new System.Drawing.Size(242, 1);
+            this.Linea.Size = new System.Drawing.Size(363, 2);
             this.Linea.TabIndex = 8;
             // 
             // txtBuscarProductos
@@ -154,13 +153,11 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtBuscarProductos.BackColor = System.Drawing.Color.White;
             this.txtBuscarProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscarProductos.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscarProductos.Location = new System.Drawing.Point(102, 27);
-            this.txtBuscarProductos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscarProductos.Location = new System.Drawing.Point(153, 42);
             this.txtBuscarProductos.Name = "txtBuscarProductos";
-            this.txtBuscarProductos.Size = new System.Drawing.Size(243, 13);
+            this.txtBuscarProductos.Size = new System.Drawing.Size(364, 19);
             this.txtBuscarProductos.TabIndex = 5;
             this.txtBuscarProductos.Text = "Buscar Productos:";
-           
             // 
             // Dgv_Principal
             // 
@@ -181,16 +178,14 @@ namespace Sol_Capa_Presentacion.Productos
             this.Dgv_Principal.ColumnHeadersHeight = 35;
             this.Dgv_Principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Principal.EnableHeadersVisualStyles = false;
-            this.Dgv_Principal.Location = new System.Drawing.Point(21, 65);
-            this.Dgv_Principal.Margin = new System.Windows.Forms.Padding(2);
+            this.Dgv_Principal.Location = new System.Drawing.Point(32, 100);
             this.Dgv_Principal.Name = "Dgv_Principal";
             this.Dgv_Principal.ReadOnly = true;
             this.Dgv_Principal.RowHeadersWidth = 62;
             this.Dgv_Principal.RowTemplate.Height = 28;
             this.Dgv_Principal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_Principal.Size = new System.Drawing.Size(1063, 190);
+            this.Dgv_Principal.Size = new System.Drawing.Size(1594, 292);
             this.Dgv_Principal.TabIndex = 3;
-           
             this.Dgv_Principal.DoubleClick += new System.EventHandler(this.Dgv_Principal_DoubleClick);
             // 
             // btnBuscar
@@ -198,10 +193,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(359, 19);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(538, 29);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(58, 25);
+            this.btnBuscar.Size = new System.Drawing.Size(87, 38);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -211,17 +205,18 @@ namespace Sol_Capa_Presentacion.Productos
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1099, 309);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1652, 482);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.txt_precio_pr);
             this.panel1.Controls.Add(this.gbxStockActual);
             this.panel1.Controls.Add(this.pnlListadoCategoria);
             this.panel1.Controls.Add(this.pnlListadoMedida);
@@ -244,19 +239,41 @@ namespace Sol_Capa_Presentacion.Productos
             this.panel1.Controls.Add(this.txtDescripcion_pr);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.txtDescripcion_ma);
-            this.panel1.Location = new System.Drawing.Point(48, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(72, 18);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1031, 293);
+            this.panel1.Size = new System.Drawing.Size(1546, 451);
             this.panel1.TabIndex = 23;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(145, 288);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(252, 2);
+            this.panel8.TabIndex = 44;
+            // 
+            // txt_precio_pr
+            // 
+            this.txt_precio_pr.BackColor = System.Drawing.Color.White;
+            this.txt_precio_pr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_precio_pr.ForeColor = System.Drawing.Color.Black;
+            this.txt_precio_pr.Location = new System.Drawing.Point(145, 268);
+            this.txt_precio_pr.MaxLength = 20;
+            this.txt_precio_pr.Name = "txt_precio_pr";
+            this.txt_precio_pr.ReadOnly = true;
+            this.txt_precio_pr.Size = new System.Drawing.Size(252, 19);
+            this.txt_precio_pr.TabIndex = 43;
+            this.txt_precio_pr.Text = "Precio (*)";
             // 
             // gbxStockActual
             // 
             this.gbxStockActual.Controls.Add(this.Dvg_StockActual);
             this.gbxStockActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxStockActual.Location = new System.Drawing.Point(453, 25);
+            this.gbxStockActual.Location = new System.Drawing.Point(680, 38);
+            this.gbxStockActual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbxStockActual.Name = "gbxStockActual";
-            this.gbxStockActual.Size = new System.Drawing.Size(559, 222);
+            this.gbxStockActual.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbxStockActual.Size = new System.Drawing.Size(838, 342);
             this.gbxStockActual.TabIndex = 42;
             this.gbxStockActual.TabStop = false;
             this.gbxStockActual.Text = "Estado de Stock Actual en Almacenes";
@@ -280,14 +297,13 @@ namespace Sol_Capa_Presentacion.Productos
             this.Dvg_StockActual.ColumnHeadersHeight = 35;
             this.Dvg_StockActual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dvg_StockActual.EnableHeadersVisualStyles = false;
-            this.Dvg_StockActual.Location = new System.Drawing.Point(14, 25);
-            this.Dvg_StockActual.Margin = new System.Windows.Forms.Padding(2);
+            this.Dvg_StockActual.Location = new System.Drawing.Point(21, 38);
             this.Dvg_StockActual.Name = "Dvg_StockActual";
             this.Dvg_StockActual.ReadOnly = true;
             this.Dvg_StockActual.RowHeadersWidth = 62;
             this.Dvg_StockActual.RowTemplate.Height = 28;
             this.Dvg_StockActual.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dvg_StockActual.Size = new System.Drawing.Size(530, 182);
+            this.Dvg_StockActual.Size = new System.Drawing.Size(795, 280);
             this.Dvg_StockActual.TabIndex = 11;
             // 
             // pnlListadoCategoria
@@ -299,10 +315,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.pnlListadoCategoria.Controls.Add(this.btnRetornar2C);
             this.pnlListadoCategoria.Controls.Add(this.btnLupa2C);
             this.pnlListadoCategoria.Controls.Add(this.Dvg_Categorias);
-            this.pnlListadoCategoria.Location = new System.Drawing.Point(758, 261);
-            this.pnlListadoCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlListadoCategoria.Location = new System.Drawing.Point(1137, 402);
             this.pnlListadoCategoria.Name = "pnlListadoCategoria";
-            this.pnlListadoCategoria.Size = new System.Drawing.Size(269, 175);
+            this.pnlListadoCategoria.Size = new System.Drawing.Size(404, 269);
             this.pnlListadoCategoria.TabIndex = 41;
             this.pnlListadoCategoria.Visible = false;
             // 
@@ -310,20 +325,18 @@ namespace Sol_Capa_Presentacion.Productos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(57, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 13);
+            this.label2.Size = new System.Drawing.Size(291, 20);
             this.label2.TabIndex = 40;
             this.label2.Text = "Listado de Unidades de Categorias";
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Location = new System.Drawing.Point(13, 73);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Location = new System.Drawing.Point(20, 112);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(150, 1);
+            this.panel11.Size = new System.Drawing.Size(225, 2);
             this.panel11.TabIndex = 39;
             // 
             // txtBuscar2C
@@ -331,10 +344,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtBuscar2C.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBuscar2C.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar2C.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar2C.Location = new System.Drawing.Point(16, 51);
-            this.txtBuscar2C.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar2C.Location = new System.Drawing.Point(24, 78);
             this.txtBuscar2C.Name = "txtBuscar2C";
-            this.txtBuscar2C.Size = new System.Drawing.Size(135, 13);
+            this.txtBuscar2C.Size = new System.Drawing.Size(202, 19);
             this.txtBuscar2C.TabIndex = 38;
             this.txtBuscar2C.Text = "Buscar Categorias:";
             // 
@@ -346,11 +358,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnRetornar2C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetornar2C.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetornar2C.ImageKey = "(ninguno)";
-            this.btnRetornar2C.Location = new System.Drawing.Point(229, 51);
-            this.btnRetornar2C.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRetornar2C.Location = new System.Drawing.Point(344, 78);
             this.btnRetornar2C.Name = "btnRetornar2C";
-            this.btnRetornar2C.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnRetornar2C.Size = new System.Drawing.Size(25, 21);
+            this.btnRetornar2C.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnRetornar2C.Size = new System.Drawing.Size(38, 32);
             this.btnRetornar2C.TabIndex = 34;
             this.btnRetornar2C.Tag = "";
             this.btnRetornar2C.Text = "<=";
@@ -365,11 +376,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnLupa2C.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupa2C.ImageKey = "puntos3.png";
             this.btnLupa2C.ImageList = this.imageList1;
-            this.btnLupa2C.Location = new System.Drawing.Point(180, 53);
-            this.btnLupa2C.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLupa2C.Location = new System.Drawing.Point(270, 82);
             this.btnLupa2C.Name = "btnLupa2C";
-            this.btnLupa2C.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnLupa2C.Size = new System.Drawing.Size(25, 21);
+            this.btnLupa2C.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupa2C.Size = new System.Drawing.Size(38, 32);
             this.btnLupa2C.TabIndex = 33;
             this.btnLupa2C.UseVisualStyleBackColor = true;
             this.btnLupa2C.Click += new System.EventHandler(this.btnLupa2C_Click);
@@ -405,14 +415,13 @@ namespace Sol_Capa_Presentacion.Productos
             this.Dvg_Categorias.ColumnHeadersHeight = 35;
             this.Dvg_Categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dvg_Categorias.EnableHeadersVisualStyles = false;
-            this.Dvg_Categorias.Location = new System.Drawing.Point(12, 78);
-            this.Dvg_Categorias.Margin = new System.Windows.Forms.Padding(2);
+            this.Dvg_Categorias.Location = new System.Drawing.Point(18, 120);
             this.Dvg_Categorias.Name = "Dvg_Categorias";
             this.Dvg_Categorias.ReadOnly = true;
             this.Dvg_Categorias.RowHeadersWidth = 62;
             this.Dvg_Categorias.RowTemplate.Height = 28;
             this.Dvg_Categorias.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dvg_Categorias.Size = new System.Drawing.Size(243, 83);
+            this.Dvg_Categorias.Size = new System.Drawing.Size(364, 128);
             this.Dvg_Categorias.TabIndex = 10;
             this.Dvg_Categorias.DoubleClick += new System.EventHandler(this.Dvg_Categorias_DoubleClick);
             // 
@@ -425,10 +434,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.pnlListadoMedida.Controls.Add(this.btnRetornar2U);
             this.pnlListadoMedida.Controls.Add(this.btnLupa2U);
             this.pnlListadoMedida.Controls.Add(this.Dgv_Unidades);
-            this.pnlListadoMedida.Location = new System.Drawing.Point(546, 259);
-            this.pnlListadoMedida.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlListadoMedida.Location = new System.Drawing.Point(819, 398);
             this.pnlListadoMedida.Name = "pnlListadoMedida";
-            this.pnlListadoMedida.Size = new System.Drawing.Size(269, 175);
+            this.pnlListadoMedida.Size = new System.Drawing.Size(404, 269);
             this.pnlListadoMedida.TabIndex = 40;
             this.pnlListadoMedida.Visible = false;
             // 
@@ -436,20 +444,18 @@ namespace Sol_Capa_Presentacion.Productos
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(57, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 13);
+            this.label1.Size = new System.Drawing.Size(271, 20);
             this.label1.TabIndex = 40;
             this.label1.Text = "Listado de Unidades de Medidas";
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Black;
-            this.panel10.Location = new System.Drawing.Point(13, 73);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Location = new System.Drawing.Point(20, 112);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(150, 1);
+            this.panel10.Size = new System.Drawing.Size(225, 2);
             this.panel10.TabIndex = 39;
             // 
             // txtBuscar2U
@@ -457,10 +463,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtBuscar2U.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBuscar2U.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar2U.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar2U.Location = new System.Drawing.Point(16, 51);
-            this.txtBuscar2U.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar2U.Location = new System.Drawing.Point(24, 78);
             this.txtBuscar2U.Name = "txtBuscar2U";
-            this.txtBuscar2U.Size = new System.Drawing.Size(135, 13);
+            this.txtBuscar2U.Size = new System.Drawing.Size(202, 19);
             this.txtBuscar2U.TabIndex = 38;
             this.txtBuscar2U.Text = "Buscar Unidades:";
             // 
@@ -472,11 +477,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnRetornar2U.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetornar2U.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetornar2U.ImageKey = "(ninguno)";
-            this.btnRetornar2U.Location = new System.Drawing.Point(229, 51);
-            this.btnRetornar2U.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRetornar2U.Location = new System.Drawing.Point(344, 78);
             this.btnRetornar2U.Name = "btnRetornar2U";
-            this.btnRetornar2U.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnRetornar2U.Size = new System.Drawing.Size(25, 21);
+            this.btnRetornar2U.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnRetornar2U.Size = new System.Drawing.Size(38, 32);
             this.btnRetornar2U.TabIndex = 34;
             this.btnRetornar2U.Tag = "";
             this.btnRetornar2U.Text = "<=";
@@ -491,11 +495,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnLupa2U.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupa2U.ImageKey = "puntos3.png";
             this.btnLupa2U.ImageList = this.imageList1;
-            this.btnLupa2U.Location = new System.Drawing.Point(180, 53);
-            this.btnLupa2U.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLupa2U.Location = new System.Drawing.Point(270, 82);
             this.btnLupa2U.Name = "btnLupa2U";
-            this.btnLupa2U.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnLupa2U.Size = new System.Drawing.Size(25, 21);
+            this.btnLupa2U.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupa2U.Size = new System.Drawing.Size(38, 32);
             this.btnLupa2U.TabIndex = 33;
             this.btnLupa2U.UseVisualStyleBackColor = true;
             this.btnLupa2U.Click += new System.EventHandler(this.btnLupa2U_Click);
@@ -519,14 +522,13 @@ namespace Sol_Capa_Presentacion.Productos
             this.Dgv_Unidades.ColumnHeadersHeight = 35;
             this.Dgv_Unidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Unidades.EnableHeadersVisualStyles = false;
-            this.Dgv_Unidades.Location = new System.Drawing.Point(12, 78);
-            this.Dgv_Unidades.Margin = new System.Windows.Forms.Padding(2);
+            this.Dgv_Unidades.Location = new System.Drawing.Point(18, 120);
             this.Dgv_Unidades.Name = "Dgv_Unidades";
             this.Dgv_Unidades.ReadOnly = true;
             this.Dgv_Unidades.RowHeadersWidth = 62;
             this.Dgv_Unidades.RowTemplate.Height = 28;
             this.Dgv_Unidades.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_Unidades.Size = new System.Drawing.Size(243, 83);
+            this.Dgv_Unidades.Size = new System.Drawing.Size(364, 128);
             this.Dgv_Unidades.TabIndex = 10;
             this.Dgv_Unidades.DoubleClick += new System.EventHandler(this.Dgv_Unidades_DoubleClick);
             // 
@@ -535,10 +537,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnretornar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnretornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnretornar.ForeColor = System.Drawing.Color.Black;
-            this.btnretornar.Location = new System.Drawing.Point(231, 222);
-            this.btnretornar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnretornar.Location = new System.Drawing.Point(346, 342);
             this.btnretornar.Name = "btnretornar";
-            this.btnretornar.Size = new System.Drawing.Size(58, 25);
+            this.btnretornar.Size = new System.Drawing.Size(87, 38);
             this.btnretornar.TabIndex = 40;
             this.btnretornar.Text = "Retornar";
             this.btnretornar.UseVisualStyleBackColor = false;
@@ -549,10 +550,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(159, 222);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Location = new System.Drawing.Point(238, 342);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(58, 25);
+            this.btnGuardar.Size = new System.Drawing.Size(87, 38);
             this.btnGuardar.TabIndex = 39;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -563,10 +563,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(84, 222);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(126, 342);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(58, 25);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 38);
             this.btnCancelar.TabIndex = 38;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -581,20 +580,18 @@ namespace Sol_Capa_Presentacion.Productos
             this.pnlListadoMarcas.Controls.Add(this.btnLupa2M);
             this.pnlListadoMarcas.Controls.Add(this.lblListadoMarcas);
             this.pnlListadoMarcas.Controls.Add(this.Dgv_Marca);
-            this.pnlListadoMarcas.Location = new System.Drawing.Point(273, 261);
-            this.pnlListadoMarcas.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlListadoMarcas.Location = new System.Drawing.Point(410, 402);
             this.pnlListadoMarcas.Name = "pnlListadoMarcas";
-            this.pnlListadoMarcas.Size = new System.Drawing.Size(269, 175);
+            this.pnlListadoMarcas.Size = new System.Drawing.Size(404, 269);
             this.pnlListadoMarcas.TabIndex = 35;
             this.pnlListadoMarcas.Visible = false;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(13, 73);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Location = new System.Drawing.Point(20, 112);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(150, 1);
+            this.panel7.Size = new System.Drawing.Size(225, 2);
             this.panel7.TabIndex = 39;
             // 
             // txtBuscar2M
@@ -602,10 +599,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtBuscar2M.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBuscar2M.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar2M.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar2M.Location = new System.Drawing.Point(16, 51);
-            this.txtBuscar2M.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar2M.Location = new System.Drawing.Point(24, 78);
             this.txtBuscar2M.Name = "txtBuscar2M";
-            this.txtBuscar2M.Size = new System.Drawing.Size(135, 13);
+            this.txtBuscar2M.Size = new System.Drawing.Size(202, 19);
             this.txtBuscar2M.TabIndex = 38;
             this.txtBuscar2M.Text = "Buscar Marca:";
             // 
@@ -617,11 +613,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnRetornar2M.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetornar2M.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetornar2M.ImageKey = "(ninguno)";
-            this.btnRetornar2M.Location = new System.Drawing.Point(229, 51);
-            this.btnRetornar2M.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRetornar2M.Location = new System.Drawing.Point(344, 78);
             this.btnRetornar2M.Name = "btnRetornar2M";
-            this.btnRetornar2M.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnRetornar2M.Size = new System.Drawing.Size(25, 21);
+            this.btnRetornar2M.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnRetornar2M.Size = new System.Drawing.Size(38, 32);
             this.btnRetornar2M.TabIndex = 34;
             this.btnRetornar2M.Tag = "";
             this.btnRetornar2M.Text = "<=";
@@ -636,11 +631,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnLupa2M.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupa2M.ImageKey = "puntos3.png";
             this.btnLupa2M.ImageList = this.imageList1;
-            this.btnLupa2M.Location = new System.Drawing.Point(180, 53);
-            this.btnLupa2M.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLupa2M.Location = new System.Drawing.Point(270, 82);
             this.btnLupa2M.Name = "btnLupa2M";
-            this.btnLupa2M.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnLupa2M.Size = new System.Drawing.Size(25, 21);
+            this.btnLupa2M.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupa2M.Size = new System.Drawing.Size(38, 32);
             this.btnLupa2M.TabIndex = 33;
             this.btnLupa2M.UseVisualStyleBackColor = true;
             this.btnLupa2M.Click += new System.EventHandler(this.btnLupa2M_Click);
@@ -649,10 +643,9 @@ namespace Sol_Capa_Presentacion.Productos
             // 
             this.lblListadoMarcas.AutoSize = true;
             this.lblListadoMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListadoMarcas.Location = new System.Drawing.Point(93, 12);
-            this.lblListadoMarcas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblListadoMarcas.Location = new System.Drawing.Point(140, 18);
             this.lblListadoMarcas.Name = "lblListadoMarcas";
-            this.lblListadoMarcas.Size = new System.Drawing.Size(111, 13);
+            this.lblListadoMarcas.Size = new System.Drawing.Size(156, 20);
             this.lblListadoMarcas.TabIndex = 11;
             this.lblListadoMarcas.Text = "Listado de Marcas";
             // 
@@ -675,14 +668,13 @@ namespace Sol_Capa_Presentacion.Productos
             this.Dgv_Marca.ColumnHeadersHeight = 35;
             this.Dgv_Marca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Marca.EnableHeadersVisualStyles = false;
-            this.Dgv_Marca.Location = new System.Drawing.Point(12, 78);
-            this.Dgv_Marca.Margin = new System.Windows.Forms.Padding(2);
+            this.Dgv_Marca.Location = new System.Drawing.Point(18, 120);
             this.Dgv_Marca.Name = "Dgv_Marca";
             this.Dgv_Marca.ReadOnly = true;
             this.Dgv_Marca.RowHeadersWidth = 62;
             this.Dgv_Marca.RowTemplate.Height = 28;
             this.Dgv_Marca.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_Marca.Size = new System.Drawing.Size(243, 83);
+            this.Dgv_Marca.Size = new System.Drawing.Size(364, 128);
             this.Dgv_Marca.TabIndex = 10;
             this.Dgv_Marca.DoubleClick += new System.EventHandler(this.Dgv_Marca_DoubleClick);
             // 
@@ -694,11 +686,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnLupaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupaCategoria.ImageKey = "puntos3.png";
             this.btnLupaCategoria.ImageList = this.imageList1;
-            this.btnLupaCategoria.Location = new System.Drawing.Point(318, 101);
-            this.btnLupaCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLupaCategoria.Location = new System.Drawing.Point(477, 155);
             this.btnLupaCategoria.Name = "btnLupaCategoria";
-            this.btnLupaCategoria.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnLupaCategoria.Size = new System.Drawing.Size(25, 21);
+            this.btnLupaCategoria.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupaCategoria.Size = new System.Drawing.Size(38, 32);
             this.btnLupaCategoria.TabIndex = 34;
             this.btnLupaCategoria.UseVisualStyleBackColor = true;
             this.btnLupaCategoria.Click += new System.EventHandler(this.btnLupaCategoria_Click);
@@ -711,11 +702,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnLupaMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupaMedida.ImageKey = "puntos3.png";
             this.btnLupaMedida.ImageList = this.imageList1;
-            this.btnLupaMedida.Location = new System.Drawing.Point(318, 75);
-            this.btnLupaMedida.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLupaMedida.Location = new System.Drawing.Point(477, 115);
             this.btnLupaMedida.Name = "btnLupaMedida";
-            this.btnLupaMedida.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnLupaMedida.Size = new System.Drawing.Size(25, 21);
+            this.btnLupaMedida.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupaMedida.Size = new System.Drawing.Size(38, 32);
             this.btnLupaMedida.TabIndex = 33;
             this.btnLupaMedida.UseVisualStyleBackColor = true;
             this.btnLupaMedida.Click += new System.EventHandler(this.btnLupaMedida_Click);
@@ -728,11 +718,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnLupaMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupaMarca.ImageKey = "puntos3.png";
             this.btnLupaMarca.ImageList = this.imageList1;
-            this.btnLupaMarca.Location = new System.Drawing.Point(318, 50);
-            this.btnLupaMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLupaMarca.Location = new System.Drawing.Point(477, 77);
             this.btnLupaMarca.Name = "btnLupaMarca";
-            this.btnLupaMarca.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnLupaMarca.Size = new System.Drawing.Size(25, 21);
+            this.btnLupaMarca.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupaMarca.Size = new System.Drawing.Size(38, 32);
             this.btnLupaMarca.TabIndex = 32;
             this.btnLupaMarca.UseVisualStyleBackColor = true;
             this.btnLupaMarca.Click += new System.EventHandler(this.button1_Click);
@@ -740,10 +729,9 @@ namespace Sol_Capa_Presentacion.Productos
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(204, 168);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Location = new System.Drawing.Point(304, 238);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(67, 1);
+            this.panel6.Size = new System.Drawing.Size(100, 2);
             this.panel6.TabIndex = 31;
             // 
             // txtStock_max
@@ -751,22 +739,20 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtStock_max.BackColor = System.Drawing.Color.White;
             this.txtStock_max.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock_max.ForeColor = System.Drawing.Color.Black;
-            this.txtStock_max.Location = new System.Drawing.Point(204, 154);
-            this.txtStock_max.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStock_max.Location = new System.Drawing.Point(304, 217);
             this.txtStock_max.MaxLength = 10;
             this.txtStock_max.Name = "txtStock_max";
             this.txtStock_max.ReadOnly = true;
-            this.txtStock_max.Size = new System.Drawing.Size(67, 13);
+            this.txtStock_max.Size = new System.Drawing.Size(100, 19);
             this.txtStock_max.TabIndex = 30;
             this.txtStock_max.Text = "Stock Max(*)";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(98, 166);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Location = new System.Drawing.Point(145, 235);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(67, 1);
+            this.panel5.Size = new System.Drawing.Size(100, 2);
             this.panel5.TabIndex = 29;
             // 
             // txtStock_min
@@ -774,22 +760,20 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtStock_min.BackColor = System.Drawing.Color.White;
             this.txtStock_min.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock_min.ForeColor = System.Drawing.Color.Black;
-            this.txtStock_min.Location = new System.Drawing.Point(98, 154);
-            this.txtStock_min.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStock_min.Location = new System.Drawing.Point(145, 217);
             this.txtStock_min.MaxLength = 10;
             this.txtStock_min.Name = "txtStock_min";
             this.txtStock_min.ReadOnly = true;
-            this.txtStock_min.Size = new System.Drawing.Size(67, 13);
+            this.txtStock_min.Size = new System.Drawing.Size(100, 19);
             this.txtStock_min.TabIndex = 28;
             this.txtStock_min.Text = "Stock Min(*)";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(74, 115);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(111, 177);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(233, 1);
+            this.panel4.Size = new System.Drawing.Size(350, 2);
             this.panel4.TabIndex = 27;
             // 
             // txtDescripcion_ca
@@ -797,22 +781,20 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtDescripcion_ca.BackColor = System.Drawing.Color.White;
             this.txtDescripcion_ca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion_ca.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_ca.Location = new System.Drawing.Point(74, 101);
-            this.txtDescripcion_ca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion_ca.Location = new System.Drawing.Point(111, 155);
             this.txtDescripcion_ca.MaxLength = 30;
             this.txtDescripcion_ca.Name = "txtDescripcion_ca";
             this.txtDescripcion_ca.ReadOnly = true;
-            this.txtDescripcion_ca.Size = new System.Drawing.Size(243, 13);
+            this.txtDescripcion_ca.Size = new System.Drawing.Size(364, 19);
             this.txtDescripcion_ca.TabIndex = 26;
             this.txtDescripcion_ca.Text = "Categoria(*)";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(73, 90);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(110, 138);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(233, 1);
+            this.panel3.Size = new System.Drawing.Size(350, 2);
             this.panel3.TabIndex = 24;
             // 
             // txtDescripcion_um
@@ -820,22 +802,20 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtDescripcion_um.BackColor = System.Drawing.Color.White;
             this.txtDescripcion_um.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion_um.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_um.Location = new System.Drawing.Point(73, 76);
-            this.txtDescripcion_um.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion_um.Location = new System.Drawing.Point(110, 117);
             this.txtDescripcion_um.MaxLength = 30;
             this.txtDescripcion_um.Name = "txtDescripcion_um";
             this.txtDescripcion_um.ReadOnly = true;
-            this.txtDescripcion_um.Size = new System.Drawing.Size(243, 13);
+            this.txtDescripcion_um.Size = new System.Drawing.Size(364, 19);
             this.txtDescripcion_um.TabIndex = 23;
             this.txtDescripcion_um.Text = "Medida(*)";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(74, 38);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(111, 58);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 1);
+            this.panel2.Size = new System.Drawing.Size(350, 2);
             this.panel2.TabIndex = 25;
             // 
             // txtDescripcion_pr
@@ -843,22 +823,20 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtDescripcion_pr.BackColor = System.Drawing.Color.White;
             this.txtDescripcion_pr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion_pr.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_pr.Location = new System.Drawing.Point(74, 25);
-            this.txtDescripcion_pr.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion_pr.Location = new System.Drawing.Point(111, 38);
             this.txtDescripcion_pr.MaxLength = 20;
             this.txtDescripcion_pr.Name = "txtDescripcion_pr";
             this.txtDescripcion_pr.ReadOnly = true;
-            this.txtDescripcion_pr.Size = new System.Drawing.Size(209, 13);
+            this.txtDescripcion_pr.Size = new System.Drawing.Size(314, 19);
             this.txtDescripcion_pr.TabIndex = 20;
             this.txtDescripcion_pr.Text = "Producto(*)";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(73, 64);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Location = new System.Drawing.Point(110, 98);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(233, 1);
+            this.panel9.Size = new System.Drawing.Size(350, 2);
             this.panel9.TabIndex = 22;
             // 
             // txtDescripcion_ma
@@ -866,12 +844,11 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtDescripcion_ma.BackColor = System.Drawing.Color.White;
             this.txtDescripcion_ma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion_ma.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_ma.Location = new System.Drawing.Point(73, 50);
-            this.txtDescripcion_ma.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion_ma.Location = new System.Drawing.Point(110, 77);
             this.txtDescripcion_ma.MaxLength = 30;
             this.txtDescripcion_ma.Name = "txtDescripcion_ma";
             this.txtDescripcion_ma.ReadOnly = true;
-            this.txtDescripcion_ma.Size = new System.Drawing.Size(243, 13);
+            this.txtDescripcion_ma.Size = new System.Drawing.Size(364, 19);
             this.txtDescripcion_ma.TabIndex = 21;
             this.txtDescripcion_ma.Text = "Marca(*)";
             // 
@@ -883,10 +860,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnnuevo.ForeColor = System.Drawing.Color.Black;
             this.btnnuevo.ImageKey = "newfile_85903.png";
             this.btnnuevo.ImageList = this.imageList1;
-            this.btnnuevo.Location = new System.Drawing.Point(11, 360);
-            this.btnnuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnnuevo.Location = new System.Drawing.Point(16, 554);
             this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(63, 58);
+            this.btnnuevo.Size = new System.Drawing.Size(94, 89);
             this.btnnuevo.TabIndex = 1;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -901,10 +877,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnactualizar.ForeColor = System.Drawing.Color.Black;
             this.btnactualizar.ImageKey = "edit_modify_icon_149489.png";
             this.btnactualizar.ImageList = this.imageList1;
-            this.btnactualizar.Location = new System.Drawing.Point(72, 360);
-            this.btnactualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnactualizar.Location = new System.Drawing.Point(108, 554);
             this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Size = new System.Drawing.Size(73, 58);
+            this.btnactualizar.Size = new System.Drawing.Size(110, 89);
             this.btnactualizar.TabIndex = 2;
             this.btnactualizar.Text = "Actualizar";
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -919,10 +894,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btneliminar.ForeColor = System.Drawing.Color.Black;
             this.btneliminar.ImageKey = "removetheproperty_theapplication_eliminar_2965.png";
             this.btneliminar.ImageList = this.imageList1;
-            this.btneliminar.Location = new System.Drawing.Point(143, 360);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btneliminar.Location = new System.Drawing.Point(214, 554);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(63, 58);
+            this.btneliminar.Size = new System.Drawing.Size(94, 89);
             this.btneliminar.TabIndex = 3;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -937,10 +911,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnreporte.ForeColor = System.Drawing.Color.Black;
             this.btnreporte.ImageKey = "file_spreadsheet_icon_143779.png";
             this.btnreporte.ImageList = this.imageList1;
-            this.btnreporte.Location = new System.Drawing.Point(205, 360);
-            this.btnreporte.Margin = new System.Windows.Forms.Padding(2);
+            this.btnreporte.Location = new System.Drawing.Point(308, 554);
             this.btnreporte.Name = "btnreporte";
-            this.btnreporte.Size = new System.Drawing.Size(63, 58);
+            this.btnreporte.Size = new System.Drawing.Size(94, 89);
             this.btnreporte.TabIndex = 4;
             this.btnreporte.Text = "Reporte";
             this.btnreporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -954,10 +927,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnsalir.ForeColor = System.Drawing.Color.Black;
             this.btnsalir.ImageKey = "mbrilogout_99583 (1).png";
             this.btnsalir.ImageList = this.imageList1;
-            this.btnsalir.Location = new System.Drawing.Point(267, 360);
-            this.btnsalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnsalir.Location = new System.Drawing.Point(400, 554);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(63, 58);
+            this.btnsalir.Size = new System.Drawing.Size(94, 89);
             this.btnsalir.TabIndex = 5;
             this.btnsalir.Text = "Salir";
             this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -966,17 +938,16 @@ namespace Sol_Capa_Presentacion.Productos
             // 
             // Frm_Productos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(55)))), ((int)(((byte)(67)))));
-            this.ClientSize = new System.Drawing.Size(1126, 507);
+            this.ClientSize = new System.Drawing.Size(1689, 780);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnreporte);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.Tb_Principal);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
@@ -1060,5 +1031,7 @@ namespace Sol_Capa_Presentacion.Productos
         private System.Windows.Forms.DataGridView Dvg_Categorias;
         private System.Windows.Forms.GroupBox gbxStockActual;
         private System.Windows.Forms.DataGridView Dvg_StockActual;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txt_precio_pr;
     }
 }

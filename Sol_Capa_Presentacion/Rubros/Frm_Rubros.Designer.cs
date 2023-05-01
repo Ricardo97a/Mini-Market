@@ -300,6 +300,7 @@ namespace Sol_Capa_Presentacion.Rubros
             this.btnreporte.Text = "Reporte";
             this.btnreporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnreporte.UseVisualStyleBackColor = false;
+            this.btnreporte.Click += new System.EventHandler(this.btnreporte_Click);
             // 
             // btnsalir
             // 

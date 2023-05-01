@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sol_Capa_Entidades;
 using Sol_Capa_Negocio;
+using Sol_Capa_Presentacion.Reporte;
 
-namespace Sol_Capa_Presentacion.Productos
+namespace Sol_Capa_Presentacion.Categoria
 {
     public partial class Frm_Categoria : Form
     {
@@ -332,6 +333,15 @@ namespace Sol_Capa_Presentacion.Productos
                 this.Botones(false);
                 this.btnretornar.Visible = true;
             }
+        }
+
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+
+            Frm_Rpt_Categoria reporte = new Frm_Rpt_Categoria();
+            reporte.ShowDialog();
+
+
         }
     }
 }

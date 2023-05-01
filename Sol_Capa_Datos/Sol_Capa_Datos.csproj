@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +49,9 @@
     <Compile Include="D_Distritos.cs" />
     <Compile Include="D_Categoria.cs" />
     <Compile Include="D_Cantones.cs" />
+    <Compile Include="D_Salida_Productos.cs" />
     <Compile Include="D_Entrada_Productos.cs" />
+    <Compile Include="D_Clientes.cs" />
     <Compile Include="D_Proveedores.cs" />
     <Compile Include="D_Provincias.cs" />
     <Compile Include="D_Rubros.cs" />
@@ -60,6 +65,9 @@
       <Project>{431814a8-d68f-411f-b64a-6ea246650bdb}</Project>
       <Name>Sol_Capa_Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

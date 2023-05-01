@@ -220,7 +220,6 @@ namespace Sol_Capa_Presentacion.Almacenes
             this.txtDescripcion_al.Size = new System.Drawing.Size(365, 19);
             this.txtDescripcion_al.TabIndex = 9;
             this.txtDescripcion_al.Text = "Almacen(*)";
-
             this.txtDescripcion_al.Enter += new System.EventHandler(this.txtDescripcion_al_Enter);
             this.txtDescripcion_al.Leave += new System.EventHandler(this.txtDescripcion_al_Leave);
             // 
@@ -300,6 +299,7 @@ namespace Sol_Capa_Presentacion.Almacenes
             this.btnreporte.Text = "Reporte";
             this.btnreporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnreporte.UseVisualStyleBackColor = false;
+            this.btnreporte.Click += new System.EventHandler(this.btnreporte_Click);
             // 
             // btnsalir
             // 

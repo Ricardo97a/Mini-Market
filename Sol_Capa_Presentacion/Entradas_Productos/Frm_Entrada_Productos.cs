@@ -13,14 +13,15 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         {
             InitializeComponent();
         }
-        #region "Variables"
-        int estadoGuarda = 0; //sin nunguna accion 
+        #region "Variables"       
         int codigo_pv = 0;
         int codigo_tde = 0;
         int codigo_ep = 0;
         int codigo_al = 0;
-        DataTable tabalaDetalle = new DataTable();
-        
+        int codigo_pr = 0;
+        int estadoGuarda = 0;
+        DataTable TablaDetalle = new DataTable();
+
         int botones = 0;
 
         #endregion
@@ -33,10 +34,10 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             Dgv_Principal.Columns[1].HeaderText = "TIPO DOCUMENTO";
             Dgv_Principal.Columns[2].Width = 160;
             Dgv_Principal.Columns[2].HeaderText = "NRO DOCUMENTO";
-            Dgv_Principal.Columns[4].Width = 110;
-            Dgv_Principal.Columns[4].HeaderText = "FECHA DOC";
-            Dgv_Principal.Columns[3].Width = 230;
-            Dgv_Principal.Columns[3].HeaderText = "PROVEEDOR";
+            Dgv_Principal.Columns[3].Width = 110;
+            Dgv_Principal.Columns[3].HeaderText = "FECHA DOC";
+            Dgv_Principal.Columns[4].Width = 230;
+            Dgv_Principal.Columns[4].HeaderText = "PROVEEDOR";
             Dgv_Principal.Columns[5].Width = 110;
             Dgv_Principal.Columns[5].HeaderText = "ALMACEN";
             Dgv_Principal.Columns[6].Width = 140;
@@ -46,6 +47,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             Dgv_Principal.Columns[9].Visible = false;
             Dgv_Principal.Columns[10].Visible = false;
             Dgv_Principal.Columns[11].Visible = false;
+            Dgv_Principal.Columns[12].Visible = false;
         }
 
         public void Listado_ep(string ctexto)
@@ -64,13 +66,13 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         }
         private void Estado_Botones_Principales(bool estado)
         {
-            this.btnnuevo.Enabled = estado;            
+            this.btnnuevo.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
             this.btnsalir.Enabled = !estado;
-            this.Crear_Tabla_Detalle();
-          
-            
+         //   this.Crear_Tabla_Detalle();
+
+
 
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -100,8 +102,8 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
                 MessageBox.Show("No se tiene informacion para visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-            {          
-                this.codigo_ep = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_ep"].Value);               
+            {
+                this.codigo_ep = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_ep"].Value);
                 this.codigo_tde = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_tde"].Value);
                 this.codigo_pv = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_pv"].Value);
                 this.codigo_al = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_al"].Value);
@@ -114,19 +116,21 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
                 txtSubtotal.Text = Dgv_Principal.CurrentRow.Cells["subtotal"].Value.ToString();
                 txtIva.Text = Dgv_Principal.CurrentRow.Cells["iva"].Value.ToString();
                 txtTotal_importe.Text = Dgv_Principal.CurrentRow.Cells["total_importe"].Value.ToString();
-                this.tabalaDetalle.AcceptChanges();
+
+               // this.TablaDetalle.AcceptChanges();
                 Dvg_Detalle.DataSource = N_Entrada_Productos.Listado_detalle_ep(this.codigo_ep);
                 this.Formato_Detalle();
             }
 
         }
+
         private void Formato_Detalle()
         {
-            Dvg_Detalle.Columns[0].Width = 220;
-            Dvg_Detalle.Columns[0].HeaderText = "PRODUCTOS";
-            Dvg_Detalle.Columns[1].Width = 100;
+            Dvg_Detalle.Columns[0].Width = 270;
+            Dvg_Detalle.Columns[0].HeaderText = "PRODUCTO";
+            Dvg_Detalle.Columns[1].Width = 160;
             Dvg_Detalle.Columns[1].HeaderText = "MARCA";
-            Dvg_Detalle.Columns[2].Width = 90;
+            Dvg_Detalle.Columns[2].Width = 80;
             Dvg_Detalle.Columns[2].HeaderText = "U.MEDIDA";
             Dvg_Detalle.Columns[3].Width = 90;
             Dvg_Detalle.Columns[3].HeaderText = "CANTIDAD";
@@ -135,23 +139,42 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             Dvg_Detalle.Columns[5].Width = 90;
             Dvg_Detalle.Columns[5].HeaderText = "TOTAL";
             Dvg_Detalle.Columns[6].Visible = false;
+            Dvg_Detalle.Columns[0].ReadOnly = true;
+            Dvg_Detalle.Columns[1].ReadOnly = true;
+            Dvg_Detalle.Columns[2].ReadOnly = true;
+            Dvg_Detalle.Columns[3].ReadOnly = true;
+            Dvg_Detalle.Columns[4].ReadOnly = true;
+            Dvg_Detalle.Columns[5].ReadOnly = true;
 
-        }
+        }       
         private void Crear_Tabla_Detalle()
         {
-            this.tabalaDetalle = new DataTable("TablaDetalle");
-            this.tabalaDetalle.Columns.Add("Descripcion_pr", System.Type.GetType("System.String"));
-            this.tabalaDetalle.Columns.Add("Descripcion_ma", System.Type.GetType("System.String"));
-            this.tabalaDetalle.Columns.Add("Descripcion_um", System.Type.GetType("System.String"));
-            this.tabalaDetalle.Columns.Add("Cantidad", System.Type.GetType("System.Decimal"));
-            this.tabalaDetalle.Columns.Add("Pu_compra", System.Type.GetType("System.Decimal"));
-            this.tabalaDetalle.Columns.Add("Total", System.Type.GetType("System.Decimal"));
-            this.tabalaDetalle.Columns.Add("Codigo_pr", System.Type.GetType("System.Int32"));
+            this.TablaDetalle = new DataTable("TablaDetalle");
+            this.TablaDetalle.Columns.Add("Descripcion_pr", System.Type.GetType("System.String"));
+            this.TablaDetalle.Columns.Add("Descripcion_ma", System.Type.GetType("System.String"));
+            this.TablaDetalle.Columns.Add("Descripcion_um", System.Type.GetType("System.String"));
+            this.TablaDetalle.Columns.Add("Cantidad", System.Type.GetType("System.Decimal"));
+            this.TablaDetalle.Columns.Add("Pu_compra", System.Type.GetType("System.Decimal"));
+            this.TablaDetalle.Columns.Add("Total", System.Type.GetType("System.Decimal"));
+            this.TablaDetalle.Columns.Add("Codigo_pr", System.Type.GetType("System.Int32"));
 
-            Dvg_Detalle.DataSource = this.tabalaDetalle;
+            Dvg_Detalle.DataSource = this.TablaDetalle;
             this.Formato_Detalle();
         }
 
+        private void Agregar_Item(string cDescripcion_pr, string cDescripcion_ma, string cDescripcion_um,decimal nCantidad, decimal nPu_compra, decimal nTotal, int nCodigo_pr)
+        {
+            DataRow xFila = TablaDetalle.NewRow();
+            xFila["Descripcion_pr"] = cDescripcion_pr;
+            xFila["Descripcion_ma"] = cDescripcion_ma;
+            xFila["Descripcion_um"] = cDescripcion_um;
+            xFila["Cantidad"] = nCantidad;
+            xFila["Pu_compra"] = nPu_compra;
+            xFila["Total"] = nTotal;
+            xFila["Codigo_pr"] = nCodigo_pr;
+            this.TablaDetalle.Rows.Add(xFila);
+            TablaDetalle.AcceptChanges();
+        }
         /* Formato Tipo Documento*/
 
         private void Formato_tdpc_ep()
@@ -184,13 +207,13 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             }
             else
             {
-               // this.codigo_tdpc = Convert.ToInt32(Dgv_Tdpc_ep.CurrentRow.Cells["codigo_tdpc"].Value);
+                // this.codigo_tdpc = Convert.ToInt32(Dgv_Tdpc_ep.CurrentRow.Cells["codigo_tdpc"].Value);
                 txtDescripcion_tde.Text = Convert.ToString(Dgv_Tdpc_ep.CurrentRow.Cells["descripcion_tdpc"].Value);
             }
 
         }
 
-       
+
         /* Formato Listado Proveedor*/
 
 
@@ -217,7 +240,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
 
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-                
+
         }
         private void Seleccionar_Item_pv_ep()
         {
@@ -230,21 +253,98 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             {
                 this.codigo_pv = Convert.ToInt32(Dvg_Proveedor.CurrentRow.Cells["codigo_pv"].Value);
                 txtrazon_social_pv.Text = Convert.ToString(Dvg_Proveedor.CurrentRow.Cells["razon_social_pv"].Value);
+            }
+
         }
-            
+
+        /* Formato Listado Productos*/
+
+
+        private void Formato_pr_ep()
+        {
+            Dvg_Productos.Columns[0].Width = 250;
+            Dvg_Productos.Columns[0].HeaderText = "PRODUCTO";
+            Dvg_Productos.Columns[1].Width = 150;
+            Dvg_Productos.Columns[1].HeaderText = "MARCA";
+            Dvg_Productos.Columns[2].Width = 90;
+            Dvg_Productos.Columns[2].HeaderText = "U. MEDIDA";
+            Dvg_Productos.Columns[3].Width = 1550;
+            Dvg_Productos.Columns[3].HeaderText = "CATEGORIA";
+            Dvg_Productos.Columns[4].Visible = false;
+        }
+
+        public void Listado_pr_ep(string ctexto)
+        {
+            try
+            {
+                Dvg_Productos.DataSource = N_Entrada_Productos.Listado_pr_ep(ctexto);
+                this.Formato_pr_ep();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
+        }
+        private void Seleccionar_Item_pr_ep()
+        {
+            if (String.IsNullOrEmpty(Convert.ToString(Dvg_Productos.CurrentRow.Cells["codigo_pr"].Value)))
+            {
+                MessageBox.Show("No se tiene informacion para visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                string xDescripcion_pr;
+                string xDescripcion_ma;
+                string xDescripcion_um;
+                decimal xCantidad;
+                decimal xPu_Compra;
+                decimal xTotal;
+                int xCodigo_pr;
+
+                bool Agregar = true;
+
+                xCodigo_pr = Convert.ToInt32(Dvg_Productos.CurrentRow.Cells["codigo_pr"].Value);
+                foreach (DataRow FilaTemp in TablaDetalle.Rows)
+                {
+                    if( Convert.ToInt32(FilaTemp["codigo_pr"])== xCodigo_pr)
+                    {
+                        Agregar = false;
+                        MessageBox.Show("El producto ya se encuentra agregado", "Aviso del Sistema");
+
+                    }
+                }
+                if (Agregar==true)
+                {
+                    decimal prueba = Convert.ToDecimal(0.00);
+                    xDescripcion_pr = Convert.ToString(Dvg_Productos.CurrentRow.Cells["descripcion_pr"].Value);
+                    xDescripcion_ma = Convert.ToString(Dvg_Productos.CurrentRow.Cells["descripcion_ma"].Value);
+                    xDescripcion_um = Convert.ToString(Dvg_Productos.CurrentRow.Cells["descripcion_um"].Value);
+                    xCantidad = prueba;
+                    xPu_Compra = prueba;
+                    xTotal = prueba;
+
+
+                    this.Agregar_Item(xDescripcion_pr, xDescripcion_ma, xDescripcion_um, xCantidad, xPu_Compra, xTotal, xCodigo_pr);
+                }
+                
+            }
+
         }
         /* Formato Listado Almacen*/
 
 
         private void Formato_al_ep()
         {
-          //  Dvg_Almacen.Columns[0].Width = 200;
+            //  Dvg_Almacen.Columns[0].Width = 200;
             //Dvg_Almacen.Columns[0].HeaderText = "CODIGO_AL";
             Dvg_Almacen.Columns[0].Visible = false;
             Dvg_Almacen.Columns[1].Width = 220;
             Dvg_Almacen.Columns[1].HeaderText = "ALMACEN";
             Dvg_Almacen.Columns[2].Visible = false;
-           
+
         }
 
         public void Listado_al_ep(string ctexto)
@@ -270,9 +370,9 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             }
             else
             {
-               this.codigo_pv = Convert.ToInt32(Dvg_Almacen.CurrentRow.Cells["codigo_al"].Value);
-               this.txtdescripcion_almacen.Text = Convert.ToString(Dvg_Almacen.CurrentRow.Cells["descripcion_al"].Value);
-           
+                this.codigo_al = Convert.ToInt32(Dvg_Almacen.CurrentRow.Cells["codigo_al"].Value);
+                this.txtdescripcion_almacen.Text = Convert.ToString(Dvg_Almacen.CurrentRow.Cells["descripcion_al"].Value);
+
             }
 
         }
@@ -280,7 +380,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         private void Estado_texto(bool lestado)
         {
             txtNro_Documento_ep.Enabled = !lestado;
-            txtrazon_social_pv.Enabled = !lestado;          
+            txtrazon_social_pv.Enabled = !lestado;
             btnLupaTipoDocumento_ep.Enabled = !lestado;
             lblfecha.Enabled = !lestado;
             lblobservaciones.Enabled = !lestado;
@@ -289,7 +389,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             dtp_fecha_ep.Enabled = !lestado;
             btnLupa_Proveedor.Enabled = !lestado;
             btnLupa_Almacen.Enabled = !lestado;
-            
+
 
 
         }
@@ -297,41 +397,74 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         {
             txtNro_Documento_ep.Text = "";
             txtrazon_social_pv.Text = "";
-           
             txtObservaciones.Text = "";
-            txtDescripcion_tde.Text = "";            
-
+            txtDescripcion_tde.Text = "";
         }
-        private void Placeholder_texto()        {
-            txtDescripcion_tde.Text = "Tipo doc (*)";           
+        private void Placeholder_texto()
+        {
+            txtDescripcion_tde.Text = "Tipo doc (*)";
             txtNro_Documento_ep.Text = "Nro.doc (*)";
-            txtrazon_social_pv.Text = "Proveedor  (*)"; 
+            txtrazon_social_pv.Text = "Proveedor  (*)";
             txtdescripcion_almacen.Text = "Almacen (*)";
             txtObservaciones.Text = "";
-          
+
+        }        
+
+        private void Calcular_totales()
+        {
+            decimal nSubtotal = 0;
+            decimal nIva = 0;
+            decimal nTotal_importe = 0;
+
+            if (Dvg_Detalle.Rows.Count == 0)
+            {
+                 nSubtotal = 0;
+                 nIva = 0;
+                 nTotal_importe = 0;
+            }
+            else
+            {
+                TablaDetalle.AcceptChanges();
+                foreach(DataRow FilaTemporal in TablaDetalle.Rows)
+                {
+                    nTotal_importe = nTotal_importe + Convert.ToDecimal(FilaTemporal["total"]);
+                   
+
+                }
+                nTotal_importe = decimal.Round(nTotal_importe, 2);
+
+                nSubtotal = nTotal_importe / (1 + Convert.ToDecimal("0,13"));
+                nIva = (nTotal_importe - nSubtotal);
+
+                txtSubtotal.Text = decimal.Round(nSubtotal, 2).ToString("#0.00");
+                txtIva.Text = decimal.Round(nIva,2).ToString("#0.00");
+                txtTotal_importe.Text =decimal.Round(nTotal_importe,2).ToString("#0.00");
+            }
         }
 
         #endregion
-       
+
         private void button2_Click(object sender, EventArgs e)
         {
             //btnNuevo_pr
-            botones = 2;          
-          
+            botones = 2;
+            this.estadoGuarda = 1;  
             this.Botones(true);
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
-            this.Placeholder_texto();
+            this.Placeholder_texto();           
             this.Estado_texto(false);
+            this.Crear_Tabla_Detalle();
+            this.txtNro_Documento_ep.Focus();          
             Tb_Principal.SelectedIndex = 1;
-            this.txtNro_Documento_ep.Focus();
-          
-        }      
+            Dvg_Detalle.Columns[3].ReadOnly = false;
+            Dvg_Detalle.Columns[4].ReadOnly = false;
+        }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            this.Seleccionar_Item();
-            if (String.IsNullOrEmpty(Convert.ToString(Dgv_Principal.CurrentRow.Cells["codigo_pv"].Value)))
+            //this.Seleccionar_Item();
+            if (String.IsNullOrEmpty(Convert.ToString(Dgv_Principal.CurrentRow.Cells["codigo_ep"].Value)))
             {
                 MessageBox.Show("No se tiene informacion para visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -339,17 +472,17 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             else
             {
                 DialogResult opcion;
-                opcion = MessageBox.Show("¿Estas seguro de eliminar el registro selecionado?", "Avisos del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                opcion = MessageBox.Show("¿Estas seguro de anular el registro selecionado?", "Avisos del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (opcion == DialogResult.Yes)
                 {
                     string respuesta = "";
-                    this.codigo_pv = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_pv"].Value);
-                    respuesta = N_Proveedor.Eliminar_pv(this.codigo_pv);
+                    this.codigo_ep = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_ep"].Value);
+                    respuesta = N_Entrada_Productos.Eliminar_ep(this.codigo_ep);
                     if (respuesta.Equals("ok"))
                     {
-                    //    this.Listado_pv("%");
-                        MessageBox.Show("Registro eliminado", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        this.codigo_pv = 0;
+                        //    this.Listado_pv("%");
+                        MessageBox.Show("Registro anulado", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        this.codigo_ep = 0;
 
                     }
                 }
@@ -361,12 +494,12 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           // this.Listado_pv(txtBuscarProductos.Text.Trim());
+            // this.Listado_pv(txtBuscarProductos.Text.Trim());
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
-        {         
-           
+        {
+
 
             if (txtDescripcion_tde.Text == "" || txtNro_Documento_ep.Text == "")
             {
@@ -381,7 +514,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             }
         }
 
-      
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -401,7 +534,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             if (Tb_Principal.SelectedTab == Tb_Principal.TabPages[1])
             {
                 this.Estado_Botones_Principales(false);
-              //  this.Estado_texto(false);
+                //  this.Estado_texto(false);
             }
 
             else
@@ -419,132 +552,141 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             else if (botones == 3)
             {
                 this.Botones(true);
-            }            
+            }
             else
             {
 
-                this.Botones(true);              
+                this.Botones(true);
                 this.Estado_texto(true);
                 this.btnretornar.Visible = true;
                 this.btn_agregar.Visible = false;
                 this.btn_quitar.Visible = false;
 
             }
-        }      
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.pnlListadoTdpc_ep.Location = btnLupaTipoDocumento_ep.Location;
             this.pnlListadoTdpc_ep.Visible = true;
-        }  
+        }
 
-       
+
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            if (txtNro_Documento_ep.Text == string.Empty ||
-                txtDescripcion_tde.Text == string.Empty ||
-                 
-                   txtdescripcion_almacen.Text == string.Empty ||
-                     txtrazon_social_pv.Text == string.Empty )
-                   
+            if (txtDescripcion_tde.Text == string.Empty  ||
+                txtNro_Documento_ep.Text == string.Empty ||
+                txtrazon_social_pv.Text == string.Empty  ||
+                Dvg_Detalle.Rows.Count == 0              ||
+                txtdescripcion_almacen.Text == string.Empty) 
+
             {
                 MessageBox.Show("Falta ingresar datos requeridos(*)", "Aviso de Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
-                E_Proveedores oPrv = new E_Proveedores();
+                E_Entrada_Productos oEP = new E_Entrada_Productos();
                 string respuesta = "";
-                oPrv.codigo_pv = this.codigo_pv;
-             //   oPrv.codigo_tdpc = this.codigo_tdpc;
-                oPrv.NroDocumento_pv = txtNro_Documento_ep.Text.Trim();
-                oPrv.Razon_Social_pv = txtrazon_social_pv.Text.Trim();
-               
-                oPrv.observaciones_pv = txtObservaciones.Text.Trim();
+                oEP.codigo_ep = this.codigo_ep;
+                oEP.codigo_tde = this.codigo_tde;
+                oEP.nrodocumento_ep = txtNro_Documento_ep.Text.Trim();
+                oEP.codigo_pv = this.codigo_pv;
+                oEP.Fecha_ep = dtp_fecha_ep.Value;
+                oEP.codigo_al = this.codigo_al;
+                oEP.observacion = txtObservaciones.Text.Trim();
+                oEP.subtotal = Convert.ToDecimal(txtSubtotal.Text.Trim());
+                oEP.iva = Convert.ToDecimal(txtIva.Text.Trim());
+                oEP.importe_total = Convert.ToDecimal(txtTotal_importe.Text.Trim());
 
-                respuesta = N_Proveedor.Guardar_pv(estadoGuarda, oPrv);
+                respuesta = N_Entrada_Productos.Guardar_ep( oEP, TablaDetalle);
                 if (respuesta == "ok")
                 {
-                   // this.Listado_pv("%");
+                    this.Listado_ep("%");
                     MessageBox.Show("Los datos han sido guardado correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    estadoGuarda = 0;
+                  
                     this.Estado_Botones_Principales(true);
                     this.Estado_Botones_Procesos(false);
                     this.txtNro_Documento_ep.Text = "";
-                   
+
                     this.txtNro_Documento_ep.ReadOnly = true;
-                    this.Tb_Principal.SelectedIndex = 0;
-                    this.codigo_pv = 0;
-                  //  this.codigo_tdpc = 0;
-                  //  this.codigo_sx = 0;
-                  //  this.codigo_ru = 0;
-                  //  this.codigo_di = 0;
+                    this.Tb_Principal.SelectedIndex = 0;                  
+                     codigo_pv = 0;
+                     codigo_tde = 0;
+                     codigo_ep = 0;
+                     codigo_al = 0;
+                    this.estadoGuarda = 0;
                     this.botones = 0;
-                   
+
                 }
                 else
                 {
                     MessageBox.Show(respuesta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
+
         }
 
         private void Dgv_Principal_DoubleClick(object sender, EventArgs e)
         {
             this.Seleccionar_Item();
+            //this.Seleccionar_Item();
+            //this.Agregar_Item();
+            //this.Seleccionar_Item_pr_ep();
             this.Estado_Botones_Procesos(false);
             Tb_Principal.SelectedIndex = 1;
-     
-        
+
+
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
 
-            this.estadoGuarda = 0; // sin ninguna accion
-          
+
+            this.estadoGuarda = 0;
             this.botones = 0;
             this.codigo_pv = 0;
-          //  this.codigo_tdpc = 0;
-         //   this.codigo_sx = 0;
-         ///   this.codigo_ru = 0;
-         //   this.codigo_di = 0;
-         //   this.botones = 0;
+            //  this.codigo_tdpc = 0;
+            //   this.codigo_sx = 0;
+            ///   this.codigo_ru = 0;
+            //   this.codigo_di = 0;
+            //   this.botones = 0;
 
 
             this.Estado_Botones_Principales(true);
             this.Limpiar_texto();
+            Dvg_Detalle.Columns[3].ReadOnly = true;
+            Dvg_Detalle.Columns[4].ReadOnly = true;
             this.Botones(false);
             this.Placeholder_texto();
 
             this.Tb_Principal.SelectedIndex = 0;
 
             if (txtNro_Documento_ep.Text == string.Empty ||
-                txtNro_Documento_ep.Text != null || 
-                txtDescripcion_tde.Text == string.Empty || 
-                txtDescripcion_tde.Text != null )
-              
+                txtNro_Documento_ep.Text != null ||
+                txtDescripcion_tde.Text == string.Empty ||
+                txtDescripcion_tde.Text != null)
+
             {
                 txtNro_Documento_ep.Text = "Producto (*)";
                 txtNro_Documento_ep.ForeColor = Color.Black;
                 txtDescripcion_tde.Text = "Marca (*)";
                 txtDescripcion_tde.ForeColor = Color.Black;
-              
+
             }
-           
-           
+
+
         }
 
         private void btnretornar_Click_1(object sender, EventArgs e)
         {
             this.Tb_Principal.SelectedIndex = 0;
-             this.Placeholder_texto();
+            this.Placeholder_texto();
             /* this.codigo_pr = 0;*/
             this.botones = 0;
-           
-        }             
-              
+
+        }
+
         private void btn_retornar_Click(object sender, EventArgs e)
         {
             this.pnlListadoTdpc_ep.Visible = false;
@@ -555,21 +697,22 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         {
             this.Seleccionar_Item_tdpc_pv();
             pnlListadoTdpc_ep.Visible = false;
+            lbl_tpde.Visible = true;
         }
 
-     
-      
+
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.pnlListado_almacen.Visible = false;
         }
 
-      
+
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.pnlListado_proveedor.Visible = false;
-        }       
+        }
 
         private void btnLupaTipoDocumento_ep_Click(object sender, EventArgs e)
         {
@@ -581,9 +724,8 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         {
             this.Listado_ep("%");
             this.Listado_tdpc_ep("%");
-           // this.("%");
-
-           this.Listado_al_ep("%");
+            this.Listado_pr_ep("%");
+            this.Listado_al_ep("%");
             this.Listado_pv_ep("%");
             tabPage2.Visible = false;
         }
@@ -615,6 +757,55 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         {
             this.pnlListado_almacen.Visible = true;
             this.pnlListado_almacen.Location = btnLupa_Almacen.Location;
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_Productos.Visible = true;
+            this.pnlListado_Productos.Location = btnLupaTipoDocumento_ep.Location;
+            txtBuscar_Productos.Focus();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_Productos.Visible = false;
+        }
+
+        private void Dvg_Productos_DoubleClick(object sender, EventArgs e)
+        {
+            this.Seleccionar_Item_pr_ep();
+            this.pnlListado_Productos.Visible = false;
+
+        }
+
+        private void Dvg_Detalle_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.estadoGuarda==1)
+            {
+                DataRow yFilas = (DataRow)TablaDetalle.Rows[e.RowIndex];
+                decimal yCantidad = Convert.ToDecimal(yFilas["Cantidad"]);
+                decimal yPu_compra = Convert.ToDecimal(yFilas["Pu_compra"]);
+                yFilas["Total"] = decimal.Round(yCantidad * yPu_compra, 2).ToString("#0.00");
+
+                this.Calcular_totales();
+            }
+          
+        }
+
+        private void Dvg_Detalle_DoubleClick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_quitar_Click(object sender, EventArgs e)
+        {
+            if (Dvg_Detalle.Rows.Count>0)
+            {
+                Dvg_Detalle.Rows.Remove(Dvg_Detalle.CurrentRow);
+                Dvg_Detalle.Refresh();
+                TablaDetalle.AcceptChanges();
+                this.Calcular_totales();
+            }
         }
     }
 

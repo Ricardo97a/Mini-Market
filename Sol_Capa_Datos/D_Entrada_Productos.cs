@@ -82,7 +82,7 @@ namespace Sol_Capa_Datos
                 comando.Parameters.Add("@nCodigo_tde", SqlDbType.Int).Value = oEp.codigo_tde;               
                 comando.Parameters.Add("@cNrodocumento_ep", SqlDbType.VarChar).Value = oEp.nrodocumento_ep;
                 comando.Parameters.Add("@nCodigo_pv", SqlDbType.Int).Value = oEp.codigo_pv;
-                comando.Parameters.Add("@fFecha_ep", SqlDbType.VarChar).Value = oEp.Fecha_ep;
+                comando.Parameters.Add("@fFecha_ep", SqlDbType.DateTime).Value = oEp.Fecha_ep;
                 comando.Parameters.Add("@nCodigo_al", SqlDbType.Int).Value = oEp.codigo_al; 
                 comando.Parameters.Add("@cObservacion_ep", SqlDbType.VarChar).Value = oEp.observacion;
                 comando.Parameters.Add("@nSubtotal", SqlDbType.Decimal).Value = oEp.subtotal;
@@ -115,7 +115,7 @@ namespace Sol_Capa_Datos
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@nCodigo_ep", SqlDbType.Int).Value = codigo_ep;
                 sqlcon.Open();
-                respuesta = comando.ExecuteNonQuery() == 1 ? "ok" : "No se pudo eliminar los datos";
+                respuesta = comando.ExecuteNonQuery() >= 1 ? "ok" : "No se pudo eliminar los datos";
             }
             catch (Exception ex)
             {
@@ -218,8 +218,38 @@ namespace Sol_Capa_Datos
             }
 
         }
-       
+        /*Listar Productos */
+        public DataTable Listado_pr_ep(string ctexto)
+        {
+            SqlDataReader Resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlcon = new SqlConnection();
 
-      
+            try
+            {
+                sqlcon = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("USP_Listado_pr_ep", sqlcon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@ctexto", SqlDbType.VarChar).Value = ctexto;
+                sqlcon.Open();
+                Resultado = comando.ExecuteReader();
+                tabla.Load(Resultado);
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlcon.State == ConnectionState.Open) sqlcon.Close();
+            }
+
+        }
+
+
+
     } /*fin de clase*/
 }

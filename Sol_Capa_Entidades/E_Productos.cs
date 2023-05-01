@@ -15,5 +15,6 @@ namespace Sol_Capa_Entidades
         public int codigo_ca { get; set; }
         public decimal stock_min { get; set; }
         public decimal stock_max { get; set; }
+        public decimal pu_venta { get; set; }
     }
 }

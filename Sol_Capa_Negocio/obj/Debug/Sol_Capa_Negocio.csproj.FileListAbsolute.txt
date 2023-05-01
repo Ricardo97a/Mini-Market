@@ -1,5 +1,6 @@
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Negocio\bin\Debug\Sol_Capa_Negocio.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Negocio\bin\Debug\Sol_Capa_Negocio.pdb
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Negocio\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Negocio\bin\Debug\Sol_Capa_Datos.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Negocio\bin\Debug\Sol_Capa_Entidades.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Negocio\bin\Debug\Sol_Capa_Datos.pdb

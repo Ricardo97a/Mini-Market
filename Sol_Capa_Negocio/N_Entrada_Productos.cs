@@ -28,7 +28,7 @@ namespace Sol_Capa_Negocio
             D_Entrada_Productos Datos = new D_Entrada_Productos();
             return Datos.Guardar_ep(oEP, dTable);
         }
-        public static string Eliminar_rp(int codigo_ep)
+        public static string Eliminar_ep(int codigo_ep)
         {
             D_Entrada_Productos Datos = new D_Entrada_Productos();
             return Datos.Eliminar_ep(codigo_ep);
@@ -49,6 +49,11 @@ namespace Sol_Capa_Negocio
             D_Entrada_Productos Datos = new D_Entrada_Productos();
             return Datos.Listado_pv_ep(ctexto);
         }
-       
+        public static DataTable Listado_pr_ep(string ctexto)
+        {
+            D_Entrada_Productos Datos = new D_Entrada_Productos();
+            return Datos.Listado_pr_ep(ctexto);
+        }
+
     }
 }

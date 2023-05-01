@@ -58,6 +58,7 @@ namespace Sol_Capa_Datos
                 comando.Parameters.Add("@nCodigo_ca", SqlDbType.VarChar).Value = oPr.codigo_ca;
                 comando.Parameters.Add("@nStock_min", SqlDbType.VarChar).Value = oPr.stock_min;
                 comando.Parameters.Add("@nStock_max", SqlDbType.VarChar).Value = oPr.stock_max; 
+                comando.Parameters.Add("@nPu_venta", SqlDbType.VarChar).Value = oPr.pu_venta; 
                 sqlcon.Open();
                 respuesta = comando.ExecuteNonQuery() >= 1 ? "ok" : "No se pudo regitrar los datos";
             }

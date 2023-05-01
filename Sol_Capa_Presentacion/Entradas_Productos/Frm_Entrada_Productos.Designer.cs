@@ -39,8 +39,10 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tb_Principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Linea = new System.Windows.Forms.Panel();
@@ -49,9 +51,23 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_almacen = new System.Windows.Forms.Label();
+            this.lbl_proveedor = new System.Windows.Forms.Label();
+            this.lbl_tpde = new System.Windows.Forms.Label();
+            this.lbl_nrodocumento = new System.Windows.Forms.Label();
+            this.pnlListado_Productos = new System.Windows.Forms.Panel();
+            this.btnLupa_Productos = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtBuscar_Productos = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Dvg_Productos = new System.Windows.Forms.DataGridView();
             this.pnlListado_proveedor = new System.Windows.Forms.Panel();
             this.btnLupa2Proveedor = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtBuscar_proveedor = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -101,6 +117,8 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Principal)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlListado_Productos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dvg_Productos)).BeginInit();
             this.pnlListado_proveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dvg_Proveedor)).BeginInit();
             this.pnlListado_almacen.SuspendLayout();
@@ -114,7 +132,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             this.Tb_Principal.Controls.Add(this.tabPage1);
             this.Tb_Principal.Controls.Add(this.tabPage2);
-            this.Tb_Principal.Location = new System.Drawing.Point(14, 12);
+            this.Tb_Principal.Location = new System.Drawing.Point(18, 12);
             this.Tb_Principal.Name = "Tb_Principal";
             this.Tb_Principal.SelectedIndex = 0;
             this.Tb_Principal.Size = new System.Drawing.Size(1660, 635);
@@ -212,6 +230,14 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbl_almacen);
+            this.panel1.Controls.Add(this.lbl_proveedor);
+            this.panel1.Controls.Add(this.lbl_tpde);
+            this.panel1.Controls.Add(this.lbl_nrodocumento);
+            this.panel1.Controls.Add(this.pnlListado_Productos);
             this.panel1.Controls.Add(this.pnlListado_proveedor);
             this.panel1.Controls.Add(this.pnlListado_almacen);
             this.panel1.Controls.Add(this.pnlListadoTdpc_ep);
@@ -247,6 +273,190 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.panel1.Size = new System.Drawing.Size(1532, 591);
             this.panel1.TabIndex = 23;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1112, 441);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 22);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "Importa total ₡";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(950, 441);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 22);
+            this.label5.TabIndex = 82;
+            this.label5.Text = "Iva ₡";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(744, 443);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 22);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "Subtotal ₡";
+            // 
+            // lbl_almacen
+            // 
+            this.lbl_almacen.AutoSize = true;
+            this.lbl_almacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_almacen.Location = new System.Drawing.Point(916, 120);
+            this.lbl_almacen.Name = "lbl_almacen";
+            this.lbl_almacen.Size = new System.Drawing.Size(84, 22);
+            this.lbl_almacen.TabIndex = 77;
+            this.lbl_almacen.Text = "Almacen:";
+            // 
+            // lbl_proveedor
+            // 
+            this.lbl_proveedor.AutoSize = true;
+            this.lbl_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_proveedor.Location = new System.Drawing.Point(916, 63);
+            this.lbl_proveedor.Name = "lbl_proveedor";
+            this.lbl_proveedor.Size = new System.Drawing.Size(98, 22);
+            this.lbl_proveedor.TabIndex = 76;
+            this.lbl_proveedor.Text = "Proveedor:";
+            // 
+            // lbl_tpde
+            // 
+            this.lbl_tpde.AutoSize = true;
+            this.lbl_tpde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tpde.Location = new System.Drawing.Point(196, 56);
+            this.lbl_tpde.Name = "lbl_tpde";
+            this.lbl_tpde.Size = new System.Drawing.Size(90, 22);
+            this.lbl_tpde.TabIndex = 74;
+            this.lbl_tpde.Text = "Tipo doc.:";
+            // 
+            // lbl_nrodocumento
+            // 
+            this.lbl_nrodocumento.AutoSize = true;
+            this.lbl_nrodocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nrodocumento.Location = new System.Drawing.Point(196, 106);
+            this.lbl_nrodocumento.Name = "lbl_nrodocumento";
+            this.lbl_nrodocumento.Size = new System.Drawing.Size(83, 22);
+            this.lbl_nrodocumento.TabIndex = 75;
+            this.lbl_nrodocumento.Text = "Nro doc.:";
+            // 
+            // pnlListado_Productos
+            // 
+            this.pnlListado_Productos.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlListado_Productos.Controls.Add(this.btnLupa_Productos);
+            this.pnlListado_Productos.Controls.Add(this.panel7);
+            this.pnlListado_Productos.Controls.Add(this.txtBuscar_Productos);
+            this.pnlListado_Productos.Controls.Add(this.button3);
+            this.pnlListado_Productos.Controls.Add(this.label1);
+            this.pnlListado_Productos.Controls.Add(this.Dvg_Productos);
+            this.pnlListado_Productos.Location = new System.Drawing.Point(14, 530);
+            this.pnlListado_Productos.Name = "pnlListado_Productos";
+            this.pnlListado_Productos.Size = new System.Drawing.Size(1048, 282);
+            this.pnlListado_Productos.TabIndex = 73;
+            this.pnlListado_Productos.Visible = false;
+            // 
+            // btnLupa_Productos
+            // 
+            this.btnLupa_Productos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLupa_Productos.FlatAppearance.BorderSize = 0;
+            this.btnLupa_Productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLupa_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLupa_Productos.ImageKey = "puntos3.png";
+            this.btnLupa_Productos.ImageList = this.imageList1;
+            this.btnLupa_Productos.Location = new System.Drawing.Point(335, 65);
+            this.btnLupa_Productos.Name = "btnLupa_Productos";
+            this.btnLupa_Productos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            this.btnLupa_Productos.Size = new System.Drawing.Size(38, 32);
+            this.btnLupa_Productos.TabIndex = 60;
+            this.btnLupa_Productos.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "newfile_85903.png");
+            this.imageList1.Images.SetKeyName(1, "edit_modify_icon_149489.png");
+            this.imageList1.Images.SetKeyName(2, "removetheproperty_theapplication_eliminar_2965.png");
+            this.imageList1.Images.SetKeyName(3, "file_spreadsheet_icon_143779.png");
+            this.imageList1.Images.SetKeyName(4, "mbrilogout_99583 (1).png");
+            this.imageList1.Images.SetKeyName(5, "puntos.png");
+            this.imageList1.Images.SetKeyName(6, "puntos3.png");
+            this.imageList1.Images.SetKeyName(7, "x.png");
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(33, 85);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(284, 1);
+            this.panel7.TabIndex = 59;
+            // 
+            // txtBuscar_Productos
+            // 
+            this.txtBuscar_Productos.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtBuscar_Productos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar_Productos.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscar_Productos.Location = new System.Drawing.Point(33, 58);
+            this.txtBuscar_Productos.MaxLength = 20;
+            this.txtBuscar_Productos.Multiline = true;
+            this.txtBuscar_Productos.Name = "txtBuscar_Productos";
+            this.txtBuscar_Productos.Size = new System.Drawing.Size(317, 26);
+            this.txtBuscar_Productos.TabIndex = 58;
+            this.txtBuscar_Productos.Text = "Buscar Productos";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.ImageKey = "x.png";
+            this.button3.ImageList = this.imageList1;
+            this.button3.Location = new System.Drawing.Point(965, 14);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(36, 30);
+            this.button3.TabIndex = 57;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(361, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Listado de Productos";
+            // 
+            // Dvg_Productos
+            // 
+            this.Dvg_Productos.AllowUserToAddRows = false;
+            this.Dvg_Productos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Olive;
+            this.Dvg_Productos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.Dvg_Productos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dvg_Productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.Dvg_Productos.ColumnHeadersHeight = 35;
+            this.Dvg_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dvg_Productos.EnableHeadersVisualStyles = false;
+            this.Dvg_Productos.Location = new System.Drawing.Point(20, 103);
+            this.Dvg_Productos.Name = "Dvg_Productos";
+            this.Dvg_Productos.RowHeadersWidth = 62;
+            this.Dvg_Productos.RowTemplate.Height = 28;
+            this.Dvg_Productos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Dvg_Productos.Size = new System.Drawing.Size(981, 166);
+            this.Dvg_Productos.TabIndex = 10;
+            this.Dvg_Productos.DoubleClick += new System.EventHandler(this.Dvg_Productos_DoubleClick);
+            // 
             // pnlListado_proveedor
             // 
             this.pnlListado_proveedor.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -277,19 +487,6 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnLupa2Proveedor.TabIndex = 60;
             this.btnLupa2Proveedor.UseVisualStyleBackColor = true;
             this.btnLupa2Proveedor.Click += new System.EventHandler(this.btnLupa2Proveedor_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "newfile_85903.png");
-            this.imageList1.Images.SetKeyName(1, "edit_modify_icon_149489.png");
-            this.imageList1.Images.SetKeyName(2, "removetheproperty_theapplication_eliminar_2965.png");
-            this.imageList1.Images.SetKeyName(3, "file_spreadsheet_icon_143779.png");
-            this.imageList1.Images.SetKeyName(4, "mbrilogout_99583 (1).png");
-            this.imageList1.Images.SetKeyName(5, "puntos.png");
-            this.imageList1.Images.SetKeyName(6, "puntos3.png");
-            this.imageList1.Images.SetKeyName(7, "x.png");
             // 
             // panel11
             // 
@@ -338,18 +535,18 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             this.Dvg_Proveedor.AllowUserToAddRows = false;
             this.Dvg_Proveedor.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Olive;
-            this.Dvg_Proveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Olive;
+            this.Dvg_Proveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.Dvg_Proveedor.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dvg_Proveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dvg_Proveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.Dvg_Proveedor.ColumnHeadersHeight = 35;
             this.Dvg_Proveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dvg_Proveedor.EnableHeadersVisualStyles = false;
@@ -401,18 +598,18 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             this.Dvg_Almacen.AllowUserToAddRows = false;
             this.Dvg_Almacen.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Olive;
-            this.Dvg_Almacen.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Olive;
+            this.Dvg_Almacen.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.Dvg_Almacen.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dvg_Almacen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dvg_Almacen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.Dvg_Almacen.ColumnHeadersHeight = 35;
             this.Dvg_Almacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dvg_Almacen.EnableHeadersVisualStyles = false;
@@ -464,18 +661,18 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             this.Dgv_Tdpc_ep.AllowUserToAddRows = false;
             this.Dgv_Tdpc_ep.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Olive;
-            this.Dgv_Tdpc_ep.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Olive;
+            this.Dgv_Tdpc_ep.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.Dgv_Tdpc_ep.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_Tdpc_ep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_Tdpc_ep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.Dgv_Tdpc_ep.ColumnHeadersHeight = 35;
             this.Dgv_Tdpc_ep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Tdpc_ep.EnableHeadersVisualStyles = false;
@@ -491,34 +688,36 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             // btn_quitar
             // 
-            this.btn_quitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_quitar.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_quitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_quitar.ForeColor = System.Drawing.Color.Black;
-            this.btn_quitar.Location = new System.Drawing.Point(269, 198);
+            this.btn_quitar.ForeColor = System.Drawing.Color.White;
+            this.btn_quitar.Location = new System.Drawing.Point(361, 220);
             this.btn_quitar.Name = "btn_quitar";
             this.btn_quitar.Size = new System.Drawing.Size(136, 39);
             this.btn_quitar.TabIndex = 72;
             this.btn_quitar.Text = "Quitar";
             this.btn_quitar.UseVisualStyleBackColor = false;
+            this.btn_quitar.Click += new System.EventHandler(this.btn_quitar_Click);
             // 
             // btn_agregar
             // 
-            this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btn_agregar.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.ForeColor = System.Drawing.Color.Black;
-            this.btn_agregar.Location = new System.Drawing.Point(112, 198);
+            this.btn_agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_agregar.Location = new System.Drawing.Point(200, 220);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(134, 39);
             this.btn_agregar.TabIndex = 71;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(1110, 440);
+            this.panel5.Location = new System.Drawing.Point(1246, 464);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(135, 2);
+            this.panel5.Size = new System.Drawing.Size(100, 2);
             this.panel5.TabIndex = 70;
             // 
             // txtTotal_importe
@@ -527,19 +726,19 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.txtTotal_importe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal_importe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal_importe.ForeColor = System.Drawing.Color.Black;
-            this.txtTotal_importe.Location = new System.Drawing.Point(1110, 420);
+            this.txtTotal_importe.Location = new System.Drawing.Point(1256, 445);
             this.txtTotal_importe.MaxLength = 20;
+            this.txtTotal_importe.Multiline = true;
             this.txtTotal_importe.Name = "txtTotal_importe";
-            this.txtTotal_importe.Size = new System.Drawing.Size(133, 19);
+            this.txtTotal_importe.Size = new System.Drawing.Size(90, 26);
             this.txtTotal_importe.TabIndex = 69;
-            this.txtTotal_importe.Text = "Total importe: ";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(969, 440);
+            this.panel4.Location = new System.Drawing.Point(1006, 463);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(135, 2);
+            this.panel4.Size = new System.Drawing.Size(100, 2);
             this.panel4.TabIndex = 68;
             // 
             // txtIva
@@ -548,19 +747,19 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.txtIva.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIva.ForeColor = System.Drawing.Color.Black;
-            this.txtIva.Location = new System.Drawing.Point(969, 420);
+            this.txtIva.Location = new System.Drawing.Point(1016, 444);
             this.txtIva.MaxLength = 20;
+            this.txtIva.Multiline = true;
             this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(135, 19);
+            this.txtIva.Size = new System.Drawing.Size(90, 26);
             this.txtIva.TabIndex = 67;
-            this.txtIva.Text = "Iva:";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(828, 441);
+            this.panel3.Location = new System.Drawing.Point(844, 463);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 2);
+            this.panel3.Size = new System.Drawing.Size(100, 2);
             this.panel3.TabIndex = 66;
             // 
             // txtSubtotal
@@ -569,54 +768,57 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.txtSubtotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubtotal.ForeColor = System.Drawing.Color.Black;
-            this.txtSubtotal.Location = new System.Drawing.Point(828, 421);
+            this.txtSubtotal.Location = new System.Drawing.Point(844, 443);
             this.txtSubtotal.MaxLength = 20;
+            this.txtSubtotal.Multiline = true;
             this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(135, 19);
+            this.txtSubtotal.Size = new System.Drawing.Size(101, 26);
             this.txtSubtotal.TabIndex = 65;
-            this.txtSubtotal.Text = "Sub Total: ";
             // 
             // Dvg_Detalle
             // 
             this.Dvg_Detalle.AllowUserToAddRows = false;
             this.Dvg_Detalle.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Olive;
-            this.Dvg_Detalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Olive;
+            this.Dvg_Detalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
             this.Dvg_Detalle.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dvg_Detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dvg_Detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.Dvg_Detalle.ColumnHeadersHeight = 35;
             this.Dvg_Detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dvg_Detalle.EnableHeadersVisualStyles = false;
-            this.Dvg_Detalle.Location = new System.Drawing.Point(110, 251);
+            this.Dvg_Detalle.Location = new System.Drawing.Point(200, 273);
             this.Dvg_Detalle.Name = "Dvg_Detalle";
-            this.Dvg_Detalle.ReadOnly = true;
             this.Dvg_Detalle.RowHeadersWidth = 62;
             this.Dvg_Detalle.RowTemplate.Height = 28;
             this.Dvg_Detalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Dvg_Detalle.Size = new System.Drawing.Size(1139, 144);
             this.Dvg_Detalle.TabIndex = 64;
+            this.Dvg_Detalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dvg_Detalle_CellEndEdit);
+            this.Dvg_Detalle.DoubleClick += new System.EventHandler(this.Dvg_Detalle_DoubleClick);
             // 
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(363, 76);
+            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.Location = new System.Drawing.Point(196, 146);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(111, 20);
+            this.lblfecha.Size = new System.Drawing.Size(126, 22);
             this.lblfecha.TabIndex = 63;
             this.lblfecha.Text = "Fecha Doc. (*)";
+            this.lblfecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtp_fecha_ep
             // 
             this.dtp_fecha_ep.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_ep.Location = new System.Drawing.Point(480, 74);
+            this.dtp_fecha_ep.Location = new System.Drawing.Point(328, 142);
             this.dtp_fecha_ep.Name = "dtp_fecha_ep";
             this.dtp_fecha_ep.Size = new System.Drawing.Size(119, 26);
             this.dtp_fecha_ep.TabIndex = 62;
@@ -629,7 +831,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnLupa_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupa_Proveedor.ImageKey = "puntos3.png";
             this.btnLupa_Proveedor.ImageList = this.imageList1;
-            this.btnLupa_Proveedor.Location = new System.Drawing.Point(1100, 45);
+            this.btnLupa_Proveedor.Location = new System.Drawing.Point(1295, 67);
             this.btnLupa_Proveedor.Name = "btnLupa_Proveedor";
             this.btnLupa_Proveedor.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.btnLupa_Proveedor.Size = new System.Drawing.Size(38, 32);
@@ -640,7 +842,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(825, 61);
+            this.panel8.Location = new System.Drawing.Point(1020, 83);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(265, 2);
             this.panel8.TabIndex = 59;
@@ -650,7 +852,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.txtrazon_social_pv.BackColor = System.Drawing.Color.White;
             this.txtrazon_social_pv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtrazon_social_pv.ForeColor = System.Drawing.Color.Black;
-            this.txtrazon_social_pv.Location = new System.Drawing.Point(825, 37);
+            this.txtrazon_social_pv.Location = new System.Drawing.Point(1020, 59);
             this.txtrazon_social_pv.Name = "txtrazon_social_pv";
             this.txtrazon_social_pv.Size = new System.Drawing.Size(267, 19);
             this.txtrazon_social_pv.TabIndex = 60;
@@ -658,7 +860,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(825, 178);
+            this.txtObservaciones.Location = new System.Drawing.Point(917, 200);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(424, 59);
@@ -668,8 +870,9 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // 
             this.lblobservaciones.BackColor = System.Drawing.Color.White;
             this.lblobservaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblobservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblobservaciones.ForeColor = System.Drawing.Color.Black;
-            this.lblobservaciones.Location = new System.Drawing.Point(822, 157);
+            this.lblobservaciones.Location = new System.Drawing.Point(914, 179);
             this.lblobservaciones.MaxLength = 30;
             this.lblobservaciones.Multiline = true;
             this.lblobservaciones.Name = "lblobservaciones";
@@ -686,7 +889,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnLupa_Almacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupa_Almacen.ImageKey = "puntos3.png";
             this.btnLupa_Almacen.ImageList = this.imageList1;
-            this.btnLupa_Almacen.Location = new System.Drawing.Point(1043, 102);
+            this.btnLupa_Almacen.Location = new System.Drawing.Point(1238, 124);
             this.btnLupa_Almacen.Name = "btnLupa_Almacen";
             this.btnLupa_Almacen.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.btnLupa_Almacen.Size = new System.Drawing.Size(38, 32);
@@ -697,7 +900,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Black;
-            this.panel15.Location = new System.Drawing.Point(825, 118);
+            this.panel15.Location = new System.Drawing.Point(1020, 140);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(207, 2);
             this.panel15.TabIndex = 49;
@@ -707,7 +910,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.txtdescripcion_almacen.BackColor = System.Drawing.Color.White;
             this.txtdescripcion_almacen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdescripcion_almacen.ForeColor = System.Drawing.Color.Black;
-            this.txtdescripcion_almacen.Location = new System.Drawing.Point(825, 94);
+            this.txtdescripcion_almacen.Location = new System.Drawing.Point(1020, 116);
             this.txtdescripcion_almacen.Name = "txtdescripcion_almacen";
             this.txtdescripcion_almacen.Size = new System.Drawing.Size(203, 19);
             this.txtdescripcion_almacen.TabIndex = 50;
@@ -718,7 +921,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnretornar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnretornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnretornar.ForeColor = System.Drawing.Color.Black;
-            this.btnretornar.Location = new System.Drawing.Point(332, 420);
+            this.btnretornar.Location = new System.Drawing.Point(424, 442);
             this.btnretornar.Name = "btnretornar";
             this.btnretornar.Size = new System.Drawing.Size(87, 38);
             this.btnretornar.TabIndex = 40;
@@ -731,7 +934,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(224, 420);
+            this.btnGuardar.Location = new System.Drawing.Point(316, 442);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 38);
             this.btnGuardar.TabIndex = 39;
@@ -744,7 +947,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(112, 420);
+            this.btnCancelar.Location = new System.Drawing.Point(204, 442);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 38);
             this.btnCancelar.TabIndex = 38;
@@ -760,7 +963,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnLupaTipoDocumento_ep.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLupaTipoDocumento_ep.ImageKey = "puntos3.png";
             this.btnLupaTipoDocumento_ep.ImageList = this.imageList1;
-            this.btnLupaTipoDocumento_ep.Location = new System.Drawing.Point(332, 31);
+            this.btnLupaTipoDocumento_ep.Location = new System.Drawing.Point(516, 59);
             this.btnLupaTipoDocumento_ep.Name = "btnLupaTipoDocumento_ep";
             this.btnLupaTipoDocumento_ep.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.btnLupaTipoDocumento_ep.Size = new System.Drawing.Size(38, 32);
@@ -771,7 +974,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(110, 94);
+            this.panel2.Location = new System.Drawing.Point(294, 122);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(208, 2);
             this.panel2.TabIndex = 25;
@@ -781,7 +984,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.txtNro_Documento_ep.BackColor = System.Drawing.Color.White;
             this.txtNro_Documento_ep.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNro_Documento_ep.ForeColor = System.Drawing.Color.Black;
-            this.txtNro_Documento_ep.Location = new System.Drawing.Point(110, 74);
+            this.txtNro_Documento_ep.Location = new System.Drawing.Point(294, 102);
             this.txtNro_Documento_ep.MaxLength = 20;
             this.txtNro_Documento_ep.Name = "txtNro_Documento_ep";
             this.txtNro_Documento_ep.Size = new System.Drawing.Size(208, 19);
@@ -791,7 +994,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(110, 48);
+            this.panel9.Location = new System.Drawing.Point(294, 76);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(213, 2);
             this.panel9.TabIndex = 22;
@@ -801,11 +1004,10 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.txtDescripcion_tde.BackColor = System.Drawing.Color.White;
             this.txtDescripcion_tde.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion_tde.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_tde.Location = new System.Drawing.Point(110, 27);
+            this.txtDescripcion_tde.Location = new System.Drawing.Point(292, 51);
             this.txtDescripcion_tde.Name = "txtDescripcion_tde";
             this.txtDescripcion_tde.Size = new System.Drawing.Size(208, 19);
             this.txtDescripcion_tde.TabIndex = 21;
-            this.txtDescripcion_tde.Text = "Tipo doc (*)";
             // 
             // btnnuevo
             // 
@@ -815,7 +1017,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnnuevo.ForeColor = System.Drawing.Color.Black;
             this.btnnuevo.ImageKey = "newfile_85903.png";
             this.btnnuevo.ImageList = this.imageList1;
-            this.btnnuevo.Location = new System.Drawing.Point(18, 674);
+            this.btnnuevo.Location = new System.Drawing.Point(27, 674);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(94, 89);
             this.btnnuevo.TabIndex = 1;
@@ -836,7 +1038,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(94, 89);
             this.btneliminar.TabIndex = 3;
-            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.Text = "Anular";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
@@ -895,6 +1097,9 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlListado_Productos.ResumeLayout(false);
+            this.pnlListado_Productos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dvg_Productos)).EndInit();
             this.pnlListado_proveedor.ResumeLayout(false);
             this.pnlListado_proveedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dvg_Proveedor)).EndInit();
@@ -961,10 +1166,24 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         private System.Windows.Forms.Button btn_quitar;
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtTotal_importe;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlListado_Productos;
+        private System.Windows.Forms.Button btnLupa_Productos;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txtBuscar_Productos;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView Dvg_Productos;
+        private System.Windows.Forms.Label lbl_tpde;
+        private System.Windows.Forms.Label lbl_almacen;
+        private System.Windows.Forms.Label lbl_proveedor;
+        private System.Windows.Forms.Label lbl_nrodocumento;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTotal_importe;
+        private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.TextBox txtSubtotal;
     }
 }

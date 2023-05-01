@@ -1,5 +1,5 @@
 ﻿
-namespace Sol_Capa_Presentacion.Productos
+namespace Sol_Capa_Presentacion.Marcas
 {
     partial class Frm_Marcas
     {
@@ -221,7 +221,6 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtDescripcion_ma.Size = new System.Drawing.Size(365, 19);
             this.txtDescripcion_ma.TabIndex = 9;
             this.txtDescripcion_ma.Text = "Marcas(*)";
-           
             this.txtDescripcion_ma.Enter += new System.EventHandler(this.txtDescripcion_ma_Enter);
             this.txtDescripcion_ma.Leave += new System.EventHandler(this.txtDescripcion_ma_Leave);
             // 
@@ -301,6 +300,7 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnreporte.Text = "Reporte";
             this.btnreporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnreporte.UseVisualStyleBackColor = false;
+            this.btnreporte.Click += new System.EventHandler(this.btnreporte_Click);
             // 
             // btnsalir
             // 

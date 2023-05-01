@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,7 +48,9 @@
     <Compile Include="E_Distritos.cs" />
     <Compile Include="E_Categoria.cs" />
     <Compile Include="E_Cantones.cs" />
+    <Compile Include="E_Salida_Productos.cs" />
     <Compile Include="E_Entrada_Productos.cs" />
+    <Compile Include="E_Clientes.cs" />
     <Compile Include="E_Proveedores.cs" />
     <Compile Include="E_Provincias.cs" />
     <Compile Include="E_Rubros.cs" />
@@ -53,6 +58,9 @@
     <Compile Include="E_Productos.cs" />
     <Compile Include="E_Unidad_Medidas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

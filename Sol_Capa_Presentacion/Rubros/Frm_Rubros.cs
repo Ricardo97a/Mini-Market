@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sol_Capa_Entidades;
 using Sol_Capa_Negocio;
+using Sol_Capa_Presentacion.Reporte;
 
 namespace Sol_Capa_Presentacion.Rubros
 {
@@ -329,6 +330,12 @@ namespace Sol_Capa_Presentacion.Rubros
                 this.Botones(false);
                 this.btnretornar.Visible = true;
             }
+        }
+
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+            Frm_Rpt_Rubros reporte = new Frm_Rpt_Rubros();
+            reporte.ShowDialog();
         }
     }
 }

@@ -1,5 +1,6 @@
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Datos\bin\Debug\Sol_Capa_Datos.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Datos\bin\Debug\Sol_Capa_Datos.pdb
+C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Datos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Datos\bin\Debug\Sol_Capa_Entidades.dll
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Datos\bin\Debug\Sol_Capa_Entidades.pdb
 C:\Sistemas c#\Sol_Sistema_POO\Sol_Capa_Datos\obj\Debug\Sol_Capa_Datos.csproj.AssemblyReference.cache

@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sol_Capa_Entidades;
 using Sol_Capa_Negocio;
+using Sol_Capa_Presentacion.Reporte;
 
-namespace Sol_Capa_Presentacion.Productos
+namespace Sol_Capa_Presentacion.Marcas
 {
     public partial class Frm_Marcas : Form
     {
@@ -330,6 +331,12 @@ namespace Sol_Capa_Presentacion.Productos
                 this.Botones(false);
                 this.btnretornar.Visible = true;
             }
+        }
+
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+            Frm_Rpt_Marcas reporte = new Frm_Rpt_Marcas();
+            reporte.ShowDialog();
         }
     }
 }
