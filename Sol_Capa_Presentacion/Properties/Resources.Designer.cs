@@ -103,6 +103,16 @@ namespace Sol_Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reporte_minimarket {
+            get {
+                object obj = ResourceManager.GetObject("reporte_minimarket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spreadsheet_icon_126923 {
             get {
                 object obj = ResourceManager.GetObject("spreadsheet_icon_126923", resourceCulture);

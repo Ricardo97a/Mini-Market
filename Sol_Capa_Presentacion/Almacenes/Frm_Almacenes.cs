@@ -28,9 +28,9 @@ namespace Sol_Capa_Presentacion.Almacenes
         #region "Mis Metodos"
         private void Formato_al()
         {
-            Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_AL";
-            Dgv_Principal.Columns[1].Width = 200;
+            Dgv_Principal.Columns[0].Width = 120;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGo";
+            Dgv_Principal.Columns[1].Width = 300;
             Dgv_Principal.Columns[1].HeaderText = "ALMACEN";
         }
 
@@ -53,7 +53,7 @@ namespace Sol_Capa_Presentacion.Almacenes
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+          //  this.btnsalir.Enabled = !estado;
 
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -93,31 +93,26 @@ namespace Sol_Capa_Presentacion.Almacenes
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (txtAlmacenes.Text == "Buscar Almacenes:")
-            {
-                txtAlmacenes.Text = "";
-                txtAlmacenes.ForeColor = Color.Black;
-
-            }
+            this.Listado_al(txtDescripcion_al.Text);
         }
 
         private void txtAlmacenes_Leave(object sender, EventArgs e)
         {
 
-            if (txtAlmacenes.Text == "")
+            if (txt_Buscar_Almacenes.Text == "")
             {
-                txtAlmacenes.Text = "Buscar Almacenes:";
-                txtAlmacenes.ForeColor = Color.Black;
+                txt_Buscar_Almacenes.Text = "Buscar Almacenes:";
+                txt_Buscar_Almacenes.ForeColor = Color.Black;
 
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtAlmacenes.Text == string.Empty)
+            if (txtDescripcion_al.Text == string.Empty)
             {
                 MessageBox.Show("Falta ingresar datos requeridos(*)", "Aviso de Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                
             }
             else
             {
@@ -246,7 +241,7 @@ namespace Sol_Capa_Presentacion.Almacenes
                 {
                     string respuesta = "";
                     this.codigo_al = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_al"].Value);
-                    respuesta = N_Marca.Eliminar_ma(this.codigo_al);
+                    respuesta = N_Almacenes.Eliminar_al(this.codigo_al);
                     if (respuesta.Equals("ok"))
                     {
                         this.Listado_al("%");
@@ -263,7 +258,7 @@ namespace Sol_Capa_Presentacion.Almacenes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Listado_al(txtAlmacenes.Text.Trim());
+            this.Listado_al(txt_Buscar_Almacenes.Text.Trim());
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -323,6 +318,11 @@ namespace Sol_Capa_Presentacion.Almacenes
         {
             Frm_Rpt_Almacenes reporte = new Frm_Rpt_Almacenes();
             reporte.ShowDialog();
+        }
+
+        private void btn_buscar_al_Click(object sender, EventArgs e)
+        {
+            this.Listado_al(txt_Buscar_Almacenes.Text);
         }
     }
 }

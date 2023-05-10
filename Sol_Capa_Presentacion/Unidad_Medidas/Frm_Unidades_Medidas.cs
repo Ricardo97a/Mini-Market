@@ -28,10 +28,10 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
         #region "Mis Metodos"
         private void Formato_um()
         {
-            Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_UM";
-            Dgv_Principal.Columns[1].Width = 100;
-            Dgv_Principal.Columns[1].HeaderText = "ABREVIATURA_UM";
+            Dgv_Principal.Columns[0].Width = 150;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO";
+            Dgv_Principal.Columns[1].Width = 200;
+            Dgv_Principal.Columns[1].HeaderText = "ABREVIATURA";
             Dgv_Principal.Columns[2].Width = 200;
             Dgv_Principal.Columns[2].HeaderText = "MEDIDAS";
         }
@@ -55,7 +55,7 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+           // this.btnsalir.Enabled = !estado;
 
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -72,7 +72,11 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
             this.txtAbreviatura_um.Enabled = estado;
             this.txtDescripcion_um.Enabled = estado;
         }
-
+        public void limpiartxt()
+        {
+            this.txtAbreviatura_um.Text = "";
+            this.txtDescripcion_um.Text = "";
+        }
         private void Seleccionar_Item()
         {
             if (String.IsNullOrEmpty(Convert.ToString(Dgv_Principal.CurrentRow.Cells["codigo_um"].Value)))
@@ -96,30 +100,10 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
             this.Formato_um();
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (txtUM.Text == "Buscar Unidas Medidas:")
-            {
-                txtUM.Text = "";
-                txtUM.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtUM_Leave(object sender, EventArgs e)
-        {
-
-            if (txtUM.Text == "")
-            {
-                txtUM.Text = "Buscar Unidas Medidas:";
-                txtUM.ForeColor = Color.Black;
-
-            }
-        }
-
+       
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtAbreviatura_um.Text == string.Empty || txtUM.Text == string.Empty)
+            if (txtAbreviatura_um.Text == string.Empty || txtDescripcion_um.Text == string.Empty)
             {
                 MessageBox.Show("Falta ingresar datos requeridos(*)", "Aviso de Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -139,8 +123,7 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
                     estadoGuarda = 0;
                     this.Estado_Botones_Principales(true);
                     this.Estado_Botones_Procesos(false);
-                    this.txtAbreviatura_um.Text = "";
-                    this.txtDescripcion_um.Text = "";
+                    this.limpiartxt();
                     this.txtDescripcion_um.ReadOnly = true;
                     this.txtAbreviatura_um.ReadOnly = true;
                     this.Tb_Principal.SelectedIndex = 0;
@@ -199,45 +182,14 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
             this.Botones(false);
 
             this.Tb_Principal.SelectedIndex = 0;
-
-            if (txtAbreviatura_um.Text == "" || txtAbreviatura_um.Text != null || txtDescripcion_um.Text == "" || txtDescripcion_um.Text != null)
-            {
-                txtAbreviatura_um.Text = "Abreviatura(*)";
-                txtAbreviatura_um.ForeColor = Color.Black;
-                txtDescripcion_um.Text = "Unidad Medidas(*)";
-                txtDescripcion_um.ForeColor = Color.Black;
-
-            }
-
-        }
-
-        private void txtDescripcion_um_Enter(object sender, EventArgs e)
-        {
-            if (txtDescripcion_um.Text == "Unidad Medidas(*)")
-            {
-                txtDescripcion_um.Text = "";
-                txtDescripcion_um.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtDescripcion_um_Leave(object sender, EventArgs e)
-        {
-
-            if (txtDescripcion_um.Text == "")
-            {
-                txtDescripcion_um.Text = "Unidad Medidas(*)";
-                txtDescripcion_um.ForeColor = Color.Black;
-
-            }
-        }
+                       
+        }                 
 
         private void Dgv_Principal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.Seleccionar_Item();
             this.Estado_Botones_Procesos(false);
             Tb_Principal.SelectedIndex = 1;
-
 
         }
 
@@ -279,63 +231,20 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
             }
 
         }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.Listado_um(txtUM.Text.Trim());
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-            this.Estado_Botones_Principales(false);
-            if (txtDescripcion_um.Text == "" || txtAbreviatura_um.Text == "")
-            {
-                txtAbreviatura_um.Text = "Abreviatura(*)";
-                txtAbreviatura_um.ForeColor = Color.Black;
-                txtDescripcion_um.Text = "Unidad Medidas(*)";
-                txtDescripcion_um.ForeColor = Color.Black;
-                txtUM.Text = "Buscar Unidas Medidas:";
-                txtUM.ForeColor = Color.Black;
-
-
-            }
-        }
+            
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtAbreviatura_um_Click(object sender, EventArgs e)
-        {
-            if (txtAbreviatura_um.Text == "Abreviatura(*)")
-            {
-                txtAbreviatura_um.Text = "";
-                txtAbreviatura_um.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-            if (txtAbreviatura_um.Text == "" || txtDescripcion_um.Text == "")
-            {
-                txtAbreviatura_um.Text = "Abreviatura(*)";
-                txtAbreviatura_um.ForeColor = Color.Black;
-                txtDescripcion_um.Text = "Unidad Medidas(*)";
-                txtDescripcion_um.ForeColor = Color.Black;
-
-            }
-        }
-
+        }       
+  
 
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
         {
             if (Tb_Principal.SelectedTab == Tb_Principal.TabPages[1])
             {
                 this.Estado_Botones_Principales(false);
-
+               
             }
             else
             {
@@ -355,6 +264,8 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
 
                 this.Botones(false);
                 this.btnretornar.Visible = true;
+                this.btnGuardar.Visible = false;
+                this.btnCancelar.Visible = false;
             }
         }
 
@@ -362,6 +273,16 @@ namespace Sol_Capa_Presentacion.Unidad_Medidas
         {
             Frm_Rpt_Unidad_Medida reporte = new Frm_Rpt_Unidad_Medida();
             reporte.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Listado_um(txt_buscar_um.Text.Trim());
+        }
+
+        private void btn_buscar_um_Click(object sender, EventArgs e)
+        {
+            this.Listado_um(txt_buscar_um.Text);
         }
     }
 }

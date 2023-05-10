@@ -1,7 +1,7 @@
 ﻿
 namespace Sol_Capa_Presentacion.Clientes
 {
-    partial class Frm_Clientes
+    partial class btnLupaRubro
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Clientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnLupaRubro));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,10 +43,11 @@ namespace Sol_Capa_Presentacion.Clientes
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tb_Principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Linea = new System.Windows.Forms.Panel();
-            this.txtBuscarProductos = new System.Windows.Forms.TextBox();
+            this.btn_buscar_cl = new FontAwesome.Sharp.IconButton();
+            this.label18 = new System.Windows.Forms.Label();
             this.Dgv_Principal = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txtBuscar_clientes = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlListadoDistritos = new System.Windows.Forms.Panel();
@@ -72,13 +73,28 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btn_retornar = new System.Windows.Forms.Button();
             this.lblListadoMarcas = new System.Windows.Forms.Label();
             this.Dgv_Tdpc = new System.Windows.Forms.DataGridView();
+            this.btnLupaDistrito = new FontAwesome.Sharp.IconButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Pnl_datos_I = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnlupa_rubro = new FontAwesome.Sharp.IconButton();
+            this.btnlupa_genero = new FontAwesome.Sharp.IconButton();
+            this.btnLupaTipoDocumento = new FontAwesome.Sharp.IconButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Pnl_datos_D = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.lblobservaciones = new System.Windows.Forms.TextBox();
-            this.btnLupaDistrito = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.txtDistritos = new System.Windows.Forms.TextBox();
-            this.btnLupaRubro = new System.Windows.Forms.Button();
-            this.btnLupaSexo = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.txtdescripcion_rubro = new System.Windows.Forms.TextBox();
@@ -96,7 +112,6 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnretornar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnLupaTipoDocumento = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -110,6 +125,8 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnreporte = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
+            this.Pnl_SubOpcion = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.Tb_Principal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Principal)).BeginInit();
@@ -123,53 +140,61 @@ namespace Sol_Capa_Presentacion.Clientes
             ((System.ComponentModel.ISupportInitialize)(this.Dvg_Genero)).BeginInit();
             this.pnlListadoTdpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Tdpc)).BeginInit();
+            this.Pnl_datos_I.SuspendLayout();
+            this.Pnl_datos_D.SuspendLayout();
+            this.Pnl_SubOpcion.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tb_Principal
             // 
             this.Tb_Principal.Controls.Add(this.tabPage1);
             this.Tb_Principal.Controls.Add(this.tabPage2);
-            this.Tb_Principal.Location = new System.Drawing.Point(14, 12);
+            this.Tb_Principal.Location = new System.Drawing.Point(14, 91);
             this.Tb_Principal.Name = "Tb_Principal";
             this.Tb_Principal.SelectedIndex = 0;
-            this.Tb_Principal.Size = new System.Drawing.Size(1660, 635);
+            this.Tb_Principal.Size = new System.Drawing.Size(1543, 429);
             this.Tb_Principal.TabIndex = 0;
-            this.Tb_Principal.RightToLeftLayoutChanged += new System.EventHandler(this.Tb_Principal_RightToLeftLayoutChanged);
             this.Tb_Principal.Selected += new System.Windows.Forms.TabControlEventHandler(this.Tb_Principal_Selected);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.Linea);
-            this.tabPage1.Controls.Add(this.txtBuscarProductos);
+            this.tabPage1.Controls.Add(this.btn_buscar_cl);
+            this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.Dgv_Principal);
-            this.tabPage1.Controls.Add(this.btnBuscar);
+            this.tabPage1.Controls.Add(this.panel10);
+            this.tabPage1.Controls.Add(this.txtBuscar_clientes);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1652, 602);
+            this.tabPage1.Size = new System.Drawing.Size(1535, 396);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // Linea
+            // btn_buscar_cl
             // 
-            this.Linea.BackColor = System.Drawing.Color.Black;
-            this.Linea.Location = new System.Drawing.Point(154, 68);
-            this.Linea.Name = "Linea";
-            this.Linea.Size = new System.Drawing.Size(363, 2);
-            this.Linea.TabIndex = 8;
+            this.btn_buscar_cl.BackColor = System.Drawing.Color.White;
+            this.btn_buscar_cl.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_cl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_cl.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_buscar_cl.IconColor = System.Drawing.Color.Black;
+            this.btn_buscar_cl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_buscar_cl.Location = new System.Drawing.Point(676, 42);
+            this.btn_buscar_cl.Name = "btn_buscar_cl";
+            this.btn_buscar_cl.Size = new System.Drawing.Size(51, 40);
+            this.btn_buscar_cl.TabIndex = 109;
+            this.btn_buscar_cl.UseVisualStyleBackColor = false;
+            this.btn_buscar_cl.Click += new System.EventHandler(this.btn_buscar_pr_Click);
             // 
-            // txtBuscarProductos
+            // label18
             // 
-            this.txtBuscarProductos.BackColor = System.Drawing.Color.White;
-            this.txtBuscarProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarProductos.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscarProductos.Location = new System.Drawing.Point(153, 42);
-            this.txtBuscarProductos.Name = "txtBuscarProductos";
-            this.txtBuscarProductos.Size = new System.Drawing.Size(364, 19);
-            this.txtBuscarProductos.TabIndex = 5;
-            this.txtBuscarProductos.Text = "Buscar Clientes:";
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(287, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(135, 30);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Buscar:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Dgv_Principal
             // 
@@ -187,31 +212,38 @@ namespace Sol_Capa_Presentacion.Clientes
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_Principal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Dgv_Principal.ColumnHeadersHeight = 35;
+            this.Dgv_Principal.ColumnHeadersHeight = 55;
             this.Dgv_Principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Principal.EnableHeadersVisualStyles = false;
             this.Dgv_Principal.Location = new System.Drawing.Point(32, 100);
             this.Dgv_Principal.Name = "Dgv_Principal";
             this.Dgv_Principal.ReadOnly = true;
             this.Dgv_Principal.RowHeadersWidth = 62;
-            this.Dgv_Principal.RowTemplate.Height = 28;
+            this.Dgv_Principal.RowTemplate.Height = 50;
             this.Dgv_Principal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_Principal.Size = new System.Drawing.Size(1594, 292);
+            this.Dgv_Principal.Size = new System.Drawing.Size(1462, 292);
             this.Dgv_Principal.TabIndex = 3;
             this.Dgv_Principal.DoubleClick += new System.EventHandler(this.Dgv_Principal_DoubleClick);
             // 
-            // btnBuscar
+            // panel10
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(538, 29);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(87, 38);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.panel10.BackColor = System.Drawing.Color.Black;
+            this.panel10.Location = new System.Drawing.Point(424, 62);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(240, 1);
+            this.panel10.TabIndex = 12;
+            // 
+            // txtBuscar_clientes
+            // 
+            this.txtBuscar_clientes.BackColor = System.Drawing.Color.White;
+            this.txtBuscar_clientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar_clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar_clientes.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscar_clientes.Location = new System.Drawing.Point(424, 33);
+            this.txtBuscar_clientes.Multiline = true;
+            this.txtBuscar_clientes.Name = "txtBuscar_clientes";
+            this.txtBuscar_clientes.Size = new System.Drawing.Size(240, 35);
+            this.txtBuscar_clientes.TabIndex = 11;
             // 
             // tabPage2
             // 
@@ -221,10 +253,9 @@ namespace Sol_Capa_Presentacion.Clientes
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1652, 602);
+            this.tabPage2.Size = new System.Drawing.Size(1535, 396);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // panel1
             // 
@@ -232,13 +263,17 @@ namespace Sol_Capa_Presentacion.Clientes
             this.panel1.Controls.Add(this.pnlListadoRubros);
             this.panel1.Controls.Add(this.pnlGenero);
             this.panel1.Controls.Add(this.pnlListadoTdpc);
-            this.panel1.Controls.Add(this.txtObservaciones);
-            this.panel1.Controls.Add(this.lblobservaciones);
             this.panel1.Controls.Add(this.btnLupaDistrito);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.Pnl_datos_I);
+            this.panel1.Controls.Add(this.btnlupa_rubro);
+            this.panel1.Controls.Add(this.btnlupa_genero);
+            this.panel1.Controls.Add(this.btnLupaTipoDocumento);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.Pnl_datos_D);
+            this.panel1.Controls.Add(this.txtObservaciones);
             this.panel1.Controls.Add(this.panel16);
             this.panel1.Controls.Add(this.txtDistritos);
-            this.panel1.Controls.Add(this.btnLupaRubro);
-            this.panel1.Controls.Add(this.btnLupaSexo);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel15);
             this.panel1.Controls.Add(this.txtdescripcion_rubro);
@@ -256,7 +291,6 @@ namespace Sol_Capa_Presentacion.Clientes
             this.panel1.Controls.Add(this.btnretornar);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.btnLupaTipoDocumento);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.panel3);
@@ -265,11 +299,10 @@ namespace Sol_Capa_Presentacion.Clientes
             this.panel1.Controls.Add(this.txtNro_Documento_cl);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.txtDescripcion_tdpc);
-            this.panel1.Location = new System.Drawing.Point(73, 15);
+            this.panel1.Location = new System.Drawing.Point(23, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1532, 591);
+            this.panel1.Size = new System.Drawing.Size(1582, 371);
             this.panel1.TabIndex = 23;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnlListadoDistritos
             // 
@@ -280,9 +313,9 @@ namespace Sol_Capa_Presentacion.Clientes
             this.pnlListadoDistritos.Controls.Add(this.button4);
             this.pnlListadoDistritos.Controls.Add(this.label3);
             this.pnlListadoDistritos.Controls.Add(this.Dvg_Distritos);
-            this.pnlListadoDistritos.Location = new System.Drawing.Point(1427, 474);
+            this.pnlListadoDistritos.Location = new System.Drawing.Point(1405, 401);
             this.pnlListadoDistritos.Name = "pnlListadoDistritos";
-            this.pnlListadoDistritos.Size = new System.Drawing.Size(1048, 282);
+            this.pnlListadoDistritos.Size = new System.Drawing.Size(827, 282);
             this.pnlListadoDistritos.TabIndex = 58;
             this.pnlListadoDistritos.Visible = false;
             // 
@@ -341,7 +374,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.ImageKey = "x.png";
             this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(965, 14);
+            this.button4.Location = new System.Drawing.Point(768, 14);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(36, 30);
             this.button4.TabIndex = 57;
@@ -383,7 +416,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.Dvg_Distritos.RowHeadersWidth = 62;
             this.Dvg_Distritos.RowTemplate.Height = 28;
             this.Dvg_Distritos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dvg_Distritos.Size = new System.Drawing.Size(981, 166);
+            this.Dvg_Distritos.Size = new System.Drawing.Size(774, 166);
             this.Dvg_Distritos.TabIndex = 10;
             this.Dvg_Distritos.DoubleClick += new System.EventHandler(this.Dvg_Distritos_DoubleClick);
             // 
@@ -396,7 +429,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.pnlListadoRubros.Controls.Add(this.button1);
             this.pnlListadoRubros.Controls.Add(this.label2);
             this.pnlListadoRubros.Controls.Add(this.Dvg_Rubros);
-            this.pnlListadoRubros.Location = new System.Drawing.Point(917, 474);
+            this.pnlListadoRubros.Location = new System.Drawing.Point(908, 401);
             this.pnlListadoRubros.Name = "pnlListadoRubros";
             this.pnlListadoRubros.Size = new System.Drawing.Size(491, 282);
             this.pnlListadoRubros.TabIndex = 57;
@@ -449,7 +482,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.button1.Size = new System.Drawing.Size(36, 30);
             this.button1.TabIndex = 57;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label2
             // 
@@ -496,7 +529,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.pnlGenero.Controls.Add(this.btn_retornarG);
             this.pnlGenero.Controls.Add(this.label1);
             this.pnlGenero.Controls.Add(this.Dvg_Genero);
-            this.pnlGenero.Location = new System.Drawing.Point(468, 474);
+            this.pnlGenero.Location = new System.Drawing.Point(466, 401);
             this.pnlGenero.Name = "pnlGenero";
             this.pnlGenero.Size = new System.Drawing.Size(443, 269);
             this.pnlGenero.TabIndex = 56;
@@ -512,7 +545,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btn_retornarG.Size = new System.Drawing.Size(36, 30);
             this.btn_retornarG.TabIndex = 57;
             this.btn_retornarG.UseVisualStyleBackColor = false;
-            this.btn_retornarG.Click += new System.EventHandler(this.btn_retornarG_Click);
+            this.btn_retornarG.Click += new System.EventHandler(this.btn_retornarG_Click_1);
             // 
             // label1
             // 
@@ -559,7 +592,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.pnlListadoTdpc.Controls.Add(this.btn_retornar);
             this.pnlListadoTdpc.Controls.Add(this.lblListadoMarcas);
             this.pnlListadoTdpc.Controls.Add(this.Dgv_Tdpc);
-            this.pnlListadoTdpc.Location = new System.Drawing.Point(19, 474);
+            this.pnlListadoTdpc.Location = new System.Drawing.Point(17, 401);
             this.pnlListadoTdpc.Name = "pnlListadoTdpc";
             this.pnlListadoTdpc.Size = new System.Drawing.Size(443, 269);
             this.pnlListadoTdpc.TabIndex = 35;
@@ -616,48 +649,243 @@ namespace Sol_Capa_Presentacion.Clientes
             this.Dgv_Tdpc.TabIndex = 10;
             this.Dgv_Tdpc.DoubleClick += new System.EventHandler(this.Dgv_Tdpc_DoubleClick);
             // 
+            // btnLupaDistrito
+            // 
+            this.btnLupaDistrito.FlatAppearance.BorderSize = 0;
+            this.btnLupaDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLupaDistrito.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnLupaDistrito.IconColor = System.Drawing.Color.Black;
+            this.btnLupaDistrito.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLupaDistrito.Location = new System.Drawing.Point(1412, 105);
+            this.btnLupaDistrito.Name = "btnLupaDistrito";
+            this.btnLupaDistrito.Size = new System.Drawing.Size(51, 40);
+            this.btnLupaDistrito.TabIndex = 66;
+            this.btnLupaDistrito.UseVisualStyleBackColor = true;
+            this.btnLupaDistrito.Click += new System.EventHandler(this.btnLupaDistrito_Click_1);
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1132, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 45);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "Movil: ";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Pnl_datos_I
+            // 
+            this.Pnl_datos_I.BackColor = System.Drawing.Color.White;
+            this.Pnl_datos_I.Controls.Add(this.label12);
+            this.Pnl_datos_I.Controls.Add(this.label14);
+            this.Pnl_datos_I.Controls.Add(this.label15);
+            this.Pnl_datos_I.Controls.Add(this.label16);
+            this.Pnl_datos_I.Controls.Add(this.label17);
+            this.Pnl_datos_I.Location = new System.Drawing.Point(742, 0);
+            this.Pnl_datos_I.Name = "Pnl_datos_I";
+            this.Pnl_datos_I.Size = new System.Drawing.Size(231, 272);
+            this.Pnl_datos_I.TabIndex = 64;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(0, 180);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(231, 92);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Observacion :";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(0, 135);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(231, 45);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Direccion (*) :";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label15
+            // 
+            this.label15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(0, 90);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(231, 45);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Ubicacion (*) :";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label16
+            // 
+            this.label16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(0, 45);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(231, 45);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Tel:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(0, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(231, 45);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Email (*) :";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnlupa_rubro
+            // 
+            this.btnlupa_rubro.FlatAppearance.BorderSize = 0;
+            this.btnlupa_rubro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlupa_rubro.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnlupa_rubro.IconColor = System.Drawing.Color.Black;
+            this.btnlupa_rubro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlupa_rubro.Location = new System.Drawing.Point(483, 249);
+            this.btnlupa_rubro.Name = "btnlupa_rubro";
+            this.btnlupa_rubro.Size = new System.Drawing.Size(51, 40);
+            this.btnlupa_rubro.TabIndex = 63;
+            this.btnlupa_rubro.UseVisualStyleBackColor = true;
+            this.btnlupa_rubro.Click += new System.EventHandler(this.btnlupa_rubro_Click);
+            // 
+            // btnlupa_genero
+            // 
+            this.btnlupa_genero.FlatAppearance.BorderSize = 0;
+            this.btnlupa_genero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlupa_genero.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnlupa_genero.IconColor = System.Drawing.Color.Black;
+            this.btnlupa_genero.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlupa_genero.Location = new System.Drawing.Point(483, 203);
+            this.btnlupa_genero.Name = "btnlupa_genero";
+            this.btnlupa_genero.Size = new System.Drawing.Size(51, 40);
+            this.btnlupa_genero.TabIndex = 62;
+            this.btnlupa_genero.UseVisualStyleBackColor = true;
+            this.btnlupa_genero.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btnLupaTipoDocumento
+            // 
+            this.btnLupaTipoDocumento.FlatAppearance.BorderSize = 0;
+            this.btnLupaTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLupaTipoDocumento.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnLupaTipoDocumento.IconColor = System.Drawing.Color.Black;
+            this.btnLupaTipoDocumento.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLupaTipoDocumento.Location = new System.Drawing.Point(560, 17);
+            this.btnLupaTipoDocumento.Name = "btnLupaTipoDocumento";
+            this.btnLupaTipoDocumento.Size = new System.Drawing.Size(51, 40);
+            this.btnLupaTipoDocumento.TabIndex = 61;
+            this.btnLupaTipoDocumento.UseVisualStyleBackColor = true;
+            this.btnLupaTipoDocumento.Click += new System.EventHandler(this.btnLupaTipoDocumento_Click);
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(461, 149);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(136, 45);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "Apellido:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Pnl_datos_D
+            // 
+            this.Pnl_datos_D.BackColor = System.Drawing.Color.White;
+            this.Pnl_datos_D.Controls.Add(this.label9);
+            this.Pnl_datos_D.Controls.Add(this.label8);
+            this.Pnl_datos_D.Controls.Add(this.label7);
+            this.Pnl_datos_D.Controls.Add(this.label6);
+            this.Pnl_datos_D.Controls.Add(this.label5);
+            this.Pnl_datos_D.Controls.Add(this.label4);
+            this.Pnl_datos_D.Location = new System.Drawing.Point(6, 2);
+            this.Pnl_datos_D.Name = "Pnl_datos_D";
+            this.Pnl_datos_D.Size = new System.Drawing.Size(255, 272);
+            this.Pnl_datos_D.TabIndex = 59;
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(0, 225);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(255, 45);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Rubro (*) :";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(0, 180);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(255, 45);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Genero (*) :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(0, 135);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(255, 45);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Nombre:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(255, 45);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Razon Social  (*) :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(255, 45);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Nro Doc. (*) :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(255, 45);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tip Doc. (*) :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(640, 249);
+            this.txtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.Location = new System.Drawing.Point(976, 205);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(424, 59);
             this.txtObservaciones.TabIndex = 55;
             // 
-            // lblobservaciones
-            // 
-            this.lblobservaciones.BackColor = System.Drawing.Color.White;
-            this.lblobservaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblobservaciones.ForeColor = System.Drawing.Color.Black;
-            this.lblobservaciones.Location = new System.Drawing.Point(637, 228);
-            this.lblobservaciones.MaxLength = 30;
-            this.lblobservaciones.Multiline = true;
-            this.lblobservaciones.Name = "lblobservaciones";
-            this.lblobservaciones.ReadOnly = true;
-            this.lblobservaciones.Size = new System.Drawing.Size(435, 26);
-            this.lblobservaciones.TabIndex = 54;
-            this.lblobservaciones.Text = "Observacion (*)";
-            // 
-            // btnLupaDistrito
-            // 
-            this.btnLupaDistrito.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLupaDistrito.FlatAppearance.BorderSize = 0;
-            this.btnLupaDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLupaDistrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLupaDistrito.ImageKey = "puntos3.png";
-            this.btnLupaDistrito.ImageList = this.imageList1;
-            this.btnLupaDistrito.Location = new System.Drawing.Point(1081, 127);
-            this.btnLupaDistrito.Name = "btnLupaDistrito";
-            this.btnLupaDistrito.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
-            this.btnLupaDistrito.Size = new System.Drawing.Size(38, 32);
-            this.btnLupaDistrito.TabIndex = 53;
-            this.btnLupaDistrito.UseVisualStyleBackColor = true;
-            this.btnLupaDistrito.Click += new System.EventHandler(this.btnLupaDistrito_Click);
-            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.Black;
-            this.panel16.Location = new System.Drawing.Point(640, 142);
+            this.panel16.Location = new System.Drawing.Point(979, 125);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(427, 2);
             this.panel16.TabIndex = 51;
@@ -666,58 +894,26 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtDistritos.BackColor = System.Drawing.Color.White;
             this.txtDistritos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDistritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDistritos.ForeColor = System.Drawing.Color.Black;
-            this.txtDistritos.Location = new System.Drawing.Point(640, 121);
+            this.txtDistritos.Location = new System.Drawing.Point(979, 97);
             this.txtDistritos.Multiline = true;
             this.txtDistritos.Name = "txtDistritos";
-            this.txtDistritos.Size = new System.Drawing.Size(435, 26);
+            this.txtDistritos.Size = new System.Drawing.Size(424, 35);
             this.txtDistritos.TabIndex = 50;
-            this.txtDistritos.Text = "Distrito /Canton /Provincia (*)";
-            // 
-            // btnLupaRubro
-            // 
-            this.btnLupaRubro.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLupaRubro.FlatAppearance.BorderSize = 0;
-            this.btnLupaRubro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLupaRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLupaRubro.ImageKey = "puntos3.png";
-            this.btnLupaRubro.ImageList = this.imageList1;
-            this.btnLupaRubro.Location = new System.Drawing.Point(328, 290);
-            this.btnLupaRubro.Name = "btnLupaRubro";
-            this.btnLupaRubro.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
-            this.btnLupaRubro.Size = new System.Drawing.Size(38, 32);
-            this.btnLupaRubro.TabIndex = 52;
-            this.btnLupaRubro.UseVisualStyleBackColor = true;
-            this.btnLupaRubro.Click += new System.EventHandler(this.btnLupaRubro_Click);
-            // 
-            // btnLupaSexo
-            // 
-            this.btnLupaSexo.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLupaSexo.FlatAppearance.BorderSize = 0;
-            this.btnLupaSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLupaSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLupaSexo.ImageKey = "puntos3.png";
-            this.btnLupaSexo.ImageList = this.imageList1;
-            this.btnLupaSexo.Location = new System.Drawing.Point(328, 232);
-            this.btnLupaSexo.Name = "btnLupaSexo";
-            this.btnLupaSexo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
-            this.btnLupaSexo.Size = new System.Drawing.Size(38, 32);
-            this.btnLupaSexo.TabIndex = 51;
-            this.btnLupaSexo.UseVisualStyleBackColor = true;
-            this.btnLupaSexo.Click += new System.EventHandler(this.btnLupaSexo_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(863, 93);
+            this.panel6.Location = new System.Drawing.Point(1225, 81);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(201, 2);
+            this.panel6.Size = new System.Drawing.Size(178, 2);
             this.panel6.TabIndex = 28;
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Black;
-            this.panel15.Location = new System.Drawing.Point(110, 306);
+            this.panel15.Location = new System.Drawing.Point(268, 264);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(207, 2);
             this.panel15.TabIndex = 49;
@@ -726,25 +922,26 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtdescripcion_rubro.BackColor = System.Drawing.Color.White;
             this.txtdescripcion_rubro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdescripcion_rubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdescripcion_rubro.ForeColor = System.Drawing.Color.Black;
-            this.txtdescripcion_rubro.Location = new System.Drawing.Point(110, 282);
+            this.txtdescripcion_rubro.Location = new System.Drawing.Point(268, 236);
+            this.txtdescripcion_rubro.Multiline = true;
             this.txtdescripcion_rubro.Name = "txtdescripcion_rubro";
-            this.txtdescripcion_rubro.Size = new System.Drawing.Size(203, 19);
+            this.txtdescripcion_rubro.Size = new System.Drawing.Size(207, 35);
             this.txtdescripcion_rubro.TabIndex = 50;
-            this.txtdescripcion_rubro.Text = "Rubro (*)";
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.Black;
-            this.panel14.Location = new System.Drawing.Point(338, 193);
+            this.panel14.Location = new System.Drawing.Point(607, 178);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(250, 2);
+            this.panel14.Size = new System.Drawing.Size(150, 2);
             this.panel14.TabIndex = 48;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Black;
-            this.panel13.Location = new System.Drawing.Point(110, 249);
+            this.panel13.Location = new System.Drawing.Point(268, 220);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(206, 2);
             this.panel13.TabIndex = 47;
@@ -753,17 +950,18 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtdescripcion_sx.BackColor = System.Drawing.Color.White;
             this.txtdescripcion_sx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdescripcion_sx.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdescripcion_sx.ForeColor = System.Drawing.Color.Black;
-            this.txtdescripcion_sx.Location = new System.Drawing.Point(110, 225);
+            this.txtdescripcion_sx.Location = new System.Drawing.Point(268, 191);
+            this.txtdescripcion_sx.Multiline = true;
             this.txtdescripcion_sx.Name = "txtdescripcion_sx";
-            this.txtdescripcion_sx.Size = new System.Drawing.Size(202, 19);
+            this.txtdescripcion_sx.Size = new System.Drawing.Size(203, 35);
             this.txtdescripcion_sx.TabIndex = 48;
-            this.txtdescripcion_sx.Text = "Sexo (*)";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(637, 193);
+            this.panel5.Location = new System.Drawing.Point(976, 170);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(427, 2);
             this.panel5.TabIndex = 49;
@@ -772,64 +970,65 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtDireccion.BackColor = System.Drawing.Color.White;
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.Color.Black;
-            this.txtDireccion.Location = new System.Drawing.Point(637, 172);
+            this.txtDireccion.Location = new System.Drawing.Point(976, 142);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(435, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(427, 35);
             this.txtDireccion.TabIndex = 48;
-            this.txtDireccion.Text = "Direccion (*)";
             // 
             // txtmovil
             // 
             this.txtmovil.BackColor = System.Drawing.Color.White;
             this.txtmovil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtmovil.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmovil.ForeColor = System.Drawing.Color.Black;
-            this.txtmovil.Location = new System.Drawing.Point(867, 68);
+            this.txtmovil.Location = new System.Drawing.Point(1229, 52);
             this.txtmovil.MaxLength = 20;
+            this.txtmovil.Multiline = true;
             this.txtmovil.Name = "txtmovil";
-            this.txtmovil.Size = new System.Drawing.Size(197, 19);
+            this.txtmovil.Size = new System.Drawing.Size(171, 35);
             this.txtmovil.TabIndex = 47;
-            this.txtmovil.Text = "# Movil (*)";
             // 
             // txtApellido
             // 
             this.txtApellido.BackColor = System.Drawing.Color.White;
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ForeColor = System.Drawing.Color.Black;
-            this.txtApellido.Location = new System.Drawing.Point(341, 170);
+            this.txtApellido.Location = new System.Drawing.Point(610, 150);
             this.txtApellido.MaxLength = 100;
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(244, 26);
+            this.txtApellido.Size = new System.Drawing.Size(142, 35);
             this.txtApellido.TabIndex = 46;
-            this.txtApellido.Text = "Apellido (*)";
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Black;
-            this.panel12.Location = new System.Drawing.Point(110, 194);
+            this.panel12.Location = new System.Drawing.Point(268, 172);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(203, 2);
+            this.panel12.Size = new System.Drawing.Size(206, 2);
             this.panel12.TabIndex = 45;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(110, 174);
+            this.txtNombre.Location = new System.Drawing.Point(268, 143);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(208, 26);
+            this.txtNombre.Size = new System.Drawing.Size(187, 35);
             this.txtNombre.TabIndex = 44;
-            this.txtNombre.Text = "Nombre (*)";
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(110, 142);
+            this.panel8.Location = new System.Drawing.Point(268, 127);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(473, 2);
             this.panel8.TabIndex = 43;
@@ -838,22 +1037,23 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtrazon_social.BackColor = System.Drawing.Color.White;
             this.txtrazon_social.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtrazon_social.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrazon_social.ForeColor = System.Drawing.Color.Black;
-            this.txtrazon_social.Location = new System.Drawing.Point(110, 122);
+            this.txtrazon_social.Location = new System.Drawing.Point(268, 98);
             this.txtrazon_social.MaxLength = 150;
+            this.txtrazon_social.Multiline = true;
             this.txtrazon_social.Name = "txtrazon_social";
-            this.txtrazon_social.Size = new System.Drawing.Size(473, 19);
+            this.txtrazon_social.Size = new System.Drawing.Size(468, 35);
             this.txtrazon_social.TabIndex = 42;
-            this.txtrazon_social.Text = "Razon Scocial (*)";
             // 
             // btnretornar
             // 
             this.btnretornar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnretornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnretornar.ForeColor = System.Drawing.Color.Black;
-            this.btnretornar.Location = new System.Drawing.Point(339, 387);
+            this.btnretornar.Location = new System.Drawing.Point(825, 303);
             this.btnretornar.Name = "btnretornar";
-            this.btnretornar.Size = new System.Drawing.Size(87, 38);
+            this.btnretornar.Size = new System.Drawing.Size(115, 38);
             this.btnretornar.TabIndex = 40;
             this.btnretornar.Text = "Retornar";
             this.btnretornar.UseVisualStyleBackColor = false;
@@ -864,9 +1064,9 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(231, 387);
+            this.btnGuardar.Location = new System.Drawing.Point(694, 303);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(87, 38);
+            this.btnGuardar.Size = new System.Drawing.Size(115, 38);
             this.btnGuardar.TabIndex = 39;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -877,54 +1077,39 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(119, 387);
+            this.btnCancelar.Location = new System.Drawing.Point(560, 303);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(115, 38);
             this.btnCancelar.TabIndex = 38;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
-            // btnLupaTipoDocumento
-            // 
-            this.btnLupaTipoDocumento.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLupaTipoDocumento.FlatAppearance.BorderSize = 0;
-            this.btnLupaTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLupaTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLupaTipoDocumento.ImageKey = "puntos3.png";
-            this.btnLupaTipoDocumento.ImageList = this.imageList1;
-            this.btnLupaTipoDocumento.Location = new System.Drawing.Point(403, 31);
-            this.btnLupaTipoDocumento.Name = "btnLupaTipoDocumento";
-            this.btnLupaTipoDocumento.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
-            this.btnLupaTipoDocumento.Size = new System.Drawing.Size(38, 32);
-            this.btnLupaTipoDocumento.TabIndex = 32;
-            this.btnLupaTipoDocumento.UseVisualStyleBackColor = true;
-            this.btnLupaTipoDocumento.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(640, 93);
+            this.panel4.Location = new System.Drawing.Point(979, 78);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(201, 2);
+            this.panel4.Size = new System.Drawing.Size(135, 2);
             this.panel4.TabIndex = 27;
             // 
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.White;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefono.Location = new System.Drawing.Point(640, 71);
+            this.txtTelefono.Location = new System.Drawing.Point(979, 50);
             this.txtTelefono.MaxLength = 20;
+            this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(201, 19);
+            this.txtTelefono.Size = new System.Drawing.Size(135, 35);
             this.txtTelefono.TabIndex = 26;
-            this.txtTelefono.Text = "# Telefono (*)";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(639, 48);
+            this.panel3.Location = new System.Drawing.Point(978, 35);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(425, 2);
             this.panel3.TabIndex = 24;
@@ -933,18 +1118,19 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(639, 27);
+            this.txtEmail.Location = new System.Drawing.Point(978, 6);
             this.txtEmail.MaxLength = 150;
+            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(425, 19);
+            this.txtEmail.Size = new System.Drawing.Size(414, 35);
             this.txtEmail.TabIndex = 23;
-            this.txtEmail.Text = "Email (*)";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(110, 94);
+            this.panel2.Location = new System.Drawing.Point(268, 83);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(208, 2);
             this.panel2.TabIndex = 25;
@@ -953,18 +1139,19 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtNro_Documento_cl.BackColor = System.Drawing.Color.White;
             this.txtNro_Documento_cl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNro_Documento_cl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNro_Documento_cl.ForeColor = System.Drawing.Color.Black;
-            this.txtNro_Documento_cl.Location = new System.Drawing.Point(110, 74);
+            this.txtNro_Documento_cl.Location = new System.Drawing.Point(268, 54);
             this.txtNro_Documento_cl.MaxLength = 20;
+            this.txtNro_Documento_cl.Multiline = true;
             this.txtNro_Documento_cl.Name = "txtNro_Documento_cl";
-            this.txtNro_Documento_cl.Size = new System.Drawing.Size(314, 19);
+            this.txtNro_Documento_cl.Size = new System.Drawing.Size(208, 35);
             this.txtNro_Documento_cl.TabIndex = 20;
-            this.txtNro_Documento_cl.Text = "Nro.doc (*)";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(110, 48);
+            this.panel9.Location = new System.Drawing.Point(268, 37);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(282, 2);
             this.panel9.TabIndex = 22;
@@ -973,12 +1160,13 @@ namespace Sol_Capa_Presentacion.Clientes
             // 
             this.txtDescripcion_tdpc.BackColor = System.Drawing.Color.White;
             this.txtDescripcion_tdpc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion_tdpc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion_tdpc.ForeColor = System.Drawing.Color.Black;
-            this.txtDescripcion_tdpc.Location = new System.Drawing.Point(110, 27);
+            this.txtDescripcion_tdpc.Location = new System.Drawing.Point(268, 8);
+            this.txtDescripcion_tdpc.Multiline = true;
             this.txtDescripcion_tdpc.Name = "txtDescripcion_tdpc";
-            this.txtDescripcion_tdpc.Size = new System.Drawing.Size(364, 19);
+            this.txtDescripcion_tdpc.Size = new System.Drawing.Size(279, 35);
             this.txtDescripcion_tdpc.TabIndex = 21;
-            this.txtDescripcion_tdpc.Text = "Tipo doc (*)";
             // 
             // btnnuevo
             // 
@@ -988,7 +1176,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnnuevo.ForeColor = System.Drawing.Color.Black;
             this.btnnuevo.ImageKey = "newfile_85903.png";
             this.btnnuevo.ImageList = this.imageList1;
-            this.btnnuevo.Location = new System.Drawing.Point(18, 674);
+            this.btnnuevo.Location = new System.Drawing.Point(13, 531);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(94, 89);
             this.btnnuevo.TabIndex = 1;
@@ -1005,7 +1193,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnactualizar.ForeColor = System.Drawing.Color.Black;
             this.btnactualizar.ImageKey = "edit_modify_icon_149489.png";
             this.btnactualizar.ImageList = this.imageList1;
-            this.btnactualizar.Location = new System.Drawing.Point(110, 674);
+            this.btnactualizar.Location = new System.Drawing.Point(105, 531);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Size = new System.Drawing.Size(110, 89);
             this.btnactualizar.TabIndex = 2;
@@ -1022,7 +1210,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btneliminar.ForeColor = System.Drawing.Color.Black;
             this.btneliminar.ImageKey = "removetheproperty_theapplication_eliminar_2965.png";
             this.btneliminar.ImageList = this.imageList1;
-            this.btneliminar.Location = new System.Drawing.Point(216, 674);
+            this.btneliminar.Location = new System.Drawing.Point(211, 531);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(94, 89);
             this.btneliminar.TabIndex = 3;
@@ -1039,7 +1227,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnreporte.ForeColor = System.Drawing.Color.Black;
             this.btnreporte.ImageKey = "file_spreadsheet_icon_143779.png";
             this.btnreporte.ImageList = this.imageList1;
-            this.btnreporte.Location = new System.Drawing.Point(310, 674);
+            this.btnreporte.Location = new System.Drawing.Point(305, 531);
             this.btnreporte.Name = "btnreporte";
             this.btnreporte.Size = new System.Drawing.Size(94, 89);
             this.btnreporte.TabIndex = 4;
@@ -1055,7 +1243,7 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnsalir.ForeColor = System.Drawing.Color.Black;
             this.btnsalir.ImageKey = "mbrilogout_99583 (1).png";
             this.btnsalir.ImageList = this.imageList1;
-            this.btnsalir.Location = new System.Drawing.Point(402, 674);
+            this.btnsalir.Location = new System.Drawing.Point(397, 531);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(94, 89);
             this.btnsalir.TabIndex = 5;
@@ -1064,19 +1252,41 @@ namespace Sol_Capa_Presentacion.Clientes
             this.btnsalir.UseVisualStyleBackColor = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // Frm_Clientes
+            // Pnl_SubOpcion
+            // 
+            this.Pnl_SubOpcion.BackColor = System.Drawing.Color.Orange;
+            this.Pnl_SubOpcion.Controls.Add(this.label10);
+            this.Pnl_SubOpcion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_SubOpcion.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_SubOpcion.Name = "Pnl_SubOpcion";
+            this.Pnl_SubOpcion.Size = new System.Drawing.Size(1599, 72);
+            this.Pnl_SubOpcion.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 72);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "CLIENTES";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnLupaRubro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(55)))), ((int)(((byte)(67)))));
-            this.ClientSize = new System.Drawing.Size(1689, 911);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1599, 864);
+            this.Controls.Add(this.Pnl_SubOpcion);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnreporte);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.Tb_Principal);
-            this.Name = "Frm_Clientes";
+            this.Name = "btnLupaRubro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Frm_Clientes_Load);
@@ -1099,6 +1309,9 @@ namespace Sol_Capa_Presentacion.Clientes
             this.pnlListadoTdpc.ResumeLayout(false);
             this.pnlListadoTdpc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Tdpc)).EndInit();
+            this.Pnl_datos_I.ResumeLayout(false);
+            this.Pnl_datos_D.ResumeLayout(false);
+            this.Pnl_SubOpcion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1109,9 +1322,6 @@ namespace Sol_Capa_Presentacion.Clientes
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView Dgv_Principal;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBuscarProductos;
-        private System.Windows.Forms.Panel Linea;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnactualizar;
         private System.Windows.Forms.Button btneliminar;
@@ -1134,7 +1344,6 @@ namespace Sol_Capa_Presentacion.Clientes
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel pnlListadoTdpc;
         private System.Windows.Forms.DataGridView Dgv_Tdpc;
-        private System.Windows.Forms.Button btnLupaTipoDocumento;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Panel panel3;
@@ -1144,12 +1353,8 @@ namespace Sol_Capa_Presentacion.Clientes
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtDescripcion_tdpc;
         private System.Windows.Forms.TextBox txtObservaciones;
-        private System.Windows.Forms.TextBox lblobservaciones;
-        private System.Windows.Forms.Button btnLupaDistrito;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox txtDistritos;
-        private System.Windows.Forms.Button btnLupaRubro;
-        private System.Windows.Forms.Button btnLupaSexo;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox txtdescripcion_rubro;
@@ -1174,5 +1379,30 @@ namespace Sol_Capa_Presentacion.Clientes
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView Dvg_Distritos;
+        private System.Windows.Forms.Panel Pnl_datos_D;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel Pnl_SubOpcion;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private FontAwesome.Sharp.IconButton btnlupa_rubro;
+        private FontAwesome.Sharp.IconButton btnlupa_genero;
+        private FontAwesome.Sharp.IconButton btnLupaTipoDocumento;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel Pnl_datos_I;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private FontAwesome.Sharp.IconButton btnLupaDistrito;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox txtBuscar_clientes;
+        private FontAwesome.Sharp.IconButton btn_buscar_cl;
     }
 }

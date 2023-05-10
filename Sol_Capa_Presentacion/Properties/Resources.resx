@@ -118,19 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="nuevo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuevo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4105934-document-edit-edit-document-update-write-writing_113937 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4105934-document-edit-edit-document-update-write-writing_113937 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="eliminar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eliminar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mbrilogout_99583" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mbrilogout_99583.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nuevo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuevo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="spreadsheet_icon_126923" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spreadsheet_icon_126923.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4105934-document-edit-edit-document-update-write-writing_113937 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4105934-document-edit-edit-document-update-write-writing_113937 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reporte_minimarket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reporte_minimarket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -33,19 +33,19 @@ namespace Sol_Capa_Presentacion.Proveedores
         #region "Mis Metodos" 
         private void Formato_pv()
         {
-            Dgv_Principal.Columns[0].Width = 90;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_PV";
-            Dgv_Principal.Columns[1].Width = 160;
+            Dgv_Principal.Columns[0].Width = 100;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO";
+            Dgv_Principal.Columns[1].Width = 250;
             Dgv_Principal.Columns[1].HeaderText = "TIPO DOCUMENTO";
-            Dgv_Principal.Columns[2].Width = 160;
+            Dgv_Principal.Columns[2].Width = 180;
             Dgv_Principal.Columns[2].HeaderText = "NRO DOCUMENTO";
-            Dgv_Principal.Columns[3].Width = 230;
+            Dgv_Principal.Columns[3].Width = 300;
             Dgv_Principal.Columns[3].HeaderText = "RAZON SOCIAL";
-            Dgv_Principal.Columns[4].Width = 120;
+            Dgv_Principal.Columns[4].Width = 200;
             Dgv_Principal.Columns[4].HeaderText = "NOMBRE";
-            Dgv_Principal.Columns[5].Width = 120;
+            Dgv_Principal.Columns[5].Width = 200;
             Dgv_Principal.Columns[5].HeaderText = "APELLIDO";
-            Dgv_Principal.Columns[6].Width = 120;
+            Dgv_Principal.Columns[6].Width = 200;
             Dgv_Principal.Columns[6].HeaderText = "RUBRO";
             Dgv_Principal.Columns[7].Visible = false;
             Dgv_Principal.Columns[8].Visible = false;
@@ -82,7 +82,7 @@ namespace Sol_Capa_Presentacion.Proveedores
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+            //this.btnsalir.Enabled = !estado;
           
             
 
@@ -144,7 +144,7 @@ namespace Sol_Capa_Presentacion.Proveedores
 
         private void Formato_tdpc_pv()
         {
-            Dgv_Tdpc.Columns[0].Width = 170;
+            Dgv_Tdpc.Columns[0].Width = 340;
             Dgv_Tdpc.Columns[0].HeaderText = "Tipo Documento";
             Dgv_Tdpc.Columns[1].Visible = false;
         }
@@ -183,8 +183,8 @@ namespace Sol_Capa_Presentacion.Proveedores
 
         private void Formato_sx_pv()
         {
-            Dvg_Genero.Columns[0].Width = 180;
-            Dvg_Genero.Columns[0].HeaderText = "Generos";
+            Dvg_Genero.Columns[0].Width = 350;
+            Dvg_Genero.Columns[0].HeaderText = "GENERO";
             Dvg_Genero.Columns[1].Visible = false;
         }
 
@@ -220,9 +220,9 @@ namespace Sol_Capa_Presentacion.Proveedores
 
 
         private void Formato_ru_pv()
-        {   
-            Dvg_Rubros.Columns[0].Width = 250;
-            Dvg_Rubros.Columns[0].HeaderText = "Rubros";
+        {
+            Dvg_Rubros.Columns[0].Width = 390;
+            Dvg_Rubros.Columns[0].HeaderText = "RUBROS";
             Dvg_Rubros.Columns[1].Visible = false;
         }
 
@@ -259,12 +259,12 @@ namespace Sol_Capa_Presentacion.Proveedores
 
         private void Formato_di_pv()
         {
-            Dvg_Distritos.Columns[0].Width = 200;
-            Dvg_Distritos.Columns[0].HeaderText = "Distrito";
-            Dvg_Distritos.Columns[1].Width = 200;
-            Dvg_Distritos.Columns[1].HeaderText = "Canton";
-            Dvg_Distritos.Columns[2].Width = 200;
-            Dvg_Distritos.Columns[2].HeaderText = "Provincia";
+            Dvg_Distritos.Columns[0].Width = 235;
+            Dvg_Distritos.Columns[0].HeaderText = "DISTRITOS";
+            Dvg_Distritos.Columns[1].Width = 235;
+            Dvg_Distritos.Columns[1].HeaderText = "CANTON";
+            Dvg_Distritos.Columns[2].Width = 240;
+            Dvg_Distritos.Columns[2].HeaderText = "PROVINCIA";
             Dvg_Distritos.Columns[3].Visible = false;
         }
 
@@ -317,11 +317,11 @@ namespace Sol_Capa_Presentacion.Proveedores
             txtDireccion.Enabled = !lestado;
             txtObservaciones.Enabled = !lestado;
             txtDescripcion_tdpc.Enabled = !lestado;
-            btnLupaSexo.Enabled = !lestado;
-            btnLupaRubro.Enabled = !lestado;
+            btnlupa_genero.Enabled = !lestado;
+            btnlupa_rubro.Enabled = !lestado;
             btnLupaDistrito.Enabled = !lestado;
             btnLupaTipoDocumento.Enabled = !lestado;
-            lblobservaciones.Enabled = !lestado;
+        
 
         }
         private void Limpiar_texto()
@@ -343,24 +343,7 @@ namespace Sol_Capa_Presentacion.Proveedores
             txtDescripcion_tdpc.Text = "";            
 
         }
-        private void Placeholder_texto()
-        {
-            txtDescripcion_tdpc.Text = "Tipo doc (*)";           
-            txtNro_Documento_pv.Text = "Nro.doc (*)";
-            txtrazon_social.Text = "Razon Social (*)";
-            txtNombre.Text = "Nombre (*)";
-            txtApellido.Text = "Apellido (*)";
-            txtdescripcion_sx.Text = "Genero (*)";
-            txtdescripcion_rubro.Text = "Rubro (*)";
-            txtEmail.Text = "Email (*)";
-            txtTelefono.Text = "# Telefono (*)";
-            txtmovil.Text = "# Movil (*)";
-            txtDistritos.Text = "Distrito /Canton /Provincia (*)";   
-            txtDireccion.Text = "Direccion (*)";
-            txtObservaciones.Text = "";
-          
-
-        }
+       
 
         #endregion
         private void Frm_Proveedores_Load(object sender, EventArgs e)
@@ -382,7 +365,7 @@ namespace Sol_Capa_Presentacion.Proveedores
             this.Botones(true);
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
-            this.Placeholder_texto();
+            
             this.Estado_texto(false);
             Tb_Principal.SelectedIndex = 1;
             this.txtNro_Documento_pv.Focus();
@@ -434,45 +417,13 @@ namespace Sol_Capa_Presentacion.Proveedores
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.Listado_pv(txtBuscarProductos.Text.Trim());
-        }
+        
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {         
-           
-
-            if (txtDescripcion_tdpc.Text == "" || txtNro_Documento_pv.Text == "")
-            {
-                txtNro_Documento_pv.Text = "Abreviatura(*)";
-                txtNro_Documento_pv.ForeColor = Color.Black;
-                txtDescripcion_tdpc.Text = "Unidad Medidas(*)";
-                txtDescripcion_tdpc.ForeColor = Color.Black;
-                txtBuscarProductos.Text = "Buscar Unidas Medidas:";
-                txtBuscarProductos.ForeColor = Color.Black;
-
-
-            }
-        }
-
+       
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }      
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-            if (txtNro_Documento_pv.Text == "" || txtDescripcion_tdpc.Text == "")
-            {
-                txtNro_Documento_pv.Text = "Abreviatura(*)";
-                txtNro_Documento_pv.ForeColor = Color.Black;
-                txtDescripcion_tdpc.Text = "Unidad Medidas(*)";
-                txtDescripcion_tdpc.ForeColor = Color.Black;
-
-            }
-        }
+        }    
 
 
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
@@ -506,14 +457,10 @@ namespace Sol_Capa_Presentacion.Proveedores
               
                 this.Estado_texto(true);
                 this.btnretornar.Visible = true;
+               
             }
         }      
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoTdpc.Location = btnLupaTipoDocumento.Location;
-            this.pnlListadoTdpc.Visible = true;
-        }  
 
        
         private void btnGuardar_Click_1(object sender, EventArgs e)
@@ -559,15 +506,10 @@ namespace Sol_Capa_Presentacion.Proveedores
                     this.Estado_Botones_Principales(true);
                     this.Estado_Botones_Procesos(false);
                     this.txtNro_Documento_pv.Text = "";
-                   
+                    this.Limpiar_texto();
                     this.txtNro_Documento_pv.ReadOnly = true;
                     this.Tb_Principal.SelectedIndex = 0;
-                    this.codigo_pv = 0;
-                    this.codigo_tdpc = 0;
-                    this.codigo_sx = 0;
-                    this.codigo_ru = 0;
-                    this.codigo_di = 0;
-                    this.botones = 0;
+                    this.codigo_pv = 0;                   
                    
                 }
                 else
@@ -604,68 +546,23 @@ namespace Sol_Capa_Presentacion.Proveedores
             this.Estado_Botones_Principales(true);
             this.Limpiar_texto();
             this.Botones(false);
-            this.Placeholder_texto();
+          
 
             this.Tb_Principal.SelectedIndex = 0;
 
-            if (txtNro_Documento_pv.Text == string.Empty ||
-                txtNro_Documento_pv.Text != null || 
-                txtDescripcion_tdpc.Text == string.Empty || 
-                txtDescripcion_tdpc.Text != null ||
-                txtEmail.Text == string.Empty ||
-                txtEmail.Text != null  ||
-                txtTelefono.Text == string.Empty ||
-                txtTelefono.Text != null )
-            {
-                txtNro_Documento_pv.Text = "Producto (*)";
-                txtNro_Documento_pv.ForeColor = Color.Black;
-                txtDescripcion_tdpc.Text = "Marca (*)";
-                txtDescripcion_tdpc.ForeColor = Color.Black;
-                txtEmail.Text = "Medida (*)";
-                txtEmail.ForeColor = Color.Black;
-                txtTelefono.Text = "Categoria (*)";
-                txtTelefono.ForeColor = Color.Black;
-
-            }
-           
            
         }
 
         private void btnretornar_Click_1(object sender, EventArgs e)
         {
             this.Tb_Principal.SelectedIndex = 0;
-             this.Placeholder_texto();
+            this.Limpiar_texto();
             /* this.codigo_pr = 0;*/
             this.botones = 0;
            
         }
-
-        private void Tb_Principal_RightToLeftLayoutChanged(object sender, EventArgs e)
-        {
-
-        }
               
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btn_retornar_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoTdpc.Visible = false;
-        }
-
-        private void btnLupaSexo_Click(object sender, EventArgs e)
-        {
-            this.pnlGenero.Location = btnLupaSexo.Location;
-            this.pnlGenero.Visible = true;
-        }
-
-        private void btn_retornarG_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoRubros.Visible = false;
-        }
+        
 
         private void Dvg_Genero_DoubleClick(object sender, EventArgs e)
         {
@@ -679,11 +576,6 @@ namespace Sol_Capa_Presentacion.Proveedores
             pnlListadoTdpc.Visible = false;
         }
 
-        private void btnLupaRubro_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoRubros.Location = btnLupaRubro.Location;
-            this.pnlListadoRubros.Visible = true; 
-        }
 
         private void Dvg_Rubros_DoubleClick(object sender, EventArgs e)
         {
@@ -691,26 +583,6 @@ namespace Sol_Capa_Presentacion.Proveedores
             pnlListadoRubros.Visible = false;
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            this.Listado_ru_pv(txtBuscar_rubros.Text);
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.pnlListadoRubros.Visible = false;
-        }
-
-        private void btnLupaDistrito_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoDistritos.Visible = true;
-            this.pnlListadoDistritos.Location = btnLupaTipoDocumento.Location;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoDistritos.Visible = false;
-        }
 
         private void Dvg_Distritos_DoubleClick(object sender, EventArgs e)
         {
@@ -718,9 +590,64 @@ namespace Sol_Capa_Presentacion.Proveedores
             this.pnlListadoDistritos.Visible = false;
         }
 
-        private void btnLupa2di_Click(object sender, EventArgs e)
+       
+        private void btnLupaTipoDocumento_Click(object sender, EventArgs e)
         {
-            this.Listado_di_pv(txtBuscar_Distritos.Text);
+            this.pnlListadoTdpc.Location = btnLupaTipoDocumento.Location;
+            this.pnlListadoTdpc.Visible = true;
+        }
+
+        private void btnlupa_genero_Click(object sender, EventArgs e)
+        {
+            this.pnlGenero.Location = btnLupaTipoDocumento.Location;
+            this.pnlGenero.Visible = true;
+        }
+
+        private void btnlupa_rubro_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoRubros.Location = btnLupaTipoDocumento.Location;
+            this.pnlListadoRubros.Visible = true;
+        }
+
+        private void btnLupaDistrito_Click_1(object sender, EventArgs e)
+        {
+            this.pnlListadoDistritos.Visible = true;
+            this.pnlListadoDistritos.Location = btnLupaTipoDocumento.Location;
+        }
+
+        private void btnRetornar2PO_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoTdpc.Visible = false;
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoDistritos.Visible = false;
+        }
+
+        private void btn_buscar_di_Click(object sender, EventArgs e)
+        {
+            this.Listado_di_pv(txt_buscar_di.Text);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoRubros.Visible = false;
+        }
+
+        private void btn_buscar_ru_Click(object sender, EventArgs e)
+        {
+            this.Listado_ru_pv(txt_buscar_ru.Text);
+        }
+
+        private void txt_buscar_ru_Click(object sender, EventArgs e)
+        {
+            this.txt_buscar_ru.Text = "";
+        }
+
+        private void txt_buscar_di_Click(object sender, EventArgs e)
+        {
+            this.txt_buscar_di.Text = "";
         }
     }
 

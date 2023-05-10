@@ -28,9 +28,9 @@ namespace Sol_Capa_Presentacion.Categoria
         #region "Mis Metodos"
         private void Formato_ca()
         {
-            Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_CA";
-            Dgv_Principal.Columns[1].Width = 200;
+            Dgv_Principal.Columns[0].Width = 150;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO";
+            Dgv_Principal.Columns[1].Width = 340;
             Dgv_Principal.Columns[1].HeaderText = "CATEGORIA";
         }
 
@@ -53,7 +53,7 @@ namespace Sol_Capa_Presentacion.Categoria
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+           // this.btnsalir.Enabled = !estado;
             
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -89,29 +89,8 @@ namespace Sol_Capa_Presentacion.Categoria
         {
             this.Listado_ca("%");
             this.Formato_ca();
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if(txtCategoria.Text== "Buscar Categoria:")
-            {
-                txtCategoria.Text = "";
-                txtCategoria.ForeColor = Color.Black;
-             
-            }
-        }
-
-        private void txtCategoria_Leave(object sender, EventArgs e)
-        {
-
-            if (txtCategoria.Text == "")
-            {
-                txtCategoria.Text = "Buscar Categoria:";
-                txtCategoria.ForeColor = Color.Black;
-
-            }
-        }
-
+        }      
+           
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtDescripcion_ca.Text == string.Empty)
@@ -154,8 +133,7 @@ namespace Sol_Capa_Presentacion.Categoria
             this.Estado_Botones_Procesos(true);
             //txtDescripcion_ca.Text = "";
             this.txtDescripcion_ca.ReadOnly = false;            
-            Tb_Principal.SelectedIndex = 1;
-         
+            Tb_Principal.SelectedIndex = 1;         
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -169,7 +147,6 @@ namespace Sol_Capa_Presentacion.Categoria
             this.txtDescripcion_ca.ReadOnly = false;
             Tb_Principal.SelectedIndex = 1;
             //txtDescripcion_ca.Focus();
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -182,38 +159,9 @@ namespace Sol_Capa_Presentacion.Categoria
             this.Estado_Botones_Principales(true);
             this.Estado_Botones_Procesos(false);
             this.Botones(false);
-            this.Tb_Principal.SelectedIndex = 0;
+            this.Tb_Principal.SelectedIndex = 0;           
 
-
-            if (txtDescripcion_ca.Text == "" || txtDescripcion_ca.Text != null)
-            {          
-                txtDescripcion_ca.Text = "Categoria(*)";
-                txtDescripcion_ca.ForeColor = Color.Black;
-
-            }
-
-        }
-
-        private void txtDescripcion_ca_Enter(object sender, EventArgs e)
-        {
-            if (txtDescripcion_ca.Text == "Categoria(*)")
-            {
-                txtDescripcion_ca.Text = "";
-                txtDescripcion_ca.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtDescripcion_ca_Leave(object sender, EventArgs e)
-        {
-
-            if (txtDescripcion_ca.Text == "")
-            {
-                txtDescripcion_ca.Text = "Categoria(*)";
-                txtDescripcion_ca.ForeColor = Color.Black;
-
-            }
-        }
+        }     
 
         private void Dgv_Principal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -230,20 +178,7 @@ namespace Sol_Capa_Presentacion.Categoria
             this.codigo_ca = 0;
             this.botones = 0;
         }
-
-        private void Tb_Principal_Click(object sender, EventArgs e)
-        {
-            if (txtCategoria.Text == "")
-            {
-                txtCategoria.Text = "Buscar Categoria:";
-                txtCategoria.ForeColor = Color.Black;
-
-            }else if (txtDescripcion_ca.Text !=null)
-            {
-                txtCategoria.Text = "Buscar Categoria:";
-                txtCategoria.ForeColor = Color.Black;
-            }
-        }
+          
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
@@ -274,37 +209,13 @@ namespace Sol_Capa_Presentacion.Categoria
               
             }
 
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.Listado_ca(txtCategoria.Text.Trim());
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_ca.Text == "")
-            {
-                txtDescripcion_ca.Text = "Categoria(*)";
-                txtDescripcion_ca.ForeColor = Color.Black;
-
-            }
-        }
+        }        
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_ca.Text == "")
-            {
-                txtDescripcion_ca.Text = "Categoria(*)";
-                txtDescripcion_ca.ForeColor = Color.Black;
-
-            }
-        }
+        
 
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
         {
@@ -332,6 +243,8 @@ namespace Sol_Capa_Presentacion.Categoria
 
                 this.Botones(false);
                 this.btnretornar.Visible = true;
+                this.btnGuardar.Visible = false;
+                this.btnCancelar.Visible = false;
             }
         }
 
@@ -342,6 +255,16 @@ namespace Sol_Capa_Presentacion.Categoria
             reporte.ShowDialog();
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Listado_ca(txt_buscar_ca.Text.Trim());
+        }
+
+        private void btn_buscar_ca_Click(object sender, EventArgs e)
+        {
+            this.Listado_ca(txt_buscar_ca.Text);
         }
     }
 }

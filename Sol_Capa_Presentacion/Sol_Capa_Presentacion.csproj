@@ -81,7 +81,16 @@
     <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86" />
     <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1577.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1577.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
@@ -93,6 +102,8 @@
     <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Services.Client" />
@@ -101,6 +112,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -110,6 +122,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Almacenes\Frm_Almacenes.cs">
@@ -148,6 +161,21 @@
     <Compile Include="Entradas_Productos\Frm_Entrada_Productos.Designer.cs">
       <DependentUpon>Frm_Entrada_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DashBoard.Designer.cs">
+      <DependentUpon>Frm_DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_login.Designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marcas\Frm_Marcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +207,21 @@
     </Compile>
     <Compile Include="Provincias\Frm_Provincias.Designer.cs">
       <DependentUpon>Frm_Provincias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidados\Frm_Ingreso_ComprasxProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidados\Frm_Ingreso_ComprasxProductos.Designer.cs">
+      <DependentUpon>Frm_Ingreso_ComprasxProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidados\Frm_Reporte_ingreso_ComprasxProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidados\Frm_Reporte_ingreso_ComprasxProductos.Designer.cs">
+      <DependentUpon>Frm_Reporte_ingreso_ComprasxProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Ingreso_ComprasxProductos.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reporte\DataSet_MiniMarket.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -239,6 +282,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Rpt_Ingreso_CompraxProducto.cs">
+      <DependentUpon>Rpt_Ingreso_CompraxProducto.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Rpt_Salida_Productos.cs">
       <DependentUpon>Rpt_Salida_Productos.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -288,6 +337,12 @@
     <Compile Include="Unidad_Medidas\Frm_Unidades_Medidas.Designer.cs">
       <DependentUpon>Frm_Unidades_Medidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuario\Frm_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\Frm_Usuario.Designer.cs">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Almacenes\Frm_Almacenes.resx">
       <DependentUpon>Frm_Almacenes.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,6 +360,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entradas_Productos\Frm_Entrada_Productos.resx">
       <DependentUpon>Frm_Entrada_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Categorias.resx">
+      <DependentUpon>Frm_Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DashBoard.resx">
+      <DependentUpon>Frm_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcas\Frm_Marcas.resx">
       <DependentUpon>Frm_Marcas.cs</DependentUpon>
@@ -330,6 +394,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Provincias\Frm_Provincias.resx">
       <DependentUpon>Frm_Provincias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidados\Frm_Ingreso_ComprasxProductos.resx">
+      <DependentUpon>Frm_Ingreso_ComprasxProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidados\Frm_Reporte_ingreso_ComprasxProductos.resx">
+      <DependentUpon>Frm_Reporte_ingreso_ComprasxProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Reporte_Ingreso_ComprasxProductos.resx">
+      <DependentUpon>Frm_Reporte_Ingreso_ComprasxProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte\Frm_Rpt_Almacenes.resx">
       <DependentUpon>Frm_Rpt_Almacenes.cs</DependentUpon>
@@ -360,6 +433,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Imprime_Ticket.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Ingreso_CompraxProducto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Ingreso_CompraxProducto.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Salida_Productos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Salida_Productos.cs</LastGenOutput>
@@ -388,6 +465,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Unidad_Medidas\Frm_Unidades_Medidas.resx">
       <DependentUpon>Frm_Unidades_Medidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Frm_Usuario.resx">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -445,6 +525,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\puntos.png" />
+    <None Include="Resources\reporte_minimarket.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -462,5 +543,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

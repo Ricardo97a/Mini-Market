@@ -28,10 +28,10 @@ namespace Sol_Capa_Presentacion.Marcas
         #region "Mis Metodos"
         private void Formato_ma()
         {
-            Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_ma";
-            Dgv_Principal.Columns[1].Width = 200;
-            Dgv_Principal.Columns[1].HeaderText = "Marca";
+            Dgv_Principal.Columns[0].Width = 155;      
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO";
+            Dgv_Principal.Columns[1].Width = 355;
+            Dgv_Principal.Columns[1].HeaderText = "MARCA";
         }
 
         public void Listado_ma(string ctexto)
@@ -53,7 +53,7 @@ namespace Sol_Capa_Presentacion.Marcas
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+            //this.btnsalir.Enabled = !estado;
             
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -310,6 +310,7 @@ namespace Sol_Capa_Presentacion.Marcas
             if (Tb_Principal.SelectedTab == Tb_Principal.TabPages[1])
             {
                 this.Estado_Botones_Principales(false);
+                
 
             }
             else
@@ -330,6 +331,8 @@ namespace Sol_Capa_Presentacion.Marcas
 
                 this.Botones(false);
                 this.btnretornar.Visible = true;
+                this.btnCancelar.Visible = false;
+                this.btnGuardar.Visible = false;
             }
         }
 

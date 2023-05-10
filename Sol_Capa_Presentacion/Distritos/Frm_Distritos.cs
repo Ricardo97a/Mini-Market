@@ -29,8 +29,8 @@ namespace Sol_Capa_Presentacion.Distritos
         #region "Mis Metodos"
         private void Formato_di()
         {
-            Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_DI";
+            Dgv_Principal.Columns[0].Width = 200;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO DISTRITO";
             Dgv_Principal.Columns[1].Width = 200;
             Dgv_Principal.Columns[1].HeaderText = "DISTRITOS";
             Dgv_Principal.Columns[2].Width = 200;
@@ -60,7 +60,7 @@ namespace Sol_Capa_Presentacion.Distritos
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+           // this.btnsalir.Enabled = !estado;
             
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -70,11 +70,12 @@ namespace Sol_Capa_Presentacion.Distritos
             this.btnretornar.Visible = !estado;
            
         }
-        public void Botones(bool estado)
-        {
-            this.btnGuardar.Enabled = estado;
-            this.btnCancelar.Enabled = estado;           
+        public void Botones(bool estado)        {
+          
+            this.btnLupa_provincia.Enabled = estado;              
             this.txtDescripcion_di.Enabled = estado;
+            this.txtDescripcion_co.Enabled = estado;
+            this.txtDescripcion_po.Enabled = estado;
         }
         private void Seleccionar_Item()
         {
@@ -102,10 +103,10 @@ namespace Sol_Capa_Presentacion.Distritos
 
         private void Formato_po_co()
         {
-            Dgv_Provincias.Columns[0].Width = 200;
+            Dgv_Provincias.Columns[0].Width = 300;
             Dgv_Provincias.Columns[0].HeaderText = "CANTON";
             Dgv_Provincias.Columns[1].Visible = false;
-            Dgv_Provincias.Columns[2].Width = 200;
+            Dgv_Provincias.Columns[2].Width = 300;
             Dgv_Provincias.Columns[2].HeaderText = "PROVINCIAS";
             Dgv_Provincias.Columns[3].Visible = false;
         }
@@ -142,34 +143,8 @@ namespace Sol_Capa_Presentacion.Distritos
             }
 
         }
-        #endregion
-        private void Frm_Cantones_Load(object sender, EventArgs e)
-        {
-           
-           
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if(txtDistritos.Text== "Buscar Marcas:")
-            {
-                txtDistritos.Text = "";
-                txtDistritos.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtMarcas_Leave(object sender, EventArgs e)
-        {
-
-            if (txtDistritos.Text == "")
-            {
-                txtDistritos.Text = "Buscar Marcas:";
-                txtDistritos.ForeColor = Color.Black;
-
-            }
-        }
-
+        #endregion       
+        
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtDescripcion_di.Text == string.Empty || txtDescripcion_po.Text == string.Empty)
@@ -194,6 +169,8 @@ namespace Sol_Capa_Presentacion.Distritos
                     this.Estado_Botones_Principales(true);
                     this.Estado_Botones_Procesos(false);
                     this.txtDescripcion_di.Text = "";
+                    this.txtDescripcion_po.Text = "";
+                    this.txtDescripcion_co.Text = "";
                     this.txtDescripcion_di.ReadOnly = true;
                     this.Tb_Principal.SelectedIndex = 0; 
                     this.codigo_di = 0;
@@ -205,19 +182,7 @@ namespace Sol_Capa_Presentacion.Distritos
                 }
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            /*
-            botones = 2;
-            estadoGuarda = 1;// nuevo registro
-            this.Estado_Botones_Principales(false);
-            this.Estado_Botones_Procesos(true);
-            //txtDescripcion_ma.Text = "";
-            this.txtDescripcion_ru.ReadOnly = false;            
-            Tb_Principal.SelectedIndex = 1; */
-         
-        }
+               
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -243,36 +208,14 @@ namespace Sol_Capa_Presentacion.Distritos
             this.Estado_Botones_Principales(true);
             this.Estado_Botones_Procesos(false);
             this.Botones(false);
+            this.pnlListadoPO_CO.Visible = false;
             this.Tb_Principal.SelectedIndex = 0;
 
-            if (txtDescripcion_di.Text == "" || txtDescripcion_di.Text != null )
-            {
-                txtDescripcion_di.Text = "Marcas(*)";
-                txtDescripcion_di.ForeColor = Color.Black;
-          
-            }
+
+            
         }
-
-        private void txtDescripcion_ma_Enter(object sender, EventArgs e)
-        {
-            if (txtDescripcion_di.Text == "Marcas(*)")
-            {
-                txtDescripcion_di.Text = "";
-                txtDescripcion_di.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtDescripcion_ma_Leave(object sender, EventArgs e)
-        {
-
-            if (txtDescripcion_di.Text == "")
-            {
-                txtDescripcion_di.Text = "Marcas(*)";
-                txtDescripcion_di.ForeColor = Color.Black;
-
-            }
-        }
+             
+       
 
         private void Dgv_Principal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -284,26 +227,16 @@ namespace Sol_Capa_Presentacion.Distritos
         }
 
         private void btnretornar_Click(object sender, EventArgs e)
-        {           
-           this.Tb_Principal.SelectedIndex = 0;
+        {
+            this.txtDescripcion_di.Text = "";
+            this.txtDescripcion_po.Text = "";
+            this.txtDescripcion_co.Text = "";
+            this.Tb_Principal.SelectedIndex = 0;
             this.codigo_po = 0;
             this.botones = 0;
         }
 
-        private void Tb_Principal_Click(object sender, EventArgs e)
-        {
-            //revisar
-            if (txtDistritos.Text == "")
-            {
-                txtDistritos.Text = "Buscar Marcas:";
-                txtDistritos.ForeColor = Color.Black;
-
-            }else if (txtDescripcion_di.Text !=null)
-            {
-                txtDistritos.Text = "Buscar Marcas:";
-                txtDistritos.ForeColor = Color.Black;
-            }
-        }
+       
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
@@ -334,36 +267,15 @@ namespace Sol_Capa_Presentacion.Distritos
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.Listado_di(txtDescripcion_di.Text.Trim());
-        }
+      
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_di.Text == "")
-            {
-                txtDescripcion_di.Text = "Marcas(*)";
-                txtDescripcion_di.ForeColor = Color.Black;
-
-            }
-        }
-
+       
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }       
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_di.Text == "")
-            {
-                txtDescripcion_di.Text = "Marcas(*)";
-                txtDescripcion_di.ForeColor = Color.Black;
-
-            }
-        }
-
+     
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
         {
             if (Tb_Principal.SelectedTab == Tb_Principal.TabPages[1])
@@ -389,6 +301,9 @@ namespace Sol_Capa_Presentacion.Distritos
 
                 this.Botones(false);
                 this.btnretornar.Visible = true;
+                this.btnCancelar.Visible = false;
+                this.btnGuardar.Visible = false;
+
             }
         }
 
@@ -400,43 +315,23 @@ namespace Sol_Capa_Presentacion.Distritos
             this.Estado_Botones_Procesos(true);
             //txtDescripcion_ma.Text = "";
             this.txtDescripcion_po.Focus();
-            this.txtDescripcion_po.ReadOnly = false;
-            txtDescripcion_po.Focus();
-            this.txtDescripcion_co.ReadOnly = false;
+            this.txtDescripcion_po.ReadOnly = true;         
+            this.txtDescripcion_co.ReadOnly = true;
             this.txtDescripcion_di.ReadOnly = false;
            
             Tb_Principal.SelectedIndex = 1; 
         }
 
-        private void btnLupaPO_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoPO_CO.Visible = true;
-            this.pnlListadoPO_CO.Location = btnLupa_po_co.Location;
-        }
-
-        private void btnRetornar2PO_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoPO_CO.Visible = false;
-        }
+       
 
         private void Dgv_Provincias_DoubleClick(object sender, EventArgs e)
         {
             this.Seleccionar_Item_po_co();
             pnlListadoPO_CO.Visible = false;
             this.txtDescripcion_di.Focus();
+            this.txtBuscar2PO_CO.Text = "Buscar Provincias o Canton:";
         }
 
-        private void btnLupa2PO_Click(object sender, EventArgs e)
-        {
-            this.Listado_po_co(txtBuscar2PO_CO.Text);
-        }
-
-       
-
-        private void btnRetornar2PO_Click_1(object sender, EventArgs e)
-        {
-            this.pnlListadoPO_CO.Visible = false;
-        }
 
         private void Dgv_Provincias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -447,6 +342,38 @@ namespace Sol_Capa_Presentacion.Distritos
         {
             this.Listado_po_co("%");
             this.Listado_di("%");
+        }
+
+        private void txtBuscar2PO_CO_Click(object sender, EventArgs e)
+        {
+            this.txtBuscar2PO_CO.Text = "";
+        }
+
+        private void btnRetornar2PO_Click_2(object sender, EventArgs e)
+        {
+            this.pnlListadoPO_CO.Visible = false;
+            this.txtBuscar2PO_CO.Text = "Buscar Provincias o Canton:";
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Listado_di(txtBuscar_distritos.Text);
+        }
+
+        private void btnLupa2PO_Click(object sender, EventArgs e)
+        {
+            this.Listado_po_co(txtBuscar2PO_CO.Text);
+        }
+
+        private void btnLupa_provincia_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoPO_CO.Visible = true;
+            this.pnlListadoPO_CO.Location = btnLupa_provincia.Location;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Listado_di(txtBuscar_distritos.Text);
         }
     }
 }

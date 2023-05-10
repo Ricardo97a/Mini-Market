@@ -28,19 +28,19 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         #region "Mis Metodos" 
         private void Formato_ep()
         {
-            Dgv_Principal.Columns[0].Width = 90;
+            Dgv_Principal.Columns[0].Width = 130;
             Dgv_Principal.Columns[0].HeaderText = "CODIGO_EP";
-            Dgv_Principal.Columns[1].Width = 160;
+            Dgv_Principal.Columns[1].Width = 230;
             Dgv_Principal.Columns[1].HeaderText = "TIPO DOCUMENTO";
-            Dgv_Principal.Columns[2].Width = 160;
+            Dgv_Principal.Columns[2].Width = 190;
             Dgv_Principal.Columns[2].HeaderText = "NRO DOCUMENTO";
-            Dgv_Principal.Columns[3].Width = 110;
+            Dgv_Principal.Columns[3].Width = 180;
             Dgv_Principal.Columns[3].HeaderText = "FECHA DOC";
-            Dgv_Principal.Columns[4].Width = 230;
+            Dgv_Principal.Columns[4].Width = 250;
             Dgv_Principal.Columns[4].HeaderText = "PROVEEDOR";
-            Dgv_Principal.Columns[5].Width = 110;
+            Dgv_Principal.Columns[5].Width = 250;
             Dgv_Principal.Columns[5].HeaderText = "ALMACEN";
-            Dgv_Principal.Columns[6].Width = 140;
+            Dgv_Principal.Columns[6].Width = 250;
             Dgv_Principal.Columns[6].HeaderText = "TOTAL IMPORTE";
             Dgv_Principal.Columns[7].Visible = false;
             Dgv_Principal.Columns[8].Visible = false;
@@ -69,7 +69,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnnuevo.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+        //    this.btnsalir.Enabled = !estado;
          //   this.Crear_Tabla_Detalle();
 
 
@@ -80,9 +80,6 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnCancelar.Visible = estado;
             this.btnGuardar.Visible = estado;
             this.btnretornar.Visible = !estado;
-
-
-
         }
         public void Botones(bool estado)
         {
@@ -90,8 +87,6 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.btnCancelar.Visible = !estado;
             this.btn_agregar.Visible = !estado;
             this.btn_quitar.Visible = !estado;
-
-
 
         }
 
@@ -126,17 +121,17 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
 
         private void Formato_Detalle()
         {
-            Dvg_Detalle.Columns[0].Width = 270;
+            Dvg_Detalle.Columns[0].Width = 300;
             Dvg_Detalle.Columns[0].HeaderText = "PRODUCTO";
-            Dvg_Detalle.Columns[1].Width = 160;
+            Dvg_Detalle.Columns[1].Width = 250;
             Dvg_Detalle.Columns[1].HeaderText = "MARCA";
-            Dvg_Detalle.Columns[2].Width = 80;
+            Dvg_Detalle.Columns[2].Width = 130;
             Dvg_Detalle.Columns[2].HeaderText = "U.MEDIDA";
-            Dvg_Detalle.Columns[3].Width = 90;
+            Dvg_Detalle.Columns[3].Width = 120;
             Dvg_Detalle.Columns[3].HeaderText = "CANTIDAD";
-            Dvg_Detalle.Columns[4].Width = 110;
+            Dvg_Detalle.Columns[4].Width = 140;
             Dvg_Detalle.Columns[4].HeaderText = "PU COMPRA";
-            Dvg_Detalle.Columns[5].Width = 90;
+            Dvg_Detalle.Columns[5].Width = 170;
             Dvg_Detalle.Columns[5].HeaderText = "TOTAL";
             Dvg_Detalle.Columns[6].Visible = false;
             Dvg_Detalle.Columns[0].ReadOnly = true;
@@ -161,6 +156,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             Dvg_Detalle.DataSource = this.TablaDetalle;
             this.Formato_Detalle();
         }
+            
 
         private void Agregar_Item(string cDescripcion_pr, string cDescripcion_ma, string cDescripcion_um,decimal nCantidad, decimal nPu_compra, decimal nTotal, int nCodigo_pr)
         {
@@ -179,7 +175,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
 
         private void Formato_tdpc_ep()
         {
-            Dgv_Tdpc_ep.Columns[0].Width = 170;
+            Dgv_Tdpc_ep.Columns[0].Width = 320;
             Dgv_Tdpc_ep.Columns[0].HeaderText = "Tipo Documento";
             Dgv_Tdpc_ep.Columns[1].Visible = false;
         }
@@ -219,11 +215,11 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
 
         private void Formato_pv_ep()
         {
-            Dvg_Proveedor.Columns[0].Width = 250;
+            Dvg_Proveedor.Columns[0].Width = 320;
             Dvg_Proveedor.Columns[0].HeaderText = "PROVEEDOR";
-            Dvg_Proveedor.Columns[1].Width = 250;
+            Dvg_Proveedor.Columns[1].Width = 300;
             Dvg_Proveedor.Columns[1].HeaderText = "TIPO DOC.";
-            Dvg_Proveedor.Columns[2].Width = 250;
+            Dvg_Proveedor.Columns[2].Width = 300;
             Dvg_Proveedor.Columns[2].HeaderText = "NRO. DOC.";
             Dvg_Proveedor.Columns[3].Visible = false;
         }
@@ -262,13 +258,13 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
 
         private void Formato_pr_ep()
         {
-            Dvg_Productos.Columns[0].Width = 250;
+            Dvg_Productos.Columns[0].Width = 300;
             Dvg_Productos.Columns[0].HeaderText = "PRODUCTO";
-            Dvg_Productos.Columns[1].Width = 150;
+            Dvg_Productos.Columns[1].Width = 300;
             Dvg_Productos.Columns[1].HeaderText = "MARCA";
-            Dvg_Productos.Columns[2].Width = 90;
+            Dvg_Productos.Columns[2].Width = 130;
             Dvg_Productos.Columns[2].HeaderText = "U. MEDIDA";
-            Dvg_Productos.Columns[3].Width = 1550;
+            Dvg_Productos.Columns[3].Width = 300;
             Dvg_Productos.Columns[3].HeaderText = "CATEGORIA";
             Dvg_Productos.Columns[4].Visible = false;
         }
@@ -341,7 +337,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             //  Dvg_Almacen.Columns[0].Width = 200;
             //Dvg_Almacen.Columns[0].HeaderText = "CODIGO_AL";
             Dvg_Almacen.Columns[0].Visible = false;
-            Dvg_Almacen.Columns[1].Width = 220;
+            Dvg_Almacen.Columns[1].Width = 360;
             Dvg_Almacen.Columns[1].HeaderText = "ALMACEN";
             Dvg_Almacen.Columns[2].Visible = false;
 
@@ -381,17 +377,13 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
         {
             txtNro_Documento_ep.Enabled = !lestado;
             txtrazon_social_pv.Enabled = !lestado;
-            btnLupaTipoDocumento_ep.Enabled = !lestado;
-            lblfecha.Enabled = !lestado;
-            lblobservaciones.Enabled = !lestado;
+            btnLupaTipoDocumento_ep.Enabled = !lestado;                    
             txtDescripcion_tde.Enabled = !lestado;
             txtdescripcion_almacen.Enabled = !lestado;
+            txtObservaciones.Enabled = !lestado;
             dtp_fecha_ep.Enabled = !lestado;
             btnLupa_Proveedor.Enabled = !lestado;
             btnLupa_Almacen.Enabled = !lestado;
-
-
-
         }
         private void Limpiar_texto()
         {
@@ -399,16 +391,12 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             txtrazon_social_pv.Text = "";
             txtObservaciones.Text = "";
             txtDescripcion_tde.Text = "";
+            txtdescripcion_almacen.Text = "";
+            txtSubtotal.Text = "";
+            txtIva.Text = "";
+            txtTotal_importe.Text = "";         
         }
-        private void Placeholder_texto()
-        {
-            txtDescripcion_tde.Text = "Tipo doc (*)";
-            txtNro_Documento_ep.Text = "Nro.doc (*)";
-            txtrazon_social_pv.Text = "Proveedor  (*)";
-            txtdescripcion_almacen.Text = "Almacen (*)";
-            txtObservaciones.Text = "";
-
-        }        
+          
 
         private void Calcular_totales()
         {
@@ -452,9 +440,10 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.Botones(true);
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
-            this.Placeholder_texto();           
+                     
             this.Estado_texto(false);
             this.Crear_Tabla_Detalle();
+
             this.txtNro_Documento_ep.Focus();          
             Tb_Principal.SelectedIndex = 1;
             Dvg_Detalle.Columns[3].ReadOnly = false;
@@ -497,36 +486,7 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             // this.Listado_pv(txtBuscarProductos.Text.Trim());
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-
-            if (txtDescripcion_tde.Text == "" || txtNro_Documento_ep.Text == "")
-            {
-                txtNro_Documento_ep.Text = "Abreviatura(*)";
-                txtNro_Documento_ep.ForeColor = Color.Black;
-                txtDescripcion_tde.Text = "Unidad Medidas(*)";
-                txtDescripcion_tde.ForeColor = Color.Black;
-                txtBuscarProductos.Text = "Buscar Unidas Medidas:";
-                txtBuscarProductos.ForeColor = Color.Black;
-
-
-            }
-        }
-
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-            if (txtNro_Documento_ep.Text == "" || txtDescripcion_tde.Text == "")
-            {
-                txtNro_Documento_ep.Text = "Abreviatura(*)";
-                txtNro_Documento_ep.ForeColor = Color.Black;
-                txtDescripcion_tde.Text = "Unidad Medidas(*)";
-                txtDescripcion_tde.ForeColor = Color.Black;
-
-            }
-        }
+       
 
 
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
@@ -641,57 +601,33 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-
-
             this.estadoGuarda = 0;
             this.botones = 0;
-            this.codigo_pv = 0;
-            //  this.codigo_tdpc = 0;
-            //   this.codigo_sx = 0;
-            ///   this.codigo_ru = 0;
-            //   this.codigo_di = 0;
-            //   this.botones = 0;
-
-
+            this.codigo_pr = 0;   
             this.Estado_Botones_Principales(true);
             this.Limpiar_texto();
             Dvg_Detalle.Columns[3].ReadOnly = true;
             Dvg_Detalle.Columns[4].ReadOnly = true;
             this.Botones(false);
-            this.Placeholder_texto();
-
+           
+            this.pnlListado_proveedor.Visible = false;
+            this.pnlListadoTdpc_ep.Visible = false;
+            this.pnlListado_almacen.Visible = false;
+            this.pnlListado_Productos.Visible = false;
             this.Tb_Principal.SelectedIndex = 0;
-
-            if (txtNro_Documento_ep.Text == string.Empty ||
-                txtNro_Documento_ep.Text != null ||
-                txtDescripcion_tde.Text == string.Empty ||
-                txtDescripcion_tde.Text != null)
-
-            {
-                txtNro_Documento_ep.Text = "Producto (*)";
-                txtNro_Documento_ep.ForeColor = Color.Black;
-                txtDescripcion_tde.Text = "Marca (*)";
-                txtDescripcion_tde.ForeColor = Color.Black;
-
-            }
-
-
+          
         }
 
         private void btnretornar_Click_1(object sender, EventArgs e)
         {
             this.Tb_Principal.SelectedIndex = 0;
-            this.Placeholder_texto();
-            /* this.codigo_pr = 0;*/
+            this.Limpiar_texto();
+            
+            Dvg_Detalle.Columns.Clear();
+
+            this.codigo_pr = 0;
             this.botones = 0;
-
-        }
-
-        private void btn_retornar_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoTdpc_ep.Visible = false;
-        }
-
+        }       
 
         private void Dgv_Tdpc_DoubleClick(object sender, EventArgs e)
         {
@@ -700,25 +636,6 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             lbl_tpde.Visible = true;
         }
 
-
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.pnlListado_almacen.Visible = false;
-        }
-
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.pnlListado_proveedor.Visible = false;
-        }
-
-        private void btnLupaTipoDocumento_ep_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoTdpc_ep.Visible = true;
-            this.pnlListadoTdpc_ep.Location = btnLupaTipoDocumento_ep.Location;
-        }
 
         private void Frm_Entrada_Productos_Load(object sender, EventArgs e)
         {
@@ -729,16 +646,10 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             this.Listado_pv_ep("%");
             tabPage2.Visible = false;
         }
-
-        private void btnLupa_Proveedor_Click(object sender, EventArgs e)
-        {
-            this.pnlListado_proveedor.Visible = true;
-            this.pnlListado_proveedor.Location = btnLupaTipoDocumento_ep.Location;
-        }
-
         private void Dvg_Proveedor_DoubleClick(object sender, EventArgs e)
         {
             this.Seleccionar_Item_pv_ep();
+            txtBuscar_proveedor.Text = "Buscar Proveedor";
             this.pnlListado_proveedor.Visible = false;
         }
 
@@ -748,32 +659,19 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
             pnlListado_almacen.Visible = false;
         }
 
-        private void btnLupa2Proveedor_Click(object sender, EventArgs e)
-        {
-            this.Listado_pv_ep(txtBuscar_proveedor.Text);
-        }
-
-        private void btnLupa_Almacen_Click(object sender, EventArgs e)
-        {
-            this.pnlListado_almacen.Visible = true;
-            this.pnlListado_almacen.Location = btnLupa_Almacen.Location;
-        }
-
+       
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             this.pnlListado_Productos.Visible = true;
-            this.pnlListado_Productos.Location = btnLupaTipoDocumento_ep.Location;
-            txtBuscar_Productos.Focus();
+            this.pnlListado_Productos.Location = txtDescripcion_tde.Location;
+         
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.pnlListado_Productos.Visible = false;
-        }
-
+      
         private void Dvg_Productos_DoubleClick(object sender, EventArgs e)
         {
             this.Seleccionar_Item_pr_ep();
+            txt_buscar_producto.Text = "Buscar Producto";
             this.pnlListado_Productos.Visible = false;
 
         }
@@ -806,6 +704,67 @@ namespace Sol_Capa_Presentacion.Entradas_Productos
                 TablaDetalle.AcceptChanges();
                 this.Calcular_totales();
             }
+        }
+
+        private void btnRetornar_list_pv_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_proveedor.Visible = false;
+            txtBuscar_proveedor.Text = "Buscar Proveedor";
+        }
+
+        private void txtBuscar_proveedor_Click(object sender, EventArgs e)
+        {
+            txtBuscar_proveedor.Text = "";
+        }
+
+        private void btn_retornar_list_tde_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoTdpc_ep.Visible = false;
+        }
+
+        private void btnLupa2PO_Click(object sender, EventArgs e)
+        {
+            this.Listado_pr_ep(txt_buscar_producto.Text);
+        }
+
+        private void btn_Retornar_lista_pr_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_Productos.Visible = false;
+            txt_buscar_producto.Text = "Buscar Producto";
+        }
+
+        private void txt_buscar_producto_Click(object sender, EventArgs e)
+        {
+            txt_buscar_producto.Text = "";
+        }
+
+        private void btnLupaTipoDocumento_ep_Click_1(object sender, EventArgs e)
+        {
+            this.pnlListadoTdpc_ep.Visible = true;
+            this.pnlListadoTdpc_ep.Location = btnLupaTipoDocumento_ep.Location;
+
+        }
+
+        private void btnLupa_Proveedor_Click_1(object sender, EventArgs e)
+        {
+            this.pnlListado_proveedor.Visible = true;
+            this.pnlListado_proveedor.Location = txtDescripcion_tde.Location;
+        }
+
+        private void btnLupa_Almacen_Click_1(object sender, EventArgs e)
+        {
+            this.pnlListado_almacen.Visible = true;
+            this.pnlListado_almacen.Location = btnLupaTipoDocumento_ep.Location;
+        }
+
+        private void btnRetornar2PO_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_almacen.Visible = false;
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

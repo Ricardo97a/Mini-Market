@@ -28,8 +28,8 @@ namespace Sol_Capa_Presentacion.Provincias
         private void Formato_po()
         {
             Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_PO";
-            Dgv_Principal.Columns[1].Width = 200;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO";
+            Dgv_Principal.Columns[1].Width = 310;
             Dgv_Principal.Columns[1].HeaderText = "PROVINCIAS";
         }
 
@@ -53,7 +53,7 @@ namespace Sol_Capa_Presentacion.Provincias
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+          //  this.btnsalir.Enabled = !estado;
             
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -67,7 +67,7 @@ namespace Sol_Capa_Presentacion.Provincias
         {
             this.btnGuardar.Enabled = estado;
             this.btnCancelar.Enabled = estado;           
-            this.txtDescripcion_po.Enabled = estado;
+            this.txtDescripcion_pr.Enabled = estado;
         }
         private void Seleccionar_Item()
         {
@@ -79,7 +79,7 @@ namespace Sol_Capa_Presentacion.Provincias
             else
             {
                 this.codigo_po = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_po"].Value);
-                txtDescripcion_po.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_po"].Value);
+                txtDescripcion_pr.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_po"].Value);
             }
 
         }
@@ -90,30 +90,10 @@ namespace Sol_Capa_Presentacion.Provincias
             this.Listado_po("%");          
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if(txtProvincias.Text== "Buscar Marcas:")
-            {
-                txtProvincias.Text = "";
-                txtProvincias.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtMarcas_Leave(object sender, EventArgs e)
-        {
-
-            if (txtProvincias.Text == "")
-            {
-                txtProvincias.Text = "Buscar Marcas:";
-                txtProvincias.ForeColor = Color.Black;
-
-            }
-        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtDescripcion_po.Text == string.Empty)
+            if (txtDescripcion_pr.Text == string.Empty)
             {
                 MessageBox.Show("Falta ingresar datos requeridos(*)","Aviso de Sistemas",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
@@ -123,7 +103,7 @@ namespace Sol_Capa_Presentacion.Provincias
                 E_Provincias oPO = new E_Provincias();
                 string respuesta = "";
                 oPO.codigo_po = this.codigo_po;
-                oPO.descripcion_po = txtDescripcion_po.Text.Trim();
+                oPO.descripcion_po = txtDescripcion_pr.Text.Trim();
                 respuesta = N_Provincias.Guardar_po(estadoGuarda, oPO);
                 if (respuesta=="ok")
                 {
@@ -132,8 +112,8 @@ namespace Sol_Capa_Presentacion.Provincias
                     estadoGuarda = 0;
                     this.Estado_Botones_Principales(true);
                     this.Estado_Botones_Procesos(false);
-                    this.txtDescripcion_po.Text = "";
-                    this.txtDescripcion_po.ReadOnly = true;
+                    this.txtDescripcion_pr.Text = "";
+                    this.txtDescripcion_pr.ReadOnly = true;
                     this.Tb_Principal.SelectedIndex = 0; 
                     this.codigo_po = 0;
                     this.botones = 0;
@@ -145,18 +125,7 @@ namespace Sol_Capa_Presentacion.Provincias
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            /*
-            botones = 2;
-            estadoGuarda = 1;// nuevo registro
-            this.Estado_Botones_Principales(false);
-            this.Estado_Botones_Procesos(true);
-            //txtDescripcion_ma.Text = "";
-            this.txtDescripcion_ru.ReadOnly = false;            
-            Tb_Principal.SelectedIndex = 1; */
-         
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -166,7 +135,7 @@ namespace Sol_Capa_Presentacion.Provincias
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
             this.Seleccionar_Item();
-            this.txtDescripcion_po.ReadOnly = false;
+            this.txtDescripcion_pr.ReadOnly = false;
             Tb_Principal.SelectedIndex = 1;
             //txtDescripcion_ma.Focus();
 
@@ -177,42 +146,19 @@ namespace Sol_Capa_Presentacion.Provincias
             estadoGuarda = 0; // sin ninguna accion
             this.botones = 0;
             this.codigo_po = 0;
-            txtDescripcion_po.Text = "";
-            this.txtDescripcion_po.ReadOnly = true;
+            txtDescripcion_pr.Text = "";
+            this.txtDescripcion_pr.ReadOnly = true;
             this.Estado_Botones_Principales(true);
             this.Estado_Botones_Procesos(false);
             this.Botones(false);
             this.Tb_Principal.SelectedIndex = 0;
 
-            if (txtDescripcion_po.Text == "" || txtDescripcion_po.Text != null )
-            {
-                txtDescripcion_po.Text = "Marcas(*)";
-                txtDescripcion_po.ForeColor = Color.Black;
-          
-            }
+           
         }
 
-        private void txtDescripcion_ma_Enter(object sender, EventArgs e)
-        {
-            if (txtDescripcion_po.Text == "Marcas(*)")
-            {
-                txtDescripcion_po.Text = "";
-                txtDescripcion_po.ForeColor = Color.Black;
+    
 
-            }
-        }
-
-        private void txtDescripcion_ma_Leave(object sender, EventArgs e)
-        {
-
-            if (txtDescripcion_po.Text == "")
-            {
-                txtDescripcion_po.Text = "Marcas(*)";
-                txtDescripcion_po.ForeColor = Color.Black;
-
-            }
-        }
-
+        
         private void Dgv_Principal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.Seleccionar_Item();
@@ -227,22 +173,10 @@ namespace Sol_Capa_Presentacion.Provincias
            this.Tb_Principal.SelectedIndex = 0;
             this.codigo_po = 0;
             this.botones = 0;
+            this.txtDescripcion_pr.Text = "";
         }
 
-        private void Tb_Principal_Click(object sender, EventArgs e)
-        {
-            //revisar
-            if (txtProvincias.Text == "")
-            {
-                txtProvincias.Text = "Buscar Marcas:";
-                txtProvincias.ForeColor = Color.Black;
-
-            }else if (txtDescripcion_po.Text !=null)
-            {
-                txtProvincias.Text = "Buscar Marcas:";
-                txtProvincias.ForeColor = Color.Black;
-            }
-        }
+       
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
@@ -275,33 +209,17 @@ namespace Sol_Capa_Presentacion.Provincias
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Listado_po(txtDescripcion_po.Text.Trim());
+            this.Listado_po(txtDescripcion_pr.Text.Trim());
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_po.Text == "")
-            {
-                txtDescripcion_po.Text = "Marcas(*)";
-                txtDescripcion_po.ForeColor = Color.Black;
-
-            }
-        }
+    
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }       
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_po.Text == "")
-            {
-                txtDescripcion_po.Text = "Marcas(*)";
-                txtDescripcion_po.ForeColor = Color.Black;
 
-            }
-        }
 
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
         {
@@ -328,6 +246,8 @@ namespace Sol_Capa_Presentacion.Provincias
 
                 this.Botones(false);
                 this.btnretornar.Visible = true;
+                this.btnCancelar.Visible = false;
+                this.btnGuardar.Visible = false;
             }
         }
 
@@ -337,9 +257,19 @@ namespace Sol_Capa_Presentacion.Provincias
             estadoGuarda = 1;// nuevo registro
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
-            //txtDescripcion_ma.Text = "";
-            this.txtDescripcion_po.ReadOnly = false;            
+            txtDescripcion_pr.Text = "";
+            this.txtDescripcion_pr.ReadOnly = false;            
             Tb_Principal.SelectedIndex = 1; 
+        }
+
+        private void Frm_Provincias_Load_1(object sender, EventArgs e)
+        {
+            this.Listado_po("%");
+       }
+
+        private void btn_buscar_pr_Click(object sender, EventArgs e)
+        {
+            this.Listado_po(txtBuscar_provincia.Text);
         }
     }
 }

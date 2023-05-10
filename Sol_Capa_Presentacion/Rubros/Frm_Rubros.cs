@@ -29,8 +29,8 @@ namespace Sol_Capa_Presentacion.Rubros
         private void Formato_ru()
         {
             Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_RU";
-            Dgv_Principal.Columns[1].Width = 200;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO";
+            Dgv_Principal.Columns[1].Width = 310;
             Dgv_Principal.Columns[1].HeaderText = "RUBRO";
         }
 
@@ -54,7 +54,7 @@ namespace Sol_Capa_Presentacion.Rubros
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado;
+           // this.btnsalir.Enabled = !estado;
             
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -89,29 +89,9 @@ namespace Sol_Capa_Presentacion.Rubros
         private void Frm_Rubros_Load(object sender, EventArgs e)
         {
             this.Listado_ru("%");          
-        }
+        }      
 
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if(txtMarcas.Text== "Buscar Marcas:")
-            {
-                txtMarcas.Text = "";
-                txtMarcas.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtMarcas_Leave(object sender, EventArgs e)
-        {
-
-            if (txtMarcas.Text == "")
-            {
-                txtMarcas.Text = "Buscar Marcas:";
-                txtMarcas.ForeColor = Color.Black;
-
-            }
-        }
-
+       
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtDescripcion_ru.Text == string.Empty)
@@ -148,14 +128,14 @@ namespace Sol_Capa_Presentacion.Rubros
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
+            
             botones = 2;
             estadoGuarda = 1;// nuevo registro
             this.Estado_Botones_Principales(false);
             this.Estado_Botones_Procesos(true);
-            //txtDescripcion_ma.Text = "";
+            txtDescripcion_ru.Text = "";
             this.txtDescripcion_ru.ReadOnly = false;            
-            Tb_Principal.SelectedIndex = 1; */
+            Tb_Principal.SelectedIndex = 1; 
          
         }
 
@@ -185,35 +165,10 @@ namespace Sol_Capa_Presentacion.Rubros
             this.Botones(false);
             this.Tb_Principal.SelectedIndex = 0;
 
-            if (txtDescripcion_ru.Text == "" || txtDescripcion_ru.Text != null )
-            {
-                txtDescripcion_ru.Text = "Marcas(*)";
-                txtDescripcion_ru.ForeColor = Color.Black;
-          
-            }
+         
         }
 
-        private void txtDescripcion_ma_Enter(object sender, EventArgs e)
-        {
-            if (txtDescripcion_ru.Text == "Marcas(*)")
-            {
-                txtDescripcion_ru.Text = "";
-                txtDescripcion_ru.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void txtDescripcion_ma_Leave(object sender, EventArgs e)
-        {
-
-            if (txtDescripcion_ru.Text == "")
-            {
-                txtDescripcion_ru.Text = "Marcas(*)";
-                txtDescripcion_ru.ForeColor = Color.Black;
-
-            }
-        }
-
+      
         private void Dgv_Principal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.Seleccionar_Item();
@@ -230,21 +185,7 @@ namespace Sol_Capa_Presentacion.Rubros
             this.botones = 0;
         }
 
-        private void Tb_Principal_Click(object sender, EventArgs e)
-        {
-            //revisar
-            if (txtMarcas.Text == "")
-            {
-                txtMarcas.Text = "Buscar Marcas:";
-                txtMarcas.ForeColor = Color.Black;
-
-            }else if (txtDescripcion_ru.Text !=null)
-            {
-                txtMarcas.Text = "Buscar Marcas:";
-                txtMarcas.ForeColor = Color.Black;
-            }
-        }
-
+        
         private void btneliminar_Click(object sender, EventArgs e)
         {
             this.Seleccionar_Item();
@@ -274,36 +215,14 @@ namespace Sol_Capa_Presentacion.Rubros
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.Listado_ru(txtDescripcion_ru.Text.Trim());
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_ru.Text == "")
-            {
-                txtDescripcion_ru.Text = "Marcas(*)";
-                txtDescripcion_ru.ForeColor = Color.Black;
-
-            }
-        }
+       
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }       
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            if (txtDescripcion_ru.Text == "")
-            {
-                txtDescripcion_ru.Text = "Marcas(*)";
-                txtDescripcion_ru.ForeColor = Color.Black;
-
-            }
-        }
-
+       
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
         {
             if (Tb_Principal.SelectedTab == Tb_Principal.TabPages[1])
@@ -329,6 +248,9 @@ namespace Sol_Capa_Presentacion.Rubros
 
                 this.Botones(false);
                 this.btnretornar.Visible = true;
+                this.btnCancelar.Visible = false;
+                this.btnGuardar.Visible = false;
+
             }
         }
 
@@ -336,6 +258,11 @@ namespace Sol_Capa_Presentacion.Rubros
         {
             Frm_Rpt_Rubros reporte = new Frm_Rpt_Rubros();
             reporte.ShowDialog();
+        }
+
+        private void btnLupa2PO_Click(object sender, EventArgs e)
+        {
+            this.Listado_ru(txtBuscar_Rubros.Text);
         }
     }
 }

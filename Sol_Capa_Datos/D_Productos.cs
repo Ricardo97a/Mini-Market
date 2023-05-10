@@ -53,12 +53,12 @@ namespace Sol_Capa_Datos
                 comando.Parameters.Add("@nopcion", SqlDbType.Int).Value = nopcion;
                 comando.Parameters.Add("@nCodigo_pr", SqlDbType.Int).Value = oPr.codigo_pr;
                 comando.Parameters.Add("@cdescripcion_pr", SqlDbType.VarChar).Value = oPr.descripcion_pr;
-                comando.Parameters.Add("@nCodigo_ma", SqlDbType.VarChar).Value = oPr.codigo_ma;
-                comando.Parameters.Add("@nCodigo_um", SqlDbType.VarChar).Value = oPr.codigo_um;
-                comando.Parameters.Add("@nCodigo_ca", SqlDbType.VarChar).Value = oPr.codigo_ca;
-                comando.Parameters.Add("@nStock_min", SqlDbType.VarChar).Value = oPr.stock_min;
-                comando.Parameters.Add("@nStock_max", SqlDbType.VarChar).Value = oPr.stock_max; 
-                comando.Parameters.Add("@nPu_venta", SqlDbType.VarChar).Value = oPr.pu_venta; 
+                comando.Parameters.Add("@nCodigo_ma", SqlDbType.Int).Value = oPr.codigo_ma;
+                comando.Parameters.Add("@nCodigo_um", SqlDbType.Int).Value = oPr.codigo_um;
+                comando.Parameters.Add("@nCodigo_ca", SqlDbType.Int).Value = oPr.codigo_ca;
+                comando.Parameters.Add("@nStock_min", SqlDbType.Decimal).Value = oPr.stock_min;
+                comando.Parameters.Add("@nStock_max", SqlDbType.Decimal).Value = oPr.stock_max; 
+                comando.Parameters.Add("@nPu_venta", SqlDbType.Decimal).Value = oPr.pu_venta; 
                 sqlcon.Open();
                 respuesta = comando.ExecuteNonQuery() >= 1 ? "ok" : "No se pudo regitrar los datos";
             }

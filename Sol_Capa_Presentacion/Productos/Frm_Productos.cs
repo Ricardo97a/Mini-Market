@@ -30,19 +30,19 @@ namespace Sol_Capa_Presentacion.Productos
         #region "Mis Metodos" 
         private void Formato_pr()
         {
-            Dgv_Principal.Columns[0].Width = 100;
-            Dgv_Principal.Columns[0].HeaderText = "CODIGO_PR";
-            Dgv_Principal.Columns[1].Width = 240;
+            Dgv_Principal.Columns[0].Width = 130;
+            Dgv_Principal.Columns[0].HeaderText = "CODIGO";
+            Dgv_Principal.Columns[1].Width = 350;
             Dgv_Principal.Columns[1].HeaderText = "PRODUCTO";
-            Dgv_Principal.Columns[2].Width = 180;
+            Dgv_Principal.Columns[2].Width = 220;
             Dgv_Principal.Columns[2].HeaderText = "MARCA";
-            Dgv_Principal.Columns[3].Width = 100;
+            Dgv_Principal.Columns[3].Width = 180;
             Dgv_Principal.Columns[3].HeaderText = "U.MEDIDA";
             Dgv_Principal.Columns[4].Width = 180;
             Dgv_Principal.Columns[4].HeaderText = "CATEGORIA";
-            Dgv_Principal.Columns[5].Width = 100;
+            Dgv_Principal.Columns[5].Width = 180;
             Dgv_Principal.Columns[5].HeaderText = "STOCK MIN";
-            Dgv_Principal.Columns[6].Width = 105;
+            Dgv_Principal.Columns[6].Width = 200;
             Dgv_Principal.Columns[6].HeaderText = "STOCK MAX";
             Dgv_Principal.Columns[7].Visible = false;
             Dgv_Principal.Columns[8].Visible = false;
@@ -70,7 +70,7 @@ namespace Sol_Capa_Presentacion.Productos
             this.btnactualizar.Enabled = estado;
             this.btneliminar.Enabled = estado;
             this.btnreporte.Enabled = estado;
-            this.btnsalir.Enabled = !estado; 
+           
 
         }
         private void Estado_Botones_Procesos(bool estado)
@@ -84,14 +84,28 @@ namespace Sol_Capa_Presentacion.Productos
         {
             this.btnGuardar.Enabled = estado;
             this.btnCancelar.Enabled = estado;
+            this.btnLupaMarca.Visible = estado;
+            this.btnLupaCategoria.Visible = estado;
+            this.btnLupaMedida.Visible = estado;
             this.txtDescripcion_pr.Enabled = estado;
             this.txtDescripcion_ma.Enabled = estado;
-            this.txtDescripcion_um.Enabled = estado;
             this.txtDescripcion_ca.Enabled = estado;
+            this.txtDescripcion_um.Enabled = estado;
             this.txtStock_max.Enabled = estado;
             this.txtStock_min.Enabled = estado;
+            this.txt_precio_pr.Enabled = estado;
+            
         }
-
+        public void LimpiarText()
+        {
+            this.txtDescripcion_pr.Text = "";
+            this.txtDescripcion_ma.Text = "";
+            this.txtDescripcion_ca.Text = "";
+            this.txtDescripcion_um.Text = "";
+            this.txtStock_max.Text = "";
+            this.txtStock_min.Text = "";
+            this.txt_precio_pr.Text = "";
+        }
         private void Seleccionar_Item()
         {
             if (String.IsNullOrEmpty(Convert.ToString(Dgv_Principal.CurrentRow.Cells["codigo_pr"].Value)))
@@ -105,9 +119,9 @@ namespace Sol_Capa_Presentacion.Productos
                 this.codigo_ma = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_ma"].Value);
                 txtDescripcion_ma.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_ma"].Value);
                 this.codigo_um = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_um"].Value);
-                txtDescripcion_um.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_um"].Value);
+                txtDescripcion_ca.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_um"].Value);
                 this.codigo_ca = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_ca"].Value);
-                txtDescripcion_ca.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_ca"].Value);
+                txtDescripcion_um.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["descripcion_ca"].Value);
                 txtStock_min.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["stock_min"].Value);
                 txtStock_max.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["stock_max"].Value);
                 txt_precio_pr.Text = Convert.ToString(Dgv_Principal.CurrentRow.Cells["pu_venta"].Value);
@@ -120,7 +134,7 @@ namespace Sol_Capa_Presentacion.Productos
 
         private void Formato_ma_pr()
         {
-            Dgv_Marca.Columns[0].Width = 170;
+            Dgv_Marca.Columns[0].Width = 300;
             Dgv_Marca.Columns[0].HeaderText = "MARCA";
             Dgv_Marca.Columns[1].Visible = false;
         }
@@ -159,7 +173,7 @@ namespace Sol_Capa_Presentacion.Productos
 
         private void Formato_um_pr()
         {
-            Dgv_Unidades.Columns[0].Width = 180;
+            Dgv_Unidades.Columns[0].Width = 300;
             Dgv_Unidades.Columns[0].HeaderText = "Unidad de Medidas";
             Dgv_Unidades.Columns[1].Visible = false;
         }
@@ -197,7 +211,7 @@ namespace Sol_Capa_Presentacion.Productos
 
         private void Formato_ca_pr()
         {
-            Dvg_Categorias.Columns[0].Width = 180;
+            Dvg_Categorias.Columns[0].Width = 300;
             Dvg_Categorias.Columns[0].HeaderText = "CATEGORIA";
             Dvg_Categorias.Columns[1].Visible = false;
         }
@@ -230,7 +244,31 @@ namespace Sol_Capa_Presentacion.Productos
             }
 
         }
+        private void Formato_Stock_Actual()
+        {
+            Dvg_StockActual.Columns[0].Width = 250;
+            Dvg_StockActual.Columns[0].HeaderText = "Almacen";
+            Dvg_StockActual.Columns[1].Width = 200;
+            Dvg_StockActual.Columns[1].HeaderText = "STOCK ACTUAL";
+            Dvg_StockActual.Columns[2].Width = 200;
+            Dvg_StockActual.Columns[2].HeaderText = "P.U COMPRA";
 
+        }
+
+        public void Listado_Stock_Actual(int nCodigo_pr)
+        {
+            try
+            {
+                Dvg_StockActual.DataSource = N_Productos.Ver_Stock_Actual(nCodigo_pr);
+                this.Formato_Stock_Actual();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
+        }
         #endregion
         private void Frm_Productos_Load(object sender, EventArgs e)
         {
@@ -255,7 +293,7 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtDescripcion_pr.ReadOnly = false;
             this.txtStock_min.ReadOnly = false;
             this.txtStock_max.ReadOnly = false;
-            this.txtDescripcion_ma.ReadOnly = false;
+           // this.txtDescripcion_ma.ReadOnly = false;
             this.txt_precio_pr.ReadOnly = false;
             Tb_Principal.SelectedIndex = 1;
           
@@ -270,7 +308,10 @@ namespace Sol_Capa_Presentacion.Productos
             this.Estado_Botones_Procesos(true);
             this.Seleccionar_Item();
             this.txtDescripcion_pr.ReadOnly = false;
-            this.txtDescripcion_ma.ReadOnly = false;
+            this.txtDescripcion_ma.ReadOnly = true;
+            this.txtDescripcion_um.ReadOnly = true;
+            this.txtDescripcion_ca.ReadOnly = true;
+            txt_precio_pr.ReadOnly = false;
             Tb_Principal.SelectedIndex = 1;
             txtDescripcion_pr.Focus();
 
@@ -310,7 +351,7 @@ namespace Sol_Capa_Presentacion.Productos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.Listado_pr(txtBuscarProductos.Text.Trim());
+         //   this.Listado_pr(txtBuscarProductos.Text.Trim());
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -322,8 +363,8 @@ namespace Sol_Capa_Presentacion.Productos
                 txtDescripcion_pr.ForeColor = Color.Black;
                 txtDescripcion_ma.Text = "Unidad Medidas(*)";
                 txtDescripcion_ma.ForeColor = Color.Black;
-                txtBuscarProductos.Text = "Buscar Unidas Medidas:";
-                txtBuscarProductos.ForeColor = Color.Black;
+               // txtBuscarProductos.Text = "Buscar Unidas Medidas:";
+//                txtBuscarProductos.ForeColor = Color.Black;
 
 
             }
@@ -334,18 +375,6 @@ namespace Sol_Capa_Presentacion.Productos
             this.Close();
         }      
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-            if (txtDescripcion_pr.Text == "" || txtDescripcion_ma.Text == "")
-            {
-                txtDescripcion_pr.Text = "Abreviatura(*)";
-                txtDescripcion_pr.ForeColor = Color.Black;
-                txtDescripcion_ma.Text = "Unidad Medidas(*)";
-                txtDescripcion_ma.ForeColor = Color.Black;
-
-            }
-        }
 
 
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
@@ -353,7 +382,7 @@ namespace Sol_Capa_Presentacion.Productos
             if (Tb_Principal.SelectedTab == Tb_Principal.TabPages[1])
             {
                 this.Estado_Botones_Principales(false);
-
+                this.btnsalir.Enabled = true;
             }
             else
             {
@@ -372,17 +401,13 @@ namespace Sol_Capa_Presentacion.Productos
             {
 
                 this.Botones(false);
+                this.btnGuardar.Visible = false;
+                this.btnCancelar.Visible = false;
                 this.btnretornar.Visible = true;
             }
         }
 
        
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoMarcas.Location = btnLupaMarca.Location;
-            this.pnlListadoMarcas.Visible = true;
-        }
 
         private void Dgv_Marca_DoubleClick(object sender, EventArgs e)
         {
@@ -396,20 +421,15 @@ namespace Sol_Capa_Presentacion.Productos
             pnlListadoMedida.Visible = false;
         }
 
-        private void btnLupaMedida_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoMedida.Location = btnLupaMedida.Location;
-            this.pnlListadoMedida.Visible = true;
-        }
 
         private void btnLupa2M_Click(object sender, EventArgs e)
         {
-            this.Listado_ma_pr(txtBuscar2M.Text);
+        //    this.Listado_ma_pr(txtBuscar2M.Text);
         }
 
         private void btnLupa2U_Click(object sender, EventArgs e)
         {
-            this.Listado_um_pr(txtBuscar2U.Text);
+            this.Listado_um_pr(txtBuscar_medida.Text);
         }
 
         private void btnRetornar2M_Click(object sender, EventArgs e)
@@ -433,23 +453,17 @@ namespace Sol_Capa_Presentacion.Productos
             pnlListadoCategoria.Visible = false;
         }
 
-        private void btnLupaCategoria_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoCategoria.Location = btnLupaCategoria.Location;
-            this.pnlListadoCategoria.Visible = true;           
-        }
-
         private void btnLupa2C_Click(object sender, EventArgs e)
         {
-            this.Listado_ca_pr(txtBuscar2C.Text);
+          //  this.Listado_ca_pr(txtBuscar2C.Text);
         }
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             if (txtDescripcion_pr.Text == string.Empty ||
                 txtDescripcion_ma.Text == string.Empty ||
-                txtDescripcion_um.Text == string.Empty ||
                 txtDescripcion_ca.Text == string.Empty ||
+                txtDescripcion_um.Text == string.Empty ||
                 txt_precio_pr.Text ==string.Empty)
             {
                 MessageBox.Show("Falta ingresar datos requeridos(*)", "Aviso de Sistemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -507,7 +521,6 @@ namespace Sol_Capa_Presentacion.Productos
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-
             this.estadoGuarda = 0; // sin ninguna accion
             this.gbxStockActual.Visible = false;
             this.botones = 0;
@@ -518,31 +531,9 @@ namespace Sol_Capa_Presentacion.Productos
             this.txtStock_min.ReadOnly = false;
             this.txtStock_max.ReadOnly = false;
             this.Estado_Botones_Principales(true);
-
             this.Botones(false);
-
-            this.Tb_Principal.SelectedIndex = 0;
-
-            if (txtDescripcion_pr.Text == string.Empty ||
-                txtDescripcion_pr.Text != null || 
-                txtDescripcion_ma.Text == string.Empty || 
-                txtDescripcion_ma.Text != null ||
-                txtDescripcion_um.Text == string.Empty ||
-                txtDescripcion_um.Text != null  ||
-                txtDescripcion_ca.Text == string.Empty ||
-                txtDescripcion_ca.Text != null )
-            {
-                txtDescripcion_pr.Text = "Producto (*)";
-                txtDescripcion_pr.ForeColor = Color.Black;
-                txtDescripcion_ma.Text = "Marca (*)";
-                txtDescripcion_ma.ForeColor = Color.Black;
-                txtDescripcion_um.Text = "Medida (*)";
-                txtDescripcion_um.ForeColor = Color.Black;
-                txtDescripcion_ca.Text = "Categoria (*)";
-                txtDescripcion_ca.ForeColor = Color.Black;
-
-            }
-           
+            this.LimpiarText();
+            this.Tb_Principal.SelectedIndex = 0;    
            
         }
 
@@ -552,6 +543,8 @@ namespace Sol_Capa_Presentacion.Productos
             this.codigo_pr = 0;
             this.botones = 0;
             this.gbxStockActual.Visible = false;
+            this.LimpiarText();
+            this.Estado_Botones_Principales(true);
         }
 
         private void Tb_Principal_RightToLeftLayoutChanged(object sender, EventArgs e)
@@ -560,29 +553,69 @@ namespace Sol_Capa_Presentacion.Productos
         }
         /* Formato Stock Actual*/
 
-        private void Formato_Stock_Actual()
-        {
-            Dvg_StockActual.Columns[0].Width = 200;
-            Dvg_StockActual.Columns[0].HeaderText = "Almacen";
-            Dvg_StockActual.Columns[1].Width = 150;
-            Dvg_StockActual.Columns[1].HeaderText = "STOCK ACTUAL";
-            Dvg_StockActual.Columns[2].Width = 150;
-            Dvg_StockActual.Columns[2].HeaderText = "P.U COMPRA";
+    
 
+        private void btnLupaMarca_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoMarcas.Location = btnLupaMarca.Location;
+            this.pnlListadoMarcas.Visible = true;
         }
 
-        public void Listado_Stock_Actual(int nCodigo_pr)
+        private void btnLupaMedida_Click(object sender, EventArgs e)
         {
-            try
-            {
-               Dvg_StockActual.DataSource = N_Productos.Ver_Stock_Actual(nCodigo_pr);
-                this.Formato_Stock_Actual();
-            }
-            catch (Exception ex)
-            {
+            this.pnlListadoMedida.Location = btnLupaMarca.Location;
+            this.pnlListadoMedida.Visible = true;
+        }
 
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
+        private void btnLupaCategoria_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoCategoria.Location = btnLupaMarca.Location;
+            this.pnlListadoCategoria.Visible = true;
+        }
+
+        private void btnLupa_Producto_Click(object sender, EventArgs e)
+        {
+            this.Listado_pr(txtBuscar_Producto.Text);
+        }
+
+        private void btnRetornar2PO_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoMedida.Visible = false;
+            this.txtBuscar_medida.Text = "Buscar";
+        }
+
+        private void btnLupa2PO_Click(object sender, EventArgs e)
+        {
+            this.Listado_um_pr(txtBuscar_medida.Text);
+        }
+
+        private void txtBuscar_medida_Click(object sender, EventArgs e)
+        {
+            this.txtBuscar_medida.Text = "";
+        }
+
+        private void btn_Buscar_Marcas_Click(object sender, EventArgs e)
+        {
+            this.Listado_ma_pr(txt_buscar_marca.Text);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoMarcas.Visible = false;
+        }
+
+        private void btn_buscar_Categoria_Click(object sender, EventArgs e)
+        {
+            this.Listado_ca_pr(txt_Buscar_Categoria.Text);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoCategoria.Visible = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

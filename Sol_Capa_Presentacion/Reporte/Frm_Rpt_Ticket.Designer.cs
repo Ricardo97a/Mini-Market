@@ -29,39 +29,40 @@ namespace Sol_Capa_Presentacion.Reporte
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crv_etiqueta = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.Rpt_Imprimir_Ticket1 = new Sol_Capa_Presentacion.Rpt_Imprime_Ticket();
             this.SuspendLayout();
             // 
-            // crystalReportViewer1
+            // crv_etiqueta
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.DisplayStatusBar = false;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.Rpt_Imprimir_Ticket1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(635, 818);
-            this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crv_etiqueta.ActiveViewIndex = -1;
+            this.crv_etiqueta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crv_etiqueta.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crv_etiqueta.DisplayStatusBar = false;
+            this.crv_etiqueta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crv_etiqueta.Location = new System.Drawing.Point(0, 0);
+            this.crv_etiqueta.Name = "crv_etiqueta";
+            this.crv_etiqueta.ReportSource = this.Rpt_Imprimir_Ticket1;
+            this.crv_etiqueta.Size = new System.Drawing.Size(635, 818);
+            this.crv_etiqueta.TabIndex = 0;
+            this.crv_etiqueta.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // Frm_Rpt_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 818);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.crv_etiqueta);
             this.Name = "Frm_Rpt_Ticket";
             this.Text = "Frm_Rpt_Ticket";
+            this.Load += new System.EventHandler(this.Frm_Rpt_Ticket_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_etiqueta;
         private Rpt_Imprime_Ticket Rpt_Imprimir_Ticket1;
     }
 }

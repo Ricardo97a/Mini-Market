@@ -82,7 +82,7 @@ namespace Sol_Capa_Presentacion
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Clientes oFrm_cl = new Frm_Clientes();
+            btnLupaRubro oFrm_cl = new btnLupaRubro();
             oFrm_cl.MdiParent = this;
             oFrm_cl.StartPosition = FormStartPosition.CenterScreen;
             oFrm_cl.Show();
@@ -154,7 +154,7 @@ namespace Sol_Capa_Presentacion
 
         private void Tbar_Clientes_Click(object sender, EventArgs e)
         {
-            Frm_Clientes oFrm_cl = new Frm_Clientes();
+            btnLupaRubro oFrm_cl = new btnLupaRubro();
             oFrm_cl.MdiParent = this;
             oFrm_cl.StartPosition = FormStartPosition.CenterScreen;
             oFrm_cl.Show();

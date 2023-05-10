@@ -40,19 +40,19 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
         #region "Mis Metodos" 
         private void Formato_sp()
         {
-            Dgv_Principal.Columns[0].Width = 90;
+            Dgv_Principal.Columns[0].Width = 150;
             Dgv_Principal.Columns[0].HeaderText = "CODIGO SP";
-            Dgv_Principal.Columns[1].Width = 160;
+            Dgv_Principal.Columns[1].Width = 250;
             Dgv_Principal.Columns[1].HeaderText = "TIPO DOCUMENTO";
-            Dgv_Principal.Columns[2].Width = 160;
+            Dgv_Principal.Columns[2].Width = 200;
             Dgv_Principal.Columns[2].HeaderText = "NRO DOCUMENTO";
-            Dgv_Principal.Columns[3].Width = 110;
+            Dgv_Principal.Columns[3].Width = 150;
             Dgv_Principal.Columns[3].HeaderText = "FECHA DOC";
             Dgv_Principal.Columns[4].Width = 230;
             Dgv_Principal.Columns[4].HeaderText = "NRO.DOC.CLI";
-            Dgv_Principal.Columns[5].Width = 110;
+            Dgv_Principal.Columns[5].Width = 300;
             Dgv_Principal.Columns[5].HeaderText = "CLIENTE";
-            Dgv_Principal.Columns[6].Width = 140;
+            Dgv_Principal.Columns[6].Width = 200;
             Dgv_Principal.Columns[6].HeaderText = "TOTAL IMPORTE";
             Dgv_Principal.Columns[7].Visible = false;
             Dgv_Principal.Columns[8].Visible = false;
@@ -90,11 +90,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
         private void Estado_Botones_Procesos(bool estado)
         {
             this.btnCancelar.Visible = estado;
-            this.btnGuardar.Visible = estado;
-            this.btnretornar.Visible = !estado;
-
-
-
+            this.btnGuardar.Visible = estado;  
         }
         public void Botones(bool estado)
         {
@@ -119,7 +115,8 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
                 this.codigo_tdpc = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_tde"].Value);
                 this.codigo_pv = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_cl"].Value);
                 //this.codigo_al = Convert.ToInt32(Dgv_Principal.CurrentRow.Cells["codigo_al"].Value);
-                //txtDescripcion_tde.Text = Dgv_Principal.CurrentRow.Cells["descripcion_tde"].Value.ToString();
+                txt_nrodocumento_sp.Text = Dgv_Principal.CurrentRow.Cells["nrodocumento_cl"].Value.ToString();
+                txtDescripcion_tde.Text = Dgv_Principal.CurrentRow.Cells["descripcion"].Value.ToString();
                 txtNro_Documento_sp.Text = Dgv_Principal.CurrentRow.Cells["nrodocumento_sp"].Value.ToString();
                 dtp_fecha_sp.Value = Convert.ToDateTime(Dgv_Principal.CurrentRow.Cells["fecha_sp"].Value);             
                 txt_razon_social_cl.Text = Dgv_Principal.CurrentRow.Cells["razon_social_cl"].Value.ToString();
@@ -137,17 +134,17 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
 
         private void Formato_Detalle()
         {
-            Dvg_Detalle.Columns[0].Width = 200;
+            Dvg_Detalle.Columns[0].Width = 300;
             Dvg_Detalle.Columns[0].HeaderText = "PRODUCTO";
-            Dvg_Detalle.Columns[1].Width = 120;
+            Dvg_Detalle.Columns[1].Width = 200;
             Dvg_Detalle.Columns[1].HeaderText = "MARCA";
-            Dvg_Detalle.Columns[2].Width = 90;
+            Dvg_Detalle.Columns[2].Width = 150;
             Dvg_Detalle.Columns[2].HeaderText = "U.MEDIDA";
-            Dvg_Detalle.Columns[3].Width = 90;
+            Dvg_Detalle.Columns[3].Width = 120;
             Dvg_Detalle.Columns[3].HeaderText = "CANTIDAD";
-            Dvg_Detalle.Columns[4].Width = 100;
+            Dvg_Detalle.Columns[4].Width = 150;
             Dvg_Detalle.Columns[4].HeaderText = "PU VENTA";
-            Dvg_Detalle.Columns[5].Width = 100;
+            Dvg_Detalle.Columns[5].Width = 300;
             Dvg_Detalle.Columns[5].HeaderText = "TOTAL";
             Dvg_Detalle.Columns[6].Visible = false;
             Dvg_Detalle.Columns[0].ReadOnly = true;
@@ -190,7 +187,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
 
         private void Formato_tdpc_sp()
         {
-            Dgv_Tdpc_ep.Columns[0].Width = 170;
+            Dgv_Tdpc_ep.Columns[0].Width = 320;
             Dgv_Tdpc_ep.Columns[0].HeaderText = "Tipo Documento";
             Dgv_Tdpc_ep.Columns[1].Visible = false;
         }
@@ -230,11 +227,11 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
 
         private void Formato_cl_sp()
         {
-            Dvg_Clientes_sp.Columns[0].Width = 250;
+            Dvg_Clientes_sp.Columns[0].Width = 320;
             Dvg_Clientes_sp.Columns[0].HeaderText = "CLIENTE";
-            Dvg_Clientes_sp.Columns[1].Width = 250;
+            Dvg_Clientes_sp.Columns[1].Width = 300;
             Dvg_Clientes_sp.Columns[1].HeaderText = "TIPO DOC.";
-            Dvg_Clientes_sp.Columns[2].Width = 250;
+            Dvg_Clientes_sp.Columns[2].Width = 300;
             Dvg_Clientes_sp.Columns[2].HeaderText = "NRO. DOC.";
             Dvg_Clientes_sp.Columns[3].Visible = false;
         }
@@ -284,17 +281,17 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
 
         private void Formato_pr_sp()
         {
-            Dvg_Productos.Columns[0].Width = 200;
+            Dvg_Productos.Columns[0].Width = 300;
             Dvg_Productos.Columns[0].HeaderText = "PRODUCTO";
-            Dvg_Productos.Columns[1].Width = 100;
+            Dvg_Productos.Columns[1].Width = 200;
             Dvg_Productos.Columns[1].HeaderText = "MARCA";
-            Dvg_Productos.Columns[2].Width = 100;
+            Dvg_Productos.Columns[2].Width = 150;
             Dvg_Productos.Columns[2].HeaderText = "U. MEDIDA";
-            Dvg_Productos.Columns[3].Width = 150;
+            Dvg_Productos.Columns[3].Width = 200;
             Dvg_Productos.Columns[3].HeaderText = "CATEGORIA";
-            Dvg_Productos.Columns[4].Width = 90;
+            Dvg_Productos.Columns[4].Width = 100;
             Dvg_Productos.Columns[4].HeaderText = "STOCK ACTUAL";
-            Dvg_Productos.Columns[5].Width = 90;
+            Dvg_Productos.Columns[5].Width = 200;
             Dvg_Productos.Columns[5].HeaderText = "PU_VENTA";
             Dvg_Productos.Columns[6].Visible = false;
         }
@@ -362,19 +359,15 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
        
         private void Estado_texto(bool lestado)
         {
+            btnLupaTipoDocumento_sp.Enabled = !lestado;           
+            btnLupa_Cliente.Enabled = !lestado;          
             txtNro_Documento_sp.Enabled = !lestado;
-            
-            btnLupaTipoDocumento_sp.Enabled = !lestado;
-            lblfecha.Enabled = !lestado;
-            lblobservaciones.Enabled = !lestado;
             txtDescripcion_tde.Enabled = !lestado;
             txt_nrodocumento_sp.Enabled = !lestado;
-            dtp_fecha_sp.Enabled = !lestado;
-          
-            btnLupa_clientes_sp.Enabled = !lestado;
-
-
-
+            dtp_fecha_sp.Enabled = !lestado;     
+            txtObservaciones.Enabled = !lestado;     
+            txt_razon_social_cl.Enabled = !lestado;     
+            
         }
         private void Limpiar_texto()
         {
@@ -383,16 +376,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
             txtObservaciones.Text = "";
             txtDescripcion_tde.Text = "";
         }
-        private void Placeholder_texto()
-        {
-            txtDescripcion_tde.Text = "Tipo doc (*)";
-            txtNro_Documento_sp.Text = "Nro.doc (*)";
-           
-            txt_nrodocumento_sp.Text = "Almacen (*)";
-            txtObservaciones.Text = "";
-
-        }        
-
+     
         private void Calcular_totales()
         {
             decimal nSubtotal = 0;
@@ -457,8 +441,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
             this.estadoGuarda = 1;  
             this.Botones(false);
             this.Estado_Botones_Principales(false);
-            this.Estado_Botones_Procesos(true);
-            this.Placeholder_texto();           
+            this.Estado_Botones_Procesos(true);          
             this.Estado_texto(false);
             this.Crear_Tabla_Detalle();
             this.txtNro_Documento_sp.Focus();          
@@ -496,44 +479,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
 
             }
 
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-           this.Listado_sp(txtBuscarProductos.Text.Trim());
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-
-            if (txtDescripcion_tde.Text == "" || txtNro_Documento_sp.Text == "")
-            {
-                txtNro_Documento_sp.Text = "Abreviatura(*)";
-                txtNro_Documento_sp.ForeColor = Color.Black;
-                txtDescripcion_tde.Text = "Unidad Medidas(*)";
-                txtDescripcion_tde.ForeColor = Color.Black;
-                txtBuscarProductos.Text = "Buscar Unidas Medidas:";
-                txtBuscarProductos.ForeColor = Color.Black;
-
-
-            }
-        }
-
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-            if (txtNro_Documento_sp.Text == "" || txtDescripcion_tde.Text == "")
-            {
-                txtNro_Documento_sp.Text = "Abreviatura(*)";
-                txtNro_Documento_sp.ForeColor = Color.Black;
-                txtDescripcion_tde.Text = "Unidad Medidas(*)";
-                txtDescripcion_tde.ForeColor = Color.Black;
-
-            }
-        }
-
+        }             
 
         private void Tb_Principal_Selected(object sender, TabControlEventArgs e)
         {
@@ -553,7 +499,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
             {
                 this.Botones(false);
                 this.Estado_texto(false);
-                this.btnretornar.Visible = false;
+               
             }
             else if (botones == 3)
             {
@@ -564,7 +510,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
 
                 this.Botones(true);
                 this.Estado_texto(true);
-                this.btnretornar.Visible = true;
+              
                 this.btn_agregar.Visible = false;
                 this.btn_quitar.Visible = false;
 
@@ -616,24 +562,27 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
                     MessageBox.Show("Los datos han sido guardados correctamente # "+this.codigo_sp, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //REPORTE
-                    Rpt_Imprime_Ticket rp_reporte = new Rpt_Imprime_Ticket();
+                   Rpt_Imprime_Ticket rp_reporte = new Rpt_Imprime_Ticket();
  
-                    rp_reporte.SetParameterValue("@nCodigo_sp", this.codigo_sp);
-                   
+                    //rp_reporte.SetParameterValue("@nCodigo_sp", this.codigo_sp);
+                    
 
 
                     rp_reporte.DataSourceConnections[0].SetConnection("RAMIREZ97", "BD_Sistema_POO", "sistemas", "1");
+                  
+                    // rp_reporte.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, @"C:\Users\ricar\Documents\Tuti\"+ boleta +txtNro_Documento_sp.Text+".pdf");
 
-                   rp_reporte.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, @"C:\Users\ricar\Documents\Tuti\"+ boleta +txtNro_Documento_sp.Text+".pdf");
+                    // string rutaArchivoPDF = @"C:\Users\ricar\Documents\Tuti\" + boleta + txtNro_Documento_sp.Text + ".pdf";
+                    // ImprimirPDF(rutaArchivoPDF);
+
+                     //string rutaArchivoPDF = @"C:\Users\ricar\Documents\Tuti\" + boleta + txtNro_Documento_sp.Text + ".pdf";
+                     //AbrirPDFEnNavegador(rutaArchivoPDF);
+                     
+                    Frm_Rpt_Ticket reporte = new Frm_Rpt_Ticket();
+                    reporte.Imprimir_report(codigo_sp);
+                    // reporte.IdCodigo = codigo_sp;
                    
-                   // string rutaArchivoPDF = @"C:\Users\ricar\Documents\Tuti\" + boleta + txtNro_Documento_sp.Text + ".pdf";
-                   // ImprimirPDF(rutaArchivoPDF);
-
-                    string rutaArchivoPDF = @"C:\Users\ricar\Documents\Tuti\" + boleta + txtNro_Documento_sp.Text + ".pdf";
-                    AbrirPDFEnNavegador(rutaArchivoPDF);
-
-                   // Frm_Rpt_Ticket reporte = new Frm_Rpt_Ticket();
-                    //reporte.ShowDialog();
+                     reporte.ShowDialog();
                     
 
                     this.Estado_Botones_Principales(true);
@@ -660,7 +609,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
             //this.Agregar_Item();
             //this.Seleccionar_Item_pr_ep();
             this.Estado_Botones_Procesos(false);
-            Tb_Principal.SelectedIndex = 1;
+            Tb_Principal.SelectedIndex = 0;
 
 
         }
@@ -684,30 +633,16 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
             Dvg_Detalle.Columns[3].ReadOnly = true;
             Dvg_Detalle.Columns[4].ReadOnly = true;
             this.Botones(false);
-            this.Placeholder_texto();
+            
 
             this.Tb_Principal.SelectedIndex = 0;
-
-            if (txtNro_Documento_sp.Text == string.Empty ||
-                txtNro_Documento_sp.Text != null ||
-                txtDescripcion_tde.Text == string.Empty ||
-                txtDescripcion_tde.Text != null)
-
-            {
-                txtNro_Documento_sp.Text = "Producto (*)";
-                txtNro_Documento_sp.ForeColor = Color.Black;
-                txtDescripcion_tde.Text = "Marca (*)";
-                txtDescripcion_tde.ForeColor = Color.Black;
-
-            }
-
 
         }
 
         private void btnretornar_Click_1(object sender, EventArgs e)
         {
             this.Tb_Principal.SelectedIndex = 0;
-            this.Placeholder_texto();
+           
             /* this.codigo_pr = 0;*/
             this.botones = 0;
 
@@ -723,7 +658,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
         {
             this.Seleccionar_Item_tdpc_pv();
             pnlListadoTdpc_sp.Visible = false;
-            lbl_tpde.Visible = true;
+          
         }
 
 
@@ -735,51 +670,14 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
 
 
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.pnlListado_clientes_sp.Visible = false;
-        }
+        
 
-        private void btnLupaTipoDocumento_ep_Click(object sender, EventArgs e)
-        {
-            this.pnlListadoTdpc_sp.Visible = true;
-            this.pnlListadoTdpc_sp.Location = btnLupaTipoDocumento_sp.Location;
-        }
-
-      
-
-        private void btnLupa_Proveedor_Click(object sender, EventArgs e)
-        {
-            this.pnlListado_clientes_sp.Visible = true;
-            this.pnlListado_clientes_sp.Location = btnLupaTipoDocumento_sp.Location;
-        }
-
-        private void Dvg_Proveedor_DoubleClick(object sender, EventArgs e)
-        {
-            this.Seleccionar_Item_cl_sp();
-            this.pnlListado_clientes_sp.Visible = false;
-        }
-
-        private void Dvg_Almacen_DoubleClick(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void btnLupa2Proveedor_Click(object sender, EventArgs e)
-        {
-            this.Listado_cl_sp(txtBuscar_cliente_sp.Text);
-        }
-
-        private void btnLupa_Almacen_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+       
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             this.pnlListado_Productos_sp.Visible = true;
-           // this.pnlListado_Productos_sp.Location = btnLupaTipoDocumento_sp.Location;
-            txtBuscar_Productos.Focus();
+           this.pnlListado_Productos_sp.Location = txtDescripcion_tde.Location;
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -790,7 +688,7 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
         private void Dvg_Productos_DoubleClick(object sender, EventArgs e)
         {
             this.Seleccionar_Item_pr_ep();
-            this.pnlListado_Productos_sp.Visible = false;
+            this.pnlListado_Productos_sp.Visible = false;           
 
         }
 
@@ -846,6 +744,11 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
             this.Listado_pr_sp("%");
 
             this.Listado_cl_sp("%");
+            this.btnGuardar.Visible = false;
+            this.btnCancelar.Visible = false;
+         
+
+
             //tabPage2.Visible = false;
         }
 
@@ -858,6 +761,53 @@ namespace Sol_Capa_Presentacion.Salidad_Productos
         {
             Frm_Rpt_Salida_Productos reporte = new Frm_Rpt_Salida_Productos();
             reporte.ShowDialog();
+        }
+
+        private void btnRetornar2PO_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_Productos_sp.Visible = false;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Listado_pr_sp(txtBuscar_Productos.Text);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_clientes_sp.Visible = false;
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Listado_cl_sp(txtBuscar_Clientes.Text);
+        }
+
+        private void btnLupaTipoDocumento_sp_Click_1(object sender, EventArgs e)
+        {
+            this.pnlListadoTdpc_sp.Visible = true;
+            this.pnlListadoTdpc_sp.Location = txtDescripcion_tde.Location;
+        }
+
+        private void btnLupa_Cliente_Click(object sender, EventArgs e)
+        {
+            this.pnlListado_clientes_sp.Visible = true;
+            this.pnlListado_clientes_sp.Location = txtDescripcion_tde.Location;
+        }
+
+        private void btnLupa_provincia_Click(object sender, EventArgs e)
+        {
+            this.Listado_sp(txtBuscar_sp.Text);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.pnlListadoTdpc_sp.Visible = false;
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 
